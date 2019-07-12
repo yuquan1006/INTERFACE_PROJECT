@@ -1,0 +1,277 @@
+[2019-07-09 16:03:56,119][emailCmd.py:Methond:__init__(32)][DEBUG]:  _/_/_/_/_/_/   初始化邮箱参数
+[2019-07-09 16:04:05,797][emailCmd.py:Methond:sendEmail(41)][INFO]:  发送测试结果邮件到['1251523660@qq.com', '1311766437@qq.com']成功！
+[2019-07-09 16:06:11,508][run_all_case.py:Methond:all_tests(21)][INFO]:  执行D:\Data\py_space\auto_cfp\case\cfp_mesgateway下测试用例
+[2019-07-09 16:06:12,280][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:12,281][oracleCmd.py:Methond:select(137)][INFO]:  select:select member_code from FE.T_MEMBER where  login_name='qiuhua.yang@ipaylinks.com' and 1=1 
+[2019-07-09 16:06:12,281][oracleCmd.py:Methond:executeSql(76)][INFO]:  开始执行:[select member_code from FE.T_MEMBER where  login_name='qiuhua.yang@ipaylinks.com' and 1=1 ]语句
+[2019-07-09 16:06:12,302][oracleCmd.py:Methond:executeSql(80)][INFO]:  执行完成，结果为:(10000008452,)
+[2019-07-09 16:06:12,394][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:12,412][oracleCmd.py:Methond:update(252)][INFO]:  update: UPDATE FE.T_MEMBER SET audi_status='0' where member_code='10000008452' and  1=1 
+[2019-07-09 16:06:12,412][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[UPDATE FE.T_MEMBER SET audi_status='0' where member_code='10000008452' and  1=1 ]语句
+[2019-07-09 16:06:12,431][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:1
+[2019-07-09 16:06:12,539][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:12,561][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[delete from FE.T_INDIVIDUAL_INFO t where t.member_code ='10000008452' or t.cer_code = '32012519930807171X']语句
+[2019-07-09 16:06:12,581][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:1
+[2019-07-09 16:06:12,674][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:12,698][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[delete from FE.T_ENTERPRISE_BASE t where t.member_code = '10000008452' or t.biz_licence_code = '9151010409889665X3']语句
+[2019-07-09 16:06:12,718][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:0
+[2019-07-09 16:06:12,811][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:12,834][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_ENTERPRISE_CERTIFICATE where FE.T_ENTERPRISE_CERTIFICATE.member_code='10000008452' and  1=1 
+[2019-07-09 16:06:12,834][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_ENTERPRISE_CERTIFICATE where FE.T_ENTERPRISE_CERTIFICATE.member_code='10000008452' and  1=1 ]语句
+[2019-07-09 16:06:12,853][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:0
+[2019-07-09 16:06:12,950][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:12,971][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_ENTERPRISE_CONTACT where FE.T_ENTERPRISE_CONTACT.member_code='10000008452' and  1=1 
+[2019-07-09 16:06:12,971][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_ENTERPRISE_CONTACT where FE.T_ENTERPRISE_CONTACT.member_code='10000008452' and  1=1 ]语句
+[2019-07-09 16:06:12,991][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:0
+[2019-07-09 16:06:13,082][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:13,103][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.t_member_service where FE.t_member_service.member_code='10000008452' and  1=1 
+[2019-07-09 16:06:13,103][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.t_member_service where FE.t_member_service.member_code='10000008452' and  1=1 ]语句
+[2019-07-09 16:06:13,119][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:0
+[2019-07-09 16:06:13,219][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:13,241][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.t_member_service_withdraw where FE.t_member_service_withdraw.member_code='10000008452' and  1=1 
+[2019-07-09 16:06:13,241][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.t_member_service_withdraw where FE.t_member_service_withdraw.member_code='10000008452' and  1=1 ]语句
+[2019-07-09 16:06:13,261][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:0
+[2019-07-09 16:06:13,345][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:13,367][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.t_member_service_wallet where FE.t_member_service_wallet.member_code='10000008452' and  1=1 
+[2019-07-09 16:06:13,367][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.t_member_service_wallet where FE.t_member_service_wallet.member_code='10000008452' and  1=1 ]语句
+[2019-07-09 16:06:13,390][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:0
+[2019-07-09 16:06:13,484][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:13,509][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.t_member_service_exchange where FE.t_member_service_exchange.member_code='10000008452' and  1=1 
+[2019-07-09 16:06:13,510][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.t_member_service_exchange where FE.t_member_service_exchange.member_code='10000008452' and  1=1 ]语句
+[2019-07-09 16:06:13,531][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:0
+[2019-07-09 16:06:13,566][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:13,566][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/security/login.json
+[2019-07-09 16:06:13,566][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"loginName": "qiuhua.yang@ipaylinks.com", "password": "12345678A"}}
+[2019-07-09 16:06:13,566][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:13,566][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":{"token":"MES_TOKEN_5ae40cbe-4587-4781-a95c-ff0cfc6f63fc"}}
+[2019-07-09 16:06:13,811][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:13,812][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/file/upload.json
+[2019-07-09 16:06:13,812][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:None     参数值:None
+[2019-07-09 16:06:13,812][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'AUTH-TOKEN': 'MES_TOKEN_5ae40cbe-4587-4781-a95c-ff0cfc6f63fc'}
+[2019-07-09 16:06:13,812][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":{"fileOssKey":"mpsposs/auth/2019/07/09/afa68e6a9a254d5fa7e8341547d2533d/10000008452/10000008452201907097155.jpg","fileSignedUrl":"https://fileserver-hz-test.oss-cn-hangzhou.aliyuncs.com/mpsposs/auth/2019/07/09/afa68e6a9a254d5fa7e8341547d2533d/10000008452/10000008452201907097155.jpg?Expires=1562663171&OSSAccessKeyId=STS.NJXfS42t2fD3MDj1GfYA8XZRa&Signature=L4xWajxVugOwqPNWGNikoBwgkfg%3D&security-token=CAIS4wJ1q6Ft5B2yfSjIr4ntLemA36sT0YbYT2Lb1UczVc4Ut5%2F5gzz2IHlNfHhqB%2B8ftfU%2Bm2hX7P4ZlokpRsEYFUadM5J55MRerw2vOoCa55K84%2BNehsL9FDLJAUYAWEkVtqCrIunGc9KBNnoN%2F00amMkJHFfPdlihNoLz1%2FwDR98LXw6%2BQCNbDdNNXGVLo9MbMn2jQ5TINQXx0EXdEG1iuAd3lQEa7r%2BkkPWB9j3UjlDx1pUnxeLLL4OjctNnMbpmTt6xx5YWTKfa1zNK4BU4osUihadfqzDcpYPfUQAPu0XZbbaIq4w1cVMlOfdoFa9AoePxj%2BN1oKnThcHrxg1ReuRNSDzYX5vnydbYGKTrFK5gK%2B6rZCqRjonebMSp71x7Wx9BalMWIehGA2RrFBkhRgvdLqKa413Qam%2BhMfPciflni8Qqlg65rIXSeALXGK%2F9yyEcN9o8fQY0OgUKzclY6Hr0%2FokmGoABEz0O
+[2019-07-09 16:06:14,196][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:14,196][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/file/upload.json
+[2019-07-09 16:06:14,196][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:None     参数值:None
+[2019-07-09 16:06:14,196][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'AUTH-TOKEN': 'MES_TOKEN_5ae40cbe-4587-4781-a95c-ff0cfc6f63fc'}
+[2019-07-09 16:06:14,196][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":{"fileOssKey":"mpsposs/auth/2019/07/09/7cc82f2f845d495e9538f29293848c33/10000008452/10000008452201907093994.jpg","fileSignedUrl":"https://fileserver-hz-test.oss-cn-hangzhou.aliyuncs.com/mpsposs/auth/2019/07/09/7cc82f2f845d495e9538f29293848c33/10000008452/10000008452201907093994.jpg?Expires=1562663172&OSSAccessKeyId=STS.NHyG98jXfnKJ64BNps1dshJWj&Signature=NtBkbFA6ShRVzX45vlTpFZ3F9aQ%3D&security-token=CAIS4wJ1q6Ft5B2yfSjIr4vMDIOMh4dH2YmhNBLzqnAmPetfh4%2F8iDz2IHlNfHhqB%2B8ftfU%2Bm2hX7P4Zlol%2FFcQaFRfNNpQss50JoQiqPdCd5cG%2FsLEK2MysQzXKVkYIW0kVtqCrIunGc9KBNnoN%2F00amMkJHFfPdlihNoLz1%2FwDR98LXw6%2BQCNbDdNNXGVLo9MbMn2jQ5TINQXx0EXdEG1iuAd3lQEa7r%2BkkPWB9j3UjlDx1pUnxeLLL4OjctNnMbpmTt6xx5YWTKfa1zNK4BU4osUihadfqzDcpYPfUQAPu0XZbbaIq4w1cVMlOfdoFa9AoePxj%2BN1oKnThcHrxg1ReuRNSDzYX5vnydbYGKTrFK5gK%2B6rZCqRjonebMSp71x7Wx9BalMWIehGA2RrFBkhRgvdLqKa413Qam%2BhMfPciflni8Qqlg65rIXSeALXGK%2F9yyEcN9o8fQY0OgUKzclY6Hr0%2FokmGoABik
+[2019-07-09 16:06:14,396][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:14,396][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/file/upload.json
+[2019-07-09 16:06:14,396][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:None     参数值:None
+[2019-07-09 16:06:14,396][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'AUTH-TOKEN': 'MES_TOKEN_5ae40cbe-4587-4781-a95c-ff0cfc6f63fc'}
+[2019-07-09 16:06:14,396][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":{"fileOssKey":"mpsposs/auth/2019/07/09/2351a290164e427ab87b3f6714254455/10000008452/10000008452201907098915.jpg","fileSignedUrl":"https://fileserver-hz-test.oss-cn-hangzhou.aliyuncs.com/mpsposs/auth/2019/07/09/2351a290164e427ab87b3f6714254455/10000008452/10000008452201907098915.jpg?Expires=1562663172&OSSAccessKeyId=STS.NKNmy6k5U7hH44UUinKn5a5B4&Signature=ipLKO7AmsyYMQeH0l%2F7zTA7xP1g%3D&security-token=CAIS4wJ1q6Ft5B2yfSjIr4j7JsOChup0gKqjNhLksWk7R%2BEZjvDp1jz2IHlNfHhqB%2B8ftfU%2Bm2hX7P4ZlokvEMIfHRecMsV6tcpa%2BFP8OoCa6pPk5rZZgcysFDnJVEZ%2BREkVtqCrIunGc9KBNnoN%2F00amMkJHFfPdlihNoLz1%2FwDR98LXw6%2BQCNbDdNNXGVLo9MbMn2jQ5TINQXx0EXdEG1iuAd3lQEa7r%2BkkPWB9j3UjlDx1pUnxeLLL4OjctNnMbpmTt6xx5YWTKfa1zNK4BU4osUihadfqzDcpYPfUQAPu0XZbbaIq4w1cVMlOfdoFa9AoePxj%2BN1oKnThcHrxg1ReuRNSDzYX5vnydbYGKTrFK5gK%2B6rZCqRjonebMSp71x7Wx9BalMWIehGA2RrFBkhRgvdLqKa413Qam%2BhMfPciflni8Qqlg65rIXSeALXGK%2F9yyEcN9o8fQY0OgUKzclY6Hr0%2FokmGoAB
+[2019-07-09 16:06:17,275][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:17,276][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/modifyLoginPwd/doPersonAuthentication.json
+[2019-07-09 16:06:17,276][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"country": "中国大陆", "name": "杨秋华", "cerCode": "32012519930807171X", "address": "江苏省南京市高淳区阳江镇杨家湾村350号", "personIdPath": "mpsposs/auth/2019/07/09/afa68e6a9a254d5fa7e8341547d2533d/10000008452/10000008452201907097155.jpg", "personIdBackPath": "mpsposs/auth/2019/07/09/7cc82f2f845d495e9538f29293848c33/10000008452/10000008452201907093994.jpg", "cerStartExpDate": "2016-10-06", "cerExpDate": "2026-10-06", "individualEnName": "yangqiuhua", "personIdHoldPath": "mpsposs/auth/2019/07/09/2351a290164e427ab87b3f6714254455/10000008452/10000008452201907098915.jpg", "bankCardNo": "6217880800001810391", "mobile": "15261471747", "passport": "", "city": "南京市", "province": "江苏省", "birthDate": ""}
+[2019-07-09 16:06:17,276][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'AUTH-TOKEN': 'MES_TOKEN_5ae40cbe-4587-4781-a95c-ff0cfc6f63fc', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:17,276][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1"}
+[2019-07-09 16:06:17,366][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:17,388][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 
+[2019-07-09 16:06:17,388][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 ]语句
+[2019-07-09 16:06:17,405][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:1
+[2019-07-09 16:06:19,399][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:19,399][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/email.json
+[2019-07-09 16:06:19,399][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"agreement": true, "email": "qiuhua.yang@ipaylinks.com", "recommendCode": ""}}
+[2019-07-09 16:06:19,399][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:19,399][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:19,399][redisCmd.py:Methond:__connect_to_redis(11)][INFO]:  创建redis连接
+[2019-07-09 16:06:19,421][redisCmd.py:Methond:get_to_redis(22)][INFO]:  从redis中获取redisKey:MES_REDIS_EMAIL_qiuhua.yang@ipaylinks.com   redisValue:"df8ba8c9-cad5-405f-9722-cc942a8c60f6"
+[2019-07-09 16:06:19,434][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:19,434][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/activeEmail.json
+[2019-07-09 16:06:19,434][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"agreement": true, "email": "qiuhua.yang@ipaylinks.com", "token": "\"df8ba8c9-cad5-405f-9722-cc942a8c60f6\""}}
+[2019-07-09 16:06:19,434][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:19,434][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":{"clientCode":"mes-gateway","traceId":"FBB4886D431444DC8AF6BB0F132AE353","res":true,"verfyToken":"MES_SIGN_VERFY_TOKEN_qiuhua.yang@ipaylinks.com"}}
+[2019-07-09 16:06:19,517][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:19,517][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:19,518][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "15261471747"}
+[2019-07-09 16:06:19,518][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:19,518][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:19,518][redisCmd.py:Methond:__connect_to_redis(11)][INFO]:  创建redis连接
+[2019-07-09 16:06:19,544][redisCmd.py:Methond:get_to_redis(22)][INFO]:  从redis中获取redisKey:MES_GATEWAY_SMS_15261471747_user_regist   redisValue:"123456"
+[2019-07-09 16:06:19,544][redisCmd.py:Methond:__connect_to_redis(11)][INFO]:  创建redis连接
+[2019-07-09 16:06:19,568][redisCmd.py:Methond:del_to_redis(37)][INFO]:  从redis中删除键值redisKey:MES_GATEWAY_SMS_SEND_TIMES_15261471747_user_regist
+[2019-07-09 16:06:19,599][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:19,599][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/improveInfo.json
+[2019-07-09 16:06:19,599][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"email": "qiuhua.yang@ipaylinks.com", "loginPhone": "15261471747", "payPwd": "12345678Z", "payPwdRepeat": "12345678Z", "pwd": "12345678A", "pwdRepeat": "12345678A", "recommendCode": "", "signType": 2, "verfyToken": "MES_SIGN_VERFY_TOKEN_qiuhua.yang@ipaylinks.com", "moblileVerifCode": "123456"}}
+[2019-07-09 16:06:19,599][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:19,600][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:19,622][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:19,622][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/security/login.json
+[2019-07-09 16:06:19,622][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"loginName": "qiuhua.yang@ipaylinks.com", "password": "12345678A"}}
+[2019-07-09 16:06:19,622][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:19,623][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":{"token":"MES_TOKEN_b1ba60c6-f0dc-4431-aa15-dc5d0ed4bfb2"}}
+[2019-07-09 16:06:19,709][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:19,735][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 
+[2019-07-09 16:06:19,735][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 ]语句
+[2019-07-09 16:06:19,749][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:1
+[2019-07-09 16:06:19,749][redisCmd.py:Methond:__connect_to_redis(11)][INFO]:  创建redis连接
+[2019-07-09 16:06:19,779][redisCmd.py:Methond:del_to_redis(37)][INFO]:  从redis中删除键值redisKey:MES_GATEWAY_SMS_SEND_TIMES_15261471747_user_regist
+[2019-07-09 16:06:19,869][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:19,887][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 
+[2019-07-09 16:06:19,887][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 ]语句
+[2019-07-09 16:06:19,900][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:0
+[2019-07-09 16:06:19,957][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:19,957][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:19,957][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "15261471747"}
+[2019-07-09 16:06:19,957][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:19,958][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:19,958][redisCmd.py:Methond:__connect_to_redis(11)][INFO]:  创建redis连接
+[2019-07-09 16:06:19,979][redisCmd.py:Methond:get_to_redis(22)][INFO]:  从redis中获取redisKey:MES_GATEWAY_SMS_15261471747_user_regist   redisValue:"123456"
+[2019-07-09 16:06:19,997][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:19,997][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/mobile.json
+[2019-07-09 16:06:19,997][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"agreement": true, "loginPhone": "15261471747", "moblileVerifCode": "123456"}}
+[2019-07-09 16:06:19,998][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:19,998][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":"MES_SIGN_VERFY_TOKEN_15261471747"}
+[2019-07-09 16:06:20,026][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:20,026][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/improveInfo.json
+[2019-07-09 16:06:20,026][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"email": "qiuhua.yang@ipaylinks.com", "loginPhone": "15261471747", "payPwd": "12345678Z", "payPwdRepeat": "12345678Z", "pwd": "12345678A", "pwdRepeat": "12345678A", "recommendCode": "", "signType": 1, "verfyToken": "MES_SIGN_VERFY_TOKEN_15261471747"}}
+[2019-07-09 16:06:20,026][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:20,026][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:20,051][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:20,051][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/security/login.json
+[2019-07-09 16:06:20,051][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"loginName": "qiuhua.yang@ipaylinks.com", "password": "12345678A"}}
+[2019-07-09 16:06:20,051][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:20,052][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":{"token":"MES_TOKEN_df8cf6cf-bd7b-4451-a498-49c1117fbdfb"}}
+[2019-07-09 16:06:20,148][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:20,166][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 
+[2019-07-09 16:06:20,166][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 ]语句
+[2019-07-09 16:06:20,183][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:1
+[2019-07-09 16:06:22,240][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:22,240][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/email.json
+[2019-07-09 16:06:22,240][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"agreement": true, "email": "qiuhua.yang@ipaylinks.com", "recommendCode": ""}}
+[2019-07-09 16:06:22,240][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:22,240][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:22,240][redisCmd.py:Methond:__connect_to_redis(11)][INFO]:  创建redis连接
+[2019-07-09 16:06:22,263][redisCmd.py:Methond:get_to_redis(22)][INFO]:  从redis中获取redisKey:MES_REDIS_EMAIL_qiuhua.yang@ipaylinks.com   redisValue:"79e5b247-505c-42b1-98bb-346bea443b28"
+[2019-07-09 16:06:22,276][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:22,276][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/activeEmail.json
+[2019-07-09 16:06:22,276][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"agreement": true, "email": "qiuhua.yang@ipaylinks.com", "token": "\"79e5b247-505c-42b1-98bb-346bea443b28\""}}
+[2019-07-09 16:06:22,276][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:22,276][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":{"clientCode":"mes-gateway","traceId":"E7E5955139D8434CAFC1964089CA34AF","res":true,"verfyToken":"MES_SIGN_VERFY_TOKEN_qiuhua.yang@ipaylinks.com"}}
+[2019-07-09 16:06:22,320][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:22,320][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:22,320][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "15261471747"}
+[2019-07-09 16:06:22,320][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:22,320][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:22,320][redisCmd.py:Methond:__connect_to_redis(11)][INFO]:  创建redis连接
+[2019-07-09 16:06:22,347][redisCmd.py:Methond:get_to_redis(22)][INFO]:  从redis中获取redisKey:MES_GATEWAY_SMS_15261471747_user_regist   redisValue:"123456"
+[2019-07-09 16:06:22,347][redisCmd.py:Methond:__connect_to_redis(11)][INFO]:  创建redis连接
+[2019-07-09 16:06:22,368][redisCmd.py:Methond:del_to_redis(37)][INFO]:  从redis中删除键值redisKey:MES_GATEWAY_SMS_SEND_TIMES_15261471747_user_regist
+[2019-07-09 16:06:22,399][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:22,399][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/improveInfo.json
+[2019-07-09 16:06:22,399][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"email": "qiuhua.yang@ipaylinks.com", "loginPhone": "15261471747", "payPwd": "12345678Z", "payPwdRepeat": "12345678Z", "pwd": "12345678A", "pwdRepeat": "12345678A", "recommendCode": "", "signType": 2, "verfyToken": "MES_SIGN_VERFY_TOKEN_qiuhua.yang@ipaylinks.com", "moblileVerifCode": "123456"}}
+[2019-07-09 16:06:22,399][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:22,399][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:22,435][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:22,435][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/security/login.json
+[2019-07-09 16:06:22,435][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"loginName": "qiuhua.yang@ipaylinks.com", "password": "12345678A"}}
+[2019-07-09 16:06:22,435][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:22,435][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":{"token":"MES_TOKEN_13862924-3cae-4976-8ee3-d6cf2f6dd37a"}}
+[2019-07-09 16:06:22,542][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:22,567][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 
+[2019-07-09 16:06:22,567][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 ]语句
+[2019-07-09 16:06:22,584][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:1
+[2019-07-09 16:06:22,584][redisCmd.py:Methond:__connect_to_redis(11)][INFO]:  创建redis连接
+[2019-07-09 16:06:22,610][redisCmd.py:Methond:del_to_redis(37)][INFO]:  从redis中删除键值redisKey:MES_GATEWAY_SMS_SEND_TIMES_15261471747_user_regist
+[2019-07-09 16:06:22,824][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:22,846][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 
+[2019-07-09 16:06:22,846][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_name='qiuhua.yang@ipaylinks.com' and  1=1 ]语句
+[2019-07-09 16:06:22,861][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:0
+[2019-07-09 16:06:22,907][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:22,907][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:22,908][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "15261471747"}
+[2019-07-09 16:06:22,908][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:22,908][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:22,908][redisCmd.py:Methond:__connect_to_redis(11)][INFO]:  创建redis连接
+[2019-07-09 16:06:22,935][redisCmd.py:Methond:get_to_redis(22)][INFO]:  从redis中获取redisKey:MES_GATEWAY_SMS_15261471747_user_regist   redisValue:"123456"
+[2019-07-09 16:06:22,956][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:22,956][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/mobile.json
+[2019-07-09 16:06:22,956][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"agreement": true, "loginPhone": "15261471747", "moblileVerifCode": "123456"}}
+[2019-07-09 16:06:22,957][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:22,957][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":"MES_SIGN_VERFY_TOKEN_15261471747"}
+[2019-07-09 16:06:22,981][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:22,981][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/improveInfo.json
+[2019-07-09 16:06:22,981][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"email": "qiuhua.yang@ipaylinks.com", "loginPhone": "15261471747", "payPwd": "12345678Z", "payPwdRepeat": "12345678Z", "pwd": "12345678A", "pwdRepeat": "12345678A", "recommendCode": "", "signType": 1, "verfyToken": "MES_SIGN_VERFY_TOKEN_15261471747"}}
+[2019-07-09 16:06:22,981][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:22,981][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:23,005][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:23,005][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/security/login.json
+[2019-07-09 16:06:23,005][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": {"loginName": "qiuhua.yang@ipaylinks.com", "password": "12345678A"}}
+[2019-07-09 16:06:23,005][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:23,005][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":{"token":"MES_TOKEN_144b456a-de83-4efa-97b8-2a029076d993"}}
+[2019-07-09 16:06:23,106][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:23,128][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_phone='18900000001' and  1=1 
+[2019-07-09 16:06:23,128][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_phone='18900000001' and  1=1 ]语句
+[2019-07-09 16:06:23,147][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:1
+[2019-07-09 16:06:23,147][oracleCmd.py:Methond:executeSql(76)][INFO]:  开始执行:[select FE.SEQ_MEMBER_MEMBER_CODE.nextval from dual]语句
+[2019-07-09 16:06:23,174][oracleCmd.py:Methond:executeSql(80)][INFO]:  执行完成，结果为:(10000008459,)
+[2019-07-09 16:06:23,174][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[INSERT INTO FE.T_MEMBER (MEMBER_CODE, TYPE, SERVICE_LEVEL_CODE, GREETING, STATUS, SECURITY_QUESTION, SECURITY_ANSWER, SSO_USER_ID, LOGIN_TYPE, LOGIN_NAME, LOGIN_PWD, CREATE_DATE, UPDATE_DATE, WITHDRAW_CYCLE, IS_GAME, ACTIVE_TIME, LOCK_STATUS, BUSINESS_TYPE, LOGIN_PHONE, NATION_REGION, AUDI_STATUS, APPLICANT_TYPE, RESIDENT_REGION, NICKNAME, AUDI_REMARK, ACCT_STATUS, MEMBER_LEVEL, TRACE_STATUS, CUST_MANAGER_EMAIL, CUST_MANAGER_NAME, IP, RECOMMEND_CODE, REGISTER_SOURCE, SHOP_AUTH, PRODUCT_LIST, LIGHTNING_RECEIPT_ACTIVE, USER_ID, SUPPLY_USER_ID, SUPPLY_NAME, AUDITOR, REFUSE_REASON, ENTERPRISE_UPGRADE_STATUS, PAY_PWD, RISK_LEVEL) VALUES ( 10000008459,0, null, null, 1, null, null, null, null, '60000000qq.com', '09a7132957b49afda6e7e2bf4dedd3b950bca173', TO_DATE('2019-06-27 20:49:43', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2019-06-27 20:49:43', 'YYYY-MM-DD HH24:MI:SS'), 0, null, null, null, 1, '18900000001', null, 0, null, null, '18900000001', null, 1, 'V', 0, null, null, '116.247.106.162', null, null, 1, null, null, null, null, null, null, null, 0, 'ef08563d0a4d8c5855e6071dc8bef3a30b5ed4a3', null)]语句
+[2019-07-09 16:06:23,196][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:1
+[2019-07-09 16:06:23,196][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_phone='15456112345' and  1=1 
+[2019-07-09 16:06:23,197][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_phone='15456112345' and  1=1 ]语句
+[2019-07-09 16:06:23,212][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:0
+[2019-07-09 16:06:23,320][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:23,321][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:23,321][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "18900000001"}
+[2019-07-09 16:06:23,321][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:23,321][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:23,343][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:23,343][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:23,343][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "15100210121111"}
+[2019-07-09 16:06:23,343][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:23,343][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"20101003","responseMsg":"手机号无效","responseStatus":"0","responseObj":null}
+[2019-07-09 16:06:23,361][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:23,361][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:23,362][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "151451214ac"}
+[2019-07-09 16:06:23,362][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:23,362][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"20101003","responseMsg":"手机号无效","responseStatus":"0","responseObj":null}
+[2019-07-09 16:06:23,382][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:23,382][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:23,382][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": ""}
+[2019-07-09 16:06:23,383][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:23,383][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"20100001","responseMsg":"请求参数错误","responseStatus":"0","responseObj":null}
+[2019-07-09 16:06:23,420][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:23,420][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:23,420][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "15456112345"}
+[2019-07-09 16:06:23,420][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:23,420][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:23,446][oracleCmd.py:Methond:orcle_close(63)][INFO]:   关闭当前数据库连接
+[2019-07-09 16:06:23,542][oracleCmd.py:Methond:__getConnect(46)][INFO]:   数据库连接建立成功
+[2019-07-09 16:06:23,542][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_phone='18900000001' and  1=1 
+[2019-07-09 16:06:23,542][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_phone='18900000001' and  1=1 ]语句
+[2019-07-09 16:06:23,620][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:1
+[2019-07-09 16:06:23,620][oracleCmd.py:Methond:executeSql(76)][INFO]:  开始执行:[select FE.SEQ_MEMBER_MEMBER_CODE.nextval from dual]语句
+[2019-07-09 16:06:23,636][oracleCmd.py:Methond:executeSql(80)][INFO]:  执行完成，结果为:(10000008460,)
+[2019-07-09 16:06:23,636][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[INSERT INTO FE.T_MEMBER (MEMBER_CODE, TYPE, SERVICE_LEVEL_CODE, GREETING, STATUS, SECURITY_QUESTION, SECURITY_ANSWER, SSO_USER_ID, LOGIN_TYPE, LOGIN_NAME, LOGIN_PWD, CREATE_DATE, UPDATE_DATE, WITHDRAW_CYCLE, IS_GAME, ACTIVE_TIME, LOCK_STATUS, BUSINESS_TYPE, LOGIN_PHONE, NATION_REGION, AUDI_STATUS, APPLICANT_TYPE, RESIDENT_REGION, NICKNAME, AUDI_REMARK, ACCT_STATUS, MEMBER_LEVEL, TRACE_STATUS, CUST_MANAGER_EMAIL, CUST_MANAGER_NAME, IP, RECOMMEND_CODE, REGISTER_SOURCE, SHOP_AUTH, PRODUCT_LIST, LIGHTNING_RECEIPT_ACTIVE, USER_ID, SUPPLY_USER_ID, SUPPLY_NAME, AUDITOR, REFUSE_REASON, ENTERPRISE_UPGRADE_STATUS, PAY_PWD, RISK_LEVEL) VALUES ( 10000008460,0, null, null, 1, null, null, null, null, '60000000qq.com', '09a7132957b49afda6e7e2bf4dedd3b950bca173', TO_DATE('2019-06-27 20:49:43', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2019-06-27 20:49:43', 'YYYY-MM-DD HH24:MI:SS'), 0, null, null, null, 1, '18900000001', null, 0, null, null, '18900000001', null, 1, 'V', 0, null, null, '116.247.106.162', null, null, 1, null, null, null, null, null, null, null, 0, 'ef08563d0a4d8c5855e6071dc8bef3a30b5ed4a3', null)]语句
+[2019-07-09 16:06:23,658][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:1
+[2019-07-09 16:06:23,658][oracleCmd.py:Methond:delete(222)][INFO]:  delete: DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_phone='15456112345' and  1=1 
+[2019-07-09 16:06:23,659][oracleCmd.py:Methond:executeCommit(95)][INFO]:  开始执行:[DELETE FROM FE.T_MEMBER where FE.T_MEMBER.login_phone='15456112345' and  1=1 ]语句
+[2019-07-09 16:06:23,677][oracleCmd.py:Methond:executeCommit(98)][INFO]:  执行完成，影响行数结果结果为:0
+[2019-07-09 16:06:23,716][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:23,716][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:23,716][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "18900000001"}
+[2019-07-09 16:06:23,716][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:23,716][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:23,736][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:23,736][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:23,737][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "15100210121111"}
+[2019-07-09 16:06:23,737][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:23,737][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"20101003","responseMsg":"手机号无效","responseStatus":"0","responseObj":null}
+[2019-07-09 16:06:23,756][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:23,756][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:23,756][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "151451214ac"}
+[2019-07-09 16:06:23,757][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:23,757][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"20101003","responseMsg":"手机号无效","responseStatus":"0","responseObj":null}
+[2019-07-09 16:06:23,777][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:23,777][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:23,777][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": ""}
+[2019-07-09 16:06:23,777][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:23,777][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"20100001","responseMsg":"请求参数错误","responseStatus":"0","responseObj":null}
+[2019-07-09 16:06:23,822][requestCmd.py:Methond:send(90)][INFO]:  请求方法:POST
+[2019-07-09 16:06:23,822][requestCmd.py:Methond:send(91)][INFO]:  请求接口:http://139.196.75.96:8054/mes-gateway/api/sign/signup/sendSmsCode.json
+[2019-07-09 16:06:23,822][requestCmd.py:Methond:send(92)][INFO]:  请求参数类型:Json     参数值:{"requestObj": "15456112345"}
+[2019-07-09 16:06:23,822][requestCmd.py:Methond:send(93)][INFO]:  请求头部:{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8'}
+[2019-07-09 16:06:23,823][requestCmd.py:Methond:send(97)][INFO]:  请求成功:<Response [200]> 请求返回数据(字符串）:{"responseCode":"00000000","responseMsg":"成功响应","responseStatus":"1","responseObj":true}
+[2019-07-09 16:06:23,846][oracleCmd.py:Methond:orcle_close(63)][INFO]:   关闭当前数据库连接
+[2019-07-09 16:06:23,927][run_all_case.py:Methond:run(36)][INFO]:  测试报告生成成功在：D:\Data\py_space\auto_cfp\report\接口自动化测试报告.html
+[2019-07-09 16:06:23,927][emailCmd.py:Methond:__init__(32)][DEBUG]:  _/_/_/_/_/_/   初始化邮箱参数
+[2019-07-09 16:06:27,869][emailCmd.py:Methond:sendEmail(41)][INFO]:  发送测试结果邮件到['1251523660@qq.com', '1311766437@qq.com']成功！

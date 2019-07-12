@@ -1,0 +1,3 @@
+生成p12 和 cer 文件
+keytool -genkey -alias privateKey -keyalg RSA -storetype PKCS12 -keystore privateKey.p12
+keytool -export -alias privateKey -keystore privateKey.p12 -storetype PKCS12 -storepass password -rfc -file publicKey.cer

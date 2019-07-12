@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0.20190611">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="注册中心地址" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="registry.address" elementType="Argument">
+            <stringProp name="Argument.name">registry.address</stringProp>
+            <stringProp name="Argument.value">101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="入账" enabled="true"/>
+        <hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="生成 bzOrderNo" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">String bzOrderNo = &quot;${__time(yyyyMMddHHmmssSSS,)}${__RandomString(4,0123456789,)}&quot;;
+vars.put(&quot;bzOrderNo&quot;, bzOrderNo);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="幂等测试" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">2</stringProp>
+          </LoopController>
+          <hashTree>
+            <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="TransactionCoreFacade.paymentIn 店铺入账" enabled="true">
+              <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="url" elementType="Argument">
+                    <stringProp name="Argument.name">url</stringProp>
+                    <stringProp name="Argument.value">${url}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="registryConfigs" elementType="Argument">
+                    <stringProp name="Argument.name">registryConfigs</stringProp>
+                    <stringProp name="Argument.value">${registryConfigs}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="monitorConfig" elementType="Argument">
+                    <stringProp name="Argument.name">monitorConfig</stringProp>
+                    <stringProp name="Argument.value">${monitorConfig}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="interfaceName" elementType="Argument">
+                    <stringProp name="Argument.name">interfaceName</stringProp>
+                    <stringProp name="Argument.value">${interfaceName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="version" elementType="Argument">
+                    <stringProp name="Argument.name">version</stringProp>
+                    <stringProp name="Argument.value">${version}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodConfigs" elementType="Argument">
+                    <stringProp name="Argument.name">methodConfigs</stringProp>
+                    <stringProp name="Argument.value">${methodConfigs}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodName" elementType="Argument">
+                    <stringProp name="Argument.name">methodName</stringProp>
+                    <stringProp name="Argument.value">${methodName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodParameters" elementType="Argument">
+                    <stringProp name="Argument.name">methodParameters</stringProp>
+                    <stringProp name="Argument.value">${methodParameters}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="classname">org.apache.jmeter.protocol.java.test.DubboTest</stringProp>
+            </JavaSampler>
+            <hashTree>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="interfaceName version methodName" enabled="true">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="515839844">interfaceName</stringProp>
+                  <stringProp name="351608024">version</stringProp>
+                  <stringProp name="-723163380">methodName</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="1398308298">
+                    <stringProp name="661971605">com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade</stringProp>
+                    <stringProp name="48563">1.0</stringProp>
+                    <stringProp name="-86519349">paymentIn</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="url 点对点直连" enabled="false">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="116079">url</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="-825906266">
+                    <stringProp name="-1887115082">dubbo://127.0.0.1:20000/</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="registryConfigs 注册中心" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.RegistryConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	RegistryConfig registryConfig = new RegistryConfig();
+	registryConfig.setProtocol(&quot;zookeeper&quot;);
+	registryConfig.setAddress(&quot;${registry.address}&quot;);
+//	registryConfig.setAddress(&quot;47.100.10.132:2181,47.100.10.132:2182,47.100.10.132:2183&quot;);
+
+	JSONArray registryConfigs = new JSONArray();
+	registryConfigs.add(registryConfig);
+	vars.put(&quot;registryConfigs&quot;,registryConfigs.toJSONString());
+	vars.put(&quot;url&quot;,&quot;&quot;);
+//	vars.put(&quot;registryConfigs&quot;,&quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="monitorConfig 监控中心" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.MonitorConfig;
+import com.alibaba.fastjson.JSON;
+
+	MonitorConfig monitorConfig = new MonitorConfig();
+	//protocol为registry时，表示从注册中心发现监控中心地址，否则为直连监控中心
+	monitorConfig.setProtocol(&quot;registry&quot;);
+	//直连监控中心服务器地址
+//	monitorConfig.setAddress(&quot;127.0.0.1:7070&quot;);
+
+	vars.put(&quot;monitorConfig&quot;, JSON.toJSONString(monitorConfig));
+	vars.put(&quot;monitorConfig&quot;, &quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="methodConfigs 方法级别配置" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.MethodConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	String methodName = vars.get(&quot;methodName&quot;);
+
+	MethodConfig methodConfig = new MethodConfig();
+	methodConfig.setName(methodName);
+	methodConfig.setTimeout(120000);
+	methodConfig.setRetries(0);
+
+	JSONArray methodConfigs = new JSONArray();
+	methodConfigs.add(methodConfig);
+	vars.put(&quot;methodConfigs&quot;, methodConfigs.toJSONString());
+
+	vars.put(&quot;methodConfigs&quot;, &quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="methodParameters groovy泛型参数对象" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">import java.math.BigDecimal;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+import com.ipaylinks.cfp.transaction.facade.request.TransactionCoreRequest;
+import com.ipaylinks.cfp.transaction.facade.enums.BusinessTypeEnum;
+import com.ipaylinks.cfp.transaction.facade.dto.AccountInfoDTO;
+	
+	TransactionCoreRequest req = new TransactionCoreRequest();
+	req.setBzOrderNo(&quot;${bzOrderNo}&quot;);
+	req.setBzType(BusinessTypeEnum.CHANNEL_IN_ACCT.getCode());
+	req.setMemberCode(&quot;20000001520&quot;);
+	req.setTxCurrencyCode(&quot;USD&quot;);
+	req.setTxAmount(new BigDecimal(&quot;1000.00&quot;));
+
+	AccountInfoDTO tarAccountInfoDTO = new AccountInfoDTO();
+	tarAccountInfoDTO.setAccountNo(&quot;320299120000001520840000000002644&quot;);
+	tarAccountInfoDTO.setAccountName(&quot;amazon-us-001&quot;);
+	tarAccountInfoDTO.setCurrencyCode(&quot;USD&quot;);
+	tarAccountInfoDTO.setAmount(new BigDecimal(&quot;1000.00&quot;));
+	req.setTarAccountInfo(tarAccountInfoDTO);
+	 
+	JSONArray methodParameters = new JSONArray();
+	methodParameters.add(JSON.toJSONString(req));
+	vars.put(&quot;methodParameters&quot;,methodParameters.toJSONString());</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="生成 bzOrderNo" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">String bzOrderNo = &quot;${__time(yyyyMMddHHmmssSSS,)}${__RandomString(4,0123456789,)}&quot;;
+vars.put(&quot;bzOrderNo&quot;, bzOrderNo);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="幂等测试" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">2</stringProp>
+          </LoopController>
+          <hashTree>
+            <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="TransactionCoreFacade.paymentIn 店铺入账" enabled="true">
+              <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="url" elementType="Argument">
+                    <stringProp name="Argument.name">url</stringProp>
+                    <stringProp name="Argument.value">${url}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="registryConfigs" elementType="Argument">
+                    <stringProp name="Argument.name">registryConfigs</stringProp>
+                    <stringProp name="Argument.value">${registryConfigs}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="monitorConfig" elementType="Argument">
+                    <stringProp name="Argument.name">monitorConfig</stringProp>
+                    <stringProp name="Argument.value">${monitorConfig}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="interfaceName" elementType="Argument">
+                    <stringProp name="Argument.name">interfaceName</stringProp>
+                    <stringProp name="Argument.value">${interfaceName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="version" elementType="Argument">
+                    <stringProp name="Argument.name">version</stringProp>
+                    <stringProp name="Argument.value">${version}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodConfigs" elementType="Argument">
+                    <stringProp name="Argument.name">methodConfigs</stringProp>
+                    <stringProp name="Argument.value">${methodConfigs}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodName" elementType="Argument">
+                    <stringProp name="Argument.name">methodName</stringProp>
+                    <stringProp name="Argument.value">${methodName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodParameters" elementType="Argument">
+                    <stringProp name="Argument.name">methodParameters</stringProp>
+                    <stringProp name="Argument.value">${methodParameters}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="classname">org.apache.jmeter.protocol.java.test.DubboTest</stringProp>
+            </JavaSampler>
+            <hashTree>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="interfaceName version methodName" enabled="true">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="515839844">interfaceName</stringProp>
+                  <stringProp name="351608024">version</stringProp>
+                  <stringProp name="-723163380">methodName</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="1398308298">
+                    <stringProp name="661971605">com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade</stringProp>
+                    <stringProp name="48563">1.0</stringProp>
+                    <stringProp name="-86519349">paymentIn</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="url 点对点直连" enabled="false">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="116079">url</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="-825906266">
+                    <stringProp name="-1887115082">dubbo://127.0.0.1:20000/</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="registryConfigs 注册中心" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.RegistryConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	RegistryConfig registryConfig = new RegistryConfig();
+	registryConfig.setProtocol(&quot;zookeeper&quot;);
+	registryConfig.setAddress(&quot;${registry.address}&quot;);
+//	registryConfig.setAddress(&quot;47.100.10.132:2181,47.100.10.132:2182,47.100.10.132:2183&quot;);
+
+	JSONArray registryConfigs = new JSONArray();
+	registryConfigs.add(registryConfig);
+	vars.put(&quot;registryConfigs&quot;,registryConfigs.toJSONString());
+	vars.put(&quot;url&quot;,&quot;&quot;);
+//	vars.put(&quot;registryConfigs&quot;,&quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="monitorConfig 监控中心" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.MonitorConfig;
+import com.alibaba.fastjson.JSON;
+
+	MonitorConfig monitorConfig = new MonitorConfig();
+	//protocol为registry时，表示从注册中心发现监控中心地址，否则为直连监控中心
+	monitorConfig.setProtocol(&quot;registry&quot;);
+	//直连监控中心服务器地址
+//	monitorConfig.setAddress(&quot;127.0.0.1:7070&quot;);
+
+	vars.put(&quot;monitorConfig&quot;, JSON.toJSONString(monitorConfig));
+	vars.put(&quot;monitorConfig&quot;, &quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="methodConfigs 方法级别配置" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.MethodConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	String methodName = vars.get(&quot;methodName&quot;);
+
+	MethodConfig methodConfig = new MethodConfig();
+	methodConfig.setName(methodName);
+	methodConfig.setTimeout(120000);
+	methodConfig.setRetries(0);
+
+	JSONArray methodConfigs = new JSONArray();
+	methodConfigs.add(methodConfig);
+	vars.put(&quot;methodConfigs&quot;, methodConfigs.toJSONString());
+
+	vars.put(&quot;methodConfigs&quot;, &quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="methodParameters groovy泛型参数对象" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">import java.math.BigDecimal;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+import com.ipaylinks.cfp.transaction.facade.request.TransactionCoreRequest;
+import com.ipaylinks.cfp.transaction.facade.enums.BusinessTypeEnum;
+import com.ipaylinks.cfp.transaction.facade.dto.AccountInfoDTO;
+	
+	TransactionCoreRequest req = new TransactionCoreRequest();
+	req.setBzOrderNo(&quot;${bzOrderNo}&quot;);
+	req.setBzType(BusinessTypeEnum.CHANNEL_IN_ACCT.getCode());
+	req.setMemberCode(&quot;20000001520&quot;);
+	req.setTxCurrencyCode(&quot;USD&quot;);
+	req.setTxAmount(new BigDecimal(&quot;2000.00&quot;));
+
+	AccountInfoDTO tarAccountInfoDTO = new AccountInfoDTO();
+	tarAccountInfoDTO.setAccountNo(&quot;320299120000001520840000000002645&quot;);
+	tarAccountInfoDTO.setAccountName(&quot;amazon-us-002&quot;);
+	tarAccountInfoDTO.setCurrencyCode(&quot;USD&quot;);
+	tarAccountInfoDTO.setAmount(new BigDecimal(&quot;2000.00&quot;));
+	req.setTarAccountInfo(tarAccountInfoDTO);
+	 
+	JSONArray methodParameters = new JSONArray();
+	methodParameters.add(JSON.toJSONString(req));
+	vars.put(&quot;methodParameters&quot;,methodParameters.toJSONString());</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="内部转账" enabled="true"/>
+        <hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="生成 bzOrderNo" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">String bzOrderNo = &quot;${__time(yyyyMMddHHmmssSSS,)}${__RandomString(4,0123456789,)}&quot;;
+vars.put(&quot;bzOrderNo&quot;, bzOrderNo);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="幂等测试" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">2</stringProp>
+          </LoopController>
+          <hashTree>
+            <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="TransactionCoreFacade.transfer 店铺转钱包" enabled="true">
+              <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="url" elementType="Argument">
+                    <stringProp name="Argument.name">url</stringProp>
+                    <stringProp name="Argument.value">${url}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="registryConfigs" elementType="Argument">
+                    <stringProp name="Argument.name">registryConfigs</stringProp>
+                    <stringProp name="Argument.value">${registryConfigs}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="monitorConfig" elementType="Argument">
+                    <stringProp name="Argument.name">monitorConfig</stringProp>
+                    <stringProp name="Argument.value">${monitorConfig}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="interfaceName" elementType="Argument">
+                    <stringProp name="Argument.name">interfaceName</stringProp>
+                    <stringProp name="Argument.value">${interfaceName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="version" elementType="Argument">
+                    <stringProp name="Argument.name">version</stringProp>
+                    <stringProp name="Argument.value">${version}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodConfigs" elementType="Argument">
+                    <stringProp name="Argument.name">methodConfigs</stringProp>
+                    <stringProp name="Argument.value">${methodConfigs}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodName" elementType="Argument">
+                    <stringProp name="Argument.name">methodName</stringProp>
+                    <stringProp name="Argument.value">${methodName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodParameters" elementType="Argument">
+                    <stringProp name="Argument.name">methodParameters</stringProp>
+                    <stringProp name="Argument.value">${methodParameters}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="classname">org.apache.jmeter.protocol.java.test.DubboTest</stringProp>
+            </JavaSampler>
+            <hashTree>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="interfaceName version methodName" enabled="true">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="515839844">interfaceName</stringProp>
+                  <stringProp name="351608024">version</stringProp>
+                  <stringProp name="-723163380">methodName</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="-1040450686">
+                    <stringProp name="661971605">com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade</stringProp>
+                    <stringProp name="48563">1.0</stringProp>
+                    <stringProp name="1280882667">transfer</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="url 点对点直连" enabled="false">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="116079">url</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="-825906266">
+                    <stringProp name="-1887115082">dubbo://127.0.0.1:20000/</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="registryConfigs 注册中心" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.RegistryConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	RegistryConfig registryConfig = new RegistryConfig();
+	registryConfig.setProtocol(&quot;zookeeper&quot;);
+	registryConfig.setAddress(&quot;${registry.address}&quot;);
+//	registryConfig.setAddress(&quot;47.100.10.132:2181,47.100.10.132:2182,47.100.10.132:2183&quot;);
+
+	JSONArray registryConfigs = new JSONArray();
+	registryConfigs.add(registryConfig);
+	vars.put(&quot;registryConfigs&quot;,registryConfigs.toJSONString());
+	vars.put(&quot;url&quot;,&quot;&quot;);
+//	vars.put(&quot;registryConfigs&quot;,&quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="monitorConfig 监控中心" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.MonitorConfig;
+import com.alibaba.fastjson.JSON;
+
+	MonitorConfig monitorConfig = new MonitorConfig();
+	//protocol为registry时，表示从注册中心发现监控中心地址，否则为直连监控中心
+	monitorConfig.setProtocol(&quot;registry&quot;);
+	//直连监控中心服务器地址
+//	monitorConfig.setAddress(&quot;127.0.0.1:7070&quot;);
+
+	vars.put(&quot;monitorConfig&quot;, JSON.toJSONString(monitorConfig));
+	vars.put(&quot;monitorConfig&quot;, &quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="methodConfigs 方法级别配置" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.MethodConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	String methodName = vars.get(&quot;methodName&quot;);
+
+	MethodConfig methodConfig = new MethodConfig();
+	methodConfig.setName(methodName);
+	methodConfig.setTimeout(120000);
+	methodConfig.setRetries(0);
+
+	JSONArray methodConfigs = new JSONArray();
+	methodConfigs.add(methodConfig);
+	vars.put(&quot;methodConfigs&quot;, methodConfigs.toJSONString());
+
+	vars.put(&quot;methodConfigs&quot;, &quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="methodParameters groovy泛型参数对象" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">import java.math.BigDecimal;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+import com.ipaylinks.cfp.transaction.facade.request.TransactionCoreRequest;
+import com.ipaylinks.cfp.transaction.facade.enums.BusinessTypeEnum;
+import com.ipaylinks.cfp.transaction.facade.dto.AccountInfoDTO;
+	
+	TransactionCoreRequest req = new TransactionCoreRequest();
+	req.setBzOrderNo(&quot;${bzOrderNo}&quot;);
+	req.setBzType(BusinessTypeEnum.SHOP_TRANSFER_WALLET.getCode());
+	req.setMemberCode(&quot;20000001520&quot;);
+	req.setTxCurrencyCode(&quot;USD&quot;);
+	req.setTxAmount(new BigDecimal(&quot;2997.00&quot;));
+	req.setFeeCurrencyCode(&quot;USD&quot;);
+     req.setFeeAmount(new BigDecimal(&quot;3&quot;));
+
+	AccountInfoDTO srcAccount1 = new AccountInfoDTO();
+	srcAccount1.setAccountNo(&quot;320299120000001520840000000002644&quot;);
+	srcAccount1.setAccountName(&quot;amazon-us-001&quot;);
+	srcAccount1.setCurrencyCode(&quot;USD&quot;);
+	srcAccount1.setAmount(new BigDecimal(&quot;999.00&quot;));
+	srcAccount1.setFeeCurrencyCode(&quot;USD&quot;);
+	srcAccount1.setFeeAmount(new BigDecimal(&quot;1&quot;));
+	
+	AccountInfoDTO srcAccount2 = new AccountInfoDTO();
+	srcAccount2.setAccountNo(&quot;320299120000001520840000000002645&quot;);
+	srcAccount2.setAccountName(&quot;amazon-us-002&quot;);
+	srcAccount2.setCurrencyCode(&quot;USD&quot;);
+	srcAccount2.setAmount(new BigDecimal(&quot;1998.00&quot;));
+	srcAccount2.setFeeCurrencyCode(&quot;USD&quot;);
+	srcAccount2.setFeeAmount(new BigDecimal(&quot;2&quot;));
+
+	List&lt;AccountInfoDTO&gt; srcAccountList = new ArrayList&lt;&gt;();
+	srcAccountList.add(srcAccount1);
+	srcAccountList.add(srcAccount2);
+	req.setSrcAccountList(srcAccountList);
+
+	AccountInfoDTO tarAccountInfoDTO = new AccountInfoDTO();
+	tarAccountInfoDTO.setAccountNo(&quot;220281120000001520840000000000000&quot;);
+	tarAccountInfoDTO.setAccountName(&quot;钱包美元账户&quot;);
+	tarAccountInfoDTO.setCurrencyCode(&quot;USD&quot;);
+	tarAccountInfoDTO.setAmount(new BigDecimal(&quot;2997.00&quot;));
+	tarAccountInfoDTO.setFeeCurrencyCode(&quot;USD&quot;);
+	tarAccountInfoDTO.setFeeAmount(new BigDecimal(&quot;0&quot;));
+	req.setTarAccountInfo(tarAccountInfoDTO);
+	 
+	JSONArray methodParameters = new JSONArray();
+	methodParameters.add(JSON.toJSONString(req));
+	vars.put(&quot;methodParameters&quot;,methodParameters.toJSONString());</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="出账" enabled="true"/>
+        <hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="入账" enabled="true"/>
+          <hashTree>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="生成 bzOrderNo" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script">String bzOrderNo = &quot;${__time(yyyyMMddHHmmssSSS,)}${__RandomString(4,0123456789,)}&quot;;
+vars.put(&quot;bzOrderNo&quot;, bzOrderNo);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+            </hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="幂等测试" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">2</stringProp>
+            </LoopController>
+            <hashTree>
+              <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="TransactionCoreFacade.paymentIn 店铺入账" enabled="true">
+                <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="url" elementType="Argument">
+                      <stringProp name="Argument.name">url</stringProp>
+                      <stringProp name="Argument.value">${url}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="registryConfigs" elementType="Argument">
+                      <stringProp name="Argument.name">registryConfigs</stringProp>
+                      <stringProp name="Argument.value">${registryConfigs}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="monitorConfig" elementType="Argument">
+                      <stringProp name="Argument.name">monitorConfig</stringProp>
+                      <stringProp name="Argument.value">${monitorConfig}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="interfaceName" elementType="Argument">
+                      <stringProp name="Argument.name">interfaceName</stringProp>
+                      <stringProp name="Argument.value">${interfaceName}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="version" elementType="Argument">
+                      <stringProp name="Argument.name">version</stringProp>
+                      <stringProp name="Argument.value">${version}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="methodConfigs" elementType="Argument">
+                      <stringProp name="Argument.name">methodConfigs</stringProp>
+                      <stringProp name="Argument.value">${methodConfigs}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="methodName" elementType="Argument">
+                      <stringProp name="Argument.name">methodName</stringProp>
+                      <stringProp name="Argument.value">${methodName}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="methodParameters" elementType="Argument">
+                      <stringProp name="Argument.name">methodParameters</stringProp>
+                      <stringProp name="Argument.value">${methodParameters}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="classname">org.apache.jmeter.protocol.java.test.DubboTest</stringProp>
+              </JavaSampler>
+              <hashTree>
+                <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="interfaceName version methodName" enabled="true">
+                  <collectionProp name="UserParameters.names">
+                    <stringProp name="515839844">interfaceName</stringProp>
+                    <stringProp name="351608024">version</stringProp>
+                    <stringProp name="-723163380">methodName</stringProp>
+                  </collectionProp>
+                  <collectionProp name="UserParameters.thread_values">
+                    <collectionProp name="1398308298">
+                      <stringProp name="661971605">com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade</stringProp>
+                      <stringProp name="48563">1.0</stringProp>
+                      <stringProp name="-86519349">paymentIn</stringProp>
+                    </collectionProp>
+                  </collectionProp>
+                  <boolProp name="UserParameters.per_iteration">false</boolProp>
+                </UserParameters>
+                <hashTree/>
+                <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="url 点对点直连" enabled="false">
+                  <collectionProp name="UserParameters.names">
+                    <stringProp name="116079">url</stringProp>
+                  </collectionProp>
+                  <collectionProp name="UserParameters.thread_values">
+                    <collectionProp name="-825906266">
+                      <stringProp name="-1887115082">dubbo://127.0.0.1:20000/</stringProp>
+                    </collectionProp>
+                  </collectionProp>
+                  <boolProp name="UserParameters.per_iteration">false</boolProp>
+                </UserParameters>
+                <hashTree/>
+                <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="registryConfigs 注册中心" enabled="true">
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <boolProp name="resetInterpreter">false</boolProp>
+                  <stringProp name="script">import com.alibaba.dubbo.config.RegistryConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	RegistryConfig registryConfig = new RegistryConfig();
+	registryConfig.setProtocol(&quot;zookeeper&quot;);
+	registryConfig.setAddress(&quot;${registry.address}&quot;);
+//	registryConfig.setAddress(&quot;47.100.10.132:2181,47.100.10.132:2182,47.100.10.132:2183&quot;);
+
+	JSONArray registryConfigs = new JSONArray();
+	registryConfigs.add(registryConfig);
+	vars.put(&quot;registryConfigs&quot;,registryConfigs.toJSONString());
+	vars.put(&quot;url&quot;,&quot;&quot;);
+//	vars.put(&quot;registryConfigs&quot;,&quot;&quot;);</stringProp>
+                </BeanShellPreProcessor>
+                <hashTree/>
+                <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="monitorConfig 监控中心" enabled="true">
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <boolProp name="resetInterpreter">false</boolProp>
+                  <stringProp name="script">import com.alibaba.dubbo.config.MonitorConfig;
+import com.alibaba.fastjson.JSON;
+
+	MonitorConfig monitorConfig = new MonitorConfig();
+	//protocol为registry时，表示从注册中心发现监控中心地址，否则为直连监控中心
+	monitorConfig.setProtocol(&quot;registry&quot;);
+	//直连监控中心服务器地址
+//	monitorConfig.setAddress(&quot;127.0.0.1:7070&quot;);
+
+	vars.put(&quot;monitorConfig&quot;, JSON.toJSONString(monitorConfig));
+	vars.put(&quot;monitorConfig&quot;, &quot;&quot;);</stringProp>
+                </BeanShellPreProcessor>
+                <hashTree/>
+                <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="methodConfigs 方法级别配置" enabled="true">
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <boolProp name="resetInterpreter">false</boolProp>
+                  <stringProp name="script">import com.alibaba.dubbo.config.MethodConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	String methodName = vars.get(&quot;methodName&quot;);
+
+	MethodConfig methodConfig = new MethodConfig();
+	methodConfig.setName(methodName);
+	methodConfig.setTimeout(120000);
+	methodConfig.setRetries(0);
+
+	JSONArray methodConfigs = new JSONArray();
+	methodConfigs.add(methodConfig);
+	vars.put(&quot;methodConfigs&quot;, methodConfigs.toJSONString());
+
+	vars.put(&quot;methodConfigs&quot;, &quot;&quot;);</stringProp>
+                </BeanShellPreProcessor>
+                <hashTree/>
+                <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="methodParameters groovy泛型参数对象" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">import java.math.BigDecimal;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+import com.ipaylinks.cfp.transaction.facade.request.TransactionCoreRequest;
+import com.ipaylinks.cfp.transaction.facade.enums.BusinessTypeEnum;
+import com.ipaylinks.cfp.transaction.facade.dto.AccountInfoDTO;
+	
+	TransactionCoreRequest req = new TransactionCoreRequest();
+	req.setBzOrderNo(&quot;${bzOrderNo}&quot;);
+	req.setBzType(BusinessTypeEnum.CHANNEL_IN_ACCT.getCode());
+	req.setMemberCode(&quot;20000001520&quot;);
+	req.setTxCurrencyCode(&quot;USD&quot;);
+	req.setTxAmount(new BigDecimal(&quot;1000.00&quot;));
+
+	AccountInfoDTO tarAccountInfoDTO = new AccountInfoDTO();
+	tarAccountInfoDTO.setAccountNo(&quot;320299120000001520840000000002644&quot;);
+	tarAccountInfoDTO.setAccountName(&quot;amazon-us-001&quot;);
+	tarAccountInfoDTO.setCurrencyCode(&quot;USD&quot;);
+	tarAccountInfoDTO.setAmount(new BigDecimal(&quot;1000.00&quot;));
+	req.setTarAccountInfo(tarAccountInfoDTO);
+	 
+	JSONArray methodParameters = new JSONArray();
+	methodParameters.add(JSON.toJSONString(req));
+	vars.put(&quot;methodParameters&quot;,methodParameters.toJSONString());</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223PreProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="生成 bzOrderNo" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script">String bzOrderNo = &quot;${__time(yyyyMMddHHmmssSSS,)}${__RandomString(4,0123456789,)}&quot;;
+vars.put(&quot;bzOrderNo&quot;, bzOrderNo);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+            </hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="幂等测试" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">2</stringProp>
+            </LoopController>
+            <hashTree>
+              <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="TransactionCoreFacade.paymentIn 店铺入账" enabled="true">
+                <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="url" elementType="Argument">
+                      <stringProp name="Argument.name">url</stringProp>
+                      <stringProp name="Argument.value">${url}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="registryConfigs" elementType="Argument">
+                      <stringProp name="Argument.name">registryConfigs</stringProp>
+                      <stringProp name="Argument.value">${registryConfigs}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="monitorConfig" elementType="Argument">
+                      <stringProp name="Argument.name">monitorConfig</stringProp>
+                      <stringProp name="Argument.value">${monitorConfig}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="interfaceName" elementType="Argument">
+                      <stringProp name="Argument.name">interfaceName</stringProp>
+                      <stringProp name="Argument.value">${interfaceName}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="version" elementType="Argument">
+                      <stringProp name="Argument.name">version</stringProp>
+                      <stringProp name="Argument.value">${version}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="methodConfigs" elementType="Argument">
+                      <stringProp name="Argument.name">methodConfigs</stringProp>
+                      <stringProp name="Argument.value">${methodConfigs}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="methodName" elementType="Argument">
+                      <stringProp name="Argument.name">methodName</stringProp>
+                      <stringProp name="Argument.value">${methodName}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="methodParameters" elementType="Argument">
+                      <stringProp name="Argument.name">methodParameters</stringProp>
+                      <stringProp name="Argument.value">${methodParameters}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="classname">org.apache.jmeter.protocol.java.test.DubboTest</stringProp>
+              </JavaSampler>
+              <hashTree>
+                <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="interfaceName version methodName" enabled="true">
+                  <collectionProp name="UserParameters.names">
+                    <stringProp name="515839844">interfaceName</stringProp>
+                    <stringProp name="351608024">version</stringProp>
+                    <stringProp name="-723163380">methodName</stringProp>
+                  </collectionProp>
+                  <collectionProp name="UserParameters.thread_values">
+                    <collectionProp name="1398308298">
+                      <stringProp name="661971605">com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade</stringProp>
+                      <stringProp name="48563">1.0</stringProp>
+                      <stringProp name="-86519349">paymentIn</stringProp>
+                    </collectionProp>
+                  </collectionProp>
+                  <boolProp name="UserParameters.per_iteration">false</boolProp>
+                </UserParameters>
+                <hashTree/>
+                <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="url 点对点直连" enabled="false">
+                  <collectionProp name="UserParameters.names">
+                    <stringProp name="116079">url</stringProp>
+                  </collectionProp>
+                  <collectionProp name="UserParameters.thread_values">
+                    <collectionProp name="-825906266">
+                      <stringProp name="-1887115082">dubbo://127.0.0.1:20000/</stringProp>
+                    </collectionProp>
+                  </collectionProp>
+                  <boolProp name="UserParameters.per_iteration">false</boolProp>
+                </UserParameters>
+                <hashTree/>
+                <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="registryConfigs 注册中心" enabled="true">
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <boolProp name="resetInterpreter">false</boolProp>
+                  <stringProp name="script">import com.alibaba.dubbo.config.RegistryConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	RegistryConfig registryConfig = new RegistryConfig();
+	registryConfig.setProtocol(&quot;zookeeper&quot;);
+	registryConfig.setAddress(&quot;${registry.address}&quot;);
+//	registryConfig.setAddress(&quot;47.100.10.132:2181,47.100.10.132:2182,47.100.10.132:2183&quot;);
+
+	JSONArray registryConfigs = new JSONArray();
+	registryConfigs.add(registryConfig);
+	vars.put(&quot;registryConfigs&quot;,registryConfigs.toJSONString());
+	vars.put(&quot;url&quot;,&quot;&quot;);
+//	vars.put(&quot;registryConfigs&quot;,&quot;&quot;);</stringProp>
+                </BeanShellPreProcessor>
+                <hashTree/>
+                <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="monitorConfig 监控中心" enabled="true">
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <boolProp name="resetInterpreter">false</boolProp>
+                  <stringProp name="script">import com.alibaba.dubbo.config.MonitorConfig;
+import com.alibaba.fastjson.JSON;
+
+	MonitorConfig monitorConfig = new MonitorConfig();
+	//protocol为registry时，表示从注册中心发现监控中心地址，否则为直连监控中心
+	monitorConfig.setProtocol(&quot;registry&quot;);
+	//直连监控中心服务器地址
+//	monitorConfig.setAddress(&quot;127.0.0.1:7070&quot;);
+
+	vars.put(&quot;monitorConfig&quot;, JSON.toJSONString(monitorConfig));
+	vars.put(&quot;monitorConfig&quot;, &quot;&quot;);</stringProp>
+                </BeanShellPreProcessor>
+                <hashTree/>
+                <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="methodConfigs 方法级别配置" enabled="true">
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <boolProp name="resetInterpreter">false</boolProp>
+                  <stringProp name="script">import com.alibaba.dubbo.config.MethodConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	String methodName = vars.get(&quot;methodName&quot;);
+
+	MethodConfig methodConfig = new MethodConfig();
+	methodConfig.setName(methodName);
+	methodConfig.setTimeout(120000);
+	methodConfig.setRetries(0);
+
+	JSONArray methodConfigs = new JSONArray();
+	methodConfigs.add(methodConfig);
+	vars.put(&quot;methodConfigs&quot;, methodConfigs.toJSONString());
+
+	vars.put(&quot;methodConfigs&quot;, &quot;&quot;);</stringProp>
+                </BeanShellPreProcessor>
+                <hashTree/>
+                <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="methodParameters groovy泛型参数对象" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">import java.math.BigDecimal;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+import com.ipaylinks.cfp.transaction.facade.request.TransactionCoreRequest;
+import com.ipaylinks.cfp.transaction.facade.enums.BusinessTypeEnum;
+import com.ipaylinks.cfp.transaction.facade.dto.AccountInfoDTO;
+	
+	TransactionCoreRequest req = new TransactionCoreRequest();
+	req.setBzOrderNo(&quot;${bzOrderNo}&quot;);
+	req.setBzType(BusinessTypeEnum.CHANNEL_IN_ACCT.getCode());
+	req.setMemberCode(&quot;20000001520&quot;);
+	req.setTxCurrencyCode(&quot;USD&quot;);
+	req.setTxAmount(new BigDecimal(&quot;2000.00&quot;));
+
+	AccountInfoDTO tarAccountInfoDTO = new AccountInfoDTO();
+	tarAccountInfoDTO.setAccountNo(&quot;320299120000001520840000000002645&quot;);
+	tarAccountInfoDTO.setAccountName(&quot;amazon-us-002&quot;);
+	tarAccountInfoDTO.setCurrencyCode(&quot;USD&quot;);
+	tarAccountInfoDTO.setAmount(new BigDecimal(&quot;2000.00&quot;));
+	req.setTarAccountInfo(tarAccountInfoDTO);
+	 
+	JSONArray methodParameters = new JSONArray();
+	methodParameters.add(JSON.toJSONString(req));
+	vars.put(&quot;methodParameters&quot;,methodParameters.toJSONString());</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223PreProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="生成 bzOrderNo" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">String bzOrderNo = &quot;${__time(yyyyMMddHHmmssSSS,)}${__RandomString(4,0123456789,)}&quot;;
+vars.put(&quot;bzOrderNo&quot;, bzOrderNo);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="幂等测试" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">2</stringProp>
+          </LoopController>
+          <hashTree>
+            <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="TransactionCoreFacade.paymentOut 店铺提现" enabled="true">
+              <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="url" elementType="Argument">
+                    <stringProp name="Argument.name">url</stringProp>
+                    <stringProp name="Argument.value">${url}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="registryConfigs" elementType="Argument">
+                    <stringProp name="Argument.name">registryConfigs</stringProp>
+                    <stringProp name="Argument.value">${registryConfigs}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="monitorConfig" elementType="Argument">
+                    <stringProp name="Argument.name">monitorConfig</stringProp>
+                    <stringProp name="Argument.value">${monitorConfig}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="interfaceName" elementType="Argument">
+                    <stringProp name="Argument.name">interfaceName</stringProp>
+                    <stringProp name="Argument.value">${interfaceName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="version" elementType="Argument">
+                    <stringProp name="Argument.name">version</stringProp>
+                    <stringProp name="Argument.value">${version}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodConfigs" elementType="Argument">
+                    <stringProp name="Argument.name">methodConfigs</stringProp>
+                    <stringProp name="Argument.value">${methodConfigs}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodName" elementType="Argument">
+                    <stringProp name="Argument.name">methodName</stringProp>
+                    <stringProp name="Argument.value">${methodName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="methodParameters" elementType="Argument">
+                    <stringProp name="Argument.name">methodParameters</stringProp>
+                    <stringProp name="Argument.value">${methodParameters}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="classname">org.apache.jmeter.protocol.java.test.DubboTest</stringProp>
+            </JavaSampler>
+            <hashTree>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="interfaceName version methodName" enabled="true">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="515839844">interfaceName</stringProp>
+                  <stringProp name="351608024">version</stringProp>
+                  <stringProp name="-723163380">methodName</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="-1122398137">
+                    <stringProp name="661971605">com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade</stringProp>
+                    <stringProp name="48563">1.0</stringProp>
+                    <stringProp name="1612873576">paymentOut</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="url 点对点直连" enabled="false">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="116079">url</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="-825906266">
+                    <stringProp name="-1887115082">dubbo://127.0.0.1:20000/</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="registryConfigs 注册中心" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.RegistryConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	RegistryConfig registryConfig = new RegistryConfig();
+	registryConfig.setProtocol(&quot;zookeeper&quot;);
+	registryConfig.setAddress(&quot;${registry.address}&quot;);
+//	registryConfig.setAddress(&quot;47.100.10.132:2181,47.100.10.132:2182,47.100.10.132:2183&quot;);
+
+	JSONArray registryConfigs = new JSONArray();
+	registryConfigs.add(registryConfig);
+	vars.put(&quot;registryConfigs&quot;,registryConfigs.toJSONString());
+	vars.put(&quot;url&quot;,&quot;&quot;);
+//	vars.put(&quot;registryConfigs&quot;,&quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="monitorConfig 监控中心" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.MonitorConfig;
+import com.alibaba.fastjson.JSON;
+
+	MonitorConfig monitorConfig = new MonitorConfig();
+	//protocol为registry时，表示从注册中心发现监控中心地址，否则为直连监控中心
+	monitorConfig.setProtocol(&quot;registry&quot;);
+	//直连监控中心服务器地址
+//	monitorConfig.setAddress(&quot;127.0.0.1:7070&quot;);
+
+	vars.put(&quot;monitorConfig&quot;, JSON.toJSONString(monitorConfig));
+	vars.put(&quot;monitorConfig&quot;, &quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="methodConfigs 方法级别配置" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">import com.alibaba.dubbo.config.MethodConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	String methodName = vars.get(&quot;methodName&quot;);
+
+	MethodConfig methodConfig = new MethodConfig();
+	methodConfig.setName(methodName);
+	methodConfig.setTimeout(120000);
+	methodConfig.setRetries(0);
+
+	JSONArray methodConfigs = new JSONArray();
+	methodConfigs.add(methodConfig);
+	vars.put(&quot;methodConfigs&quot;, methodConfigs.toJSONString());
+
+	vars.put(&quot;methodConfigs&quot;, &quot;&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="methodParameters groovy泛型参数对象" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+import com.ipaylinks.cfp.transaction.facade.request.TransactionCoreRequest;
+import com.ipaylinks.cfp.transaction.facade.enums.BusinessTypeEnum;
+import com.ipaylinks.cfp.transaction.facade.dto.AccountInfoDTO;
+import com.ipaylinks.cfp.transaction.facade.enums.FOExtColumnEnum;
+	
+	TransactionCoreRequest req = new TransactionCoreRequest();
+	req.setBzOrderNo(&quot;${bzOrderNo}&quot;);
+	req.setBzType(BusinessTypeEnum.SHOP_WITHDRAW.getCode());
+	req.setMemberCode(&quot;20000001520&quot;);
+	req.setTxCurrencyCode(&quot;USD&quot;);
+	req.setTxAmount(new BigDecimal(&quot;2997.00&quot;));
+	req.setFeeCurrencyCode(&quot;USD&quot;);
+     req.setFeeAmount(new BigDecimal(&quot;3&quot;));
+
+	AccountInfoDTO srcAccount1 = new AccountInfoDTO();
+	srcAccount1.setAccountNo(&quot;320299120000001520840000000002644&quot;);
+	srcAccount1.setAccountName(&quot;amazon-us-001&quot;);
+	srcAccount1.setCurrencyCode(&quot;USD&quot;);
+	srcAccount1.setAmount(new BigDecimal(&quot;999.00&quot;));
+	srcAccount1.setFeeCurrencyCode(&quot;USD&quot;);
+	srcAccount1.setFeeAmount(new BigDecimal(&quot;1&quot;));
+
+	AccountInfoDTO srcAccount2 = new AccountInfoDTO();
+	srcAccount2.setAccountNo(&quot;320299120000001520840000000002645&quot;);
+	srcAccount2.setAccountName(&quot;amazon-us-002&quot;);
+	srcAccount2.setCurrencyCode(&quot;USD&quot;);
+	srcAccount2.setAmount(new BigDecimal(&quot;1998.00&quot;));
+	srcAccount2.setFeeCurrencyCode(&quot;USD&quot;);
+	srcAccount2.setFeeAmount(new BigDecimal(&quot;2&quot;));
+
+	List&lt;AccountInfoDTO&gt; srcAccountList = new ArrayList&lt;&gt;();
+	srcAccountList.add(srcAccount1);
+	srcAccountList.add(srcAccount2);
+	req.setSrcAccountList(srcAccountList);
+
+	AccountInfoDTO tarAccountInfoDTO = new AccountInfoDTO();
+	tarAccountInfoDTO.setAccountNo(&quot;290613ae6980601eee4b3fac2222041aea020aefed265198&quot;);
+	tarAccountInfoDTO.setAccountName(&quot;杨秋华&quot;);
+	tarAccountInfoDTO.setCurrencyCode(&quot;CNY&quot;);
+	tarAccountInfoDTO.setAmount(new BigDecimal(&quot;20379.60&quot;));
+	
+	tarAccountInfoDTO.setBankName(&quot;中国银行&quot;);
+	tarAccountInfoDTO.setBankAddress(&quot;中国上海浦东&quot;);
+	tarAccountInfoDTO.setSubAccountNo(&quot;1560201403990018003519&quot;);
+	tarAccountInfoDTO.setFundSource(&quot;3&quot;);
+	tarAccountInfoDTO.setFullName(&quot;杨秋华&quot;);
+	tarAccountInfoDTO.setCertNo(&quot;32012519930807171X&quot;);
+	tarAccountInfoDTO.setExchangeRate(BigDecimal.valueOf(6.8));
+		Map&lt;String,String&gt; extendData = new HashMap&lt;&gt;();
+		//联行号 中国银行上海市浦东分行
+		extendData.put(FOExtColumnEnum.BANK_CNAPS_CODE.getCode(),&quot;104290003582&quot;);
+		//BusinessType
+		extendData.put(FOExtColumnEnum.BUSINESS_TYPE.getCode(),&quot;1&quot;);
+	tarAccountInfoDTO.setExtendData(extendData);
+	req.setTarAccountInfo(tarAccountInfoDTO);
+	 
+	JSONArray methodParameters = new JSONArray();
+	methodParameters.add(JSON.toJSONString(req));
+	vars.put(&quot;methodParameters&quot;,methodParameters.toJSONString());</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

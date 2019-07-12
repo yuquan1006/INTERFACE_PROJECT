@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ipaylinks.test.mock.server.dao.mapper.NotifyRecordMapper">
+  <resultMap id="BaseResultMap" type="com.ipaylinks.test.mock.server.dao.model.NotifyRecord">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="access_point" jdbcType="VARCHAR" property="accessPoint" />
+    <result column="notify_template_name" jdbcType="VARCHAR" property="notifyTemplateName" />
+    <result column="unique_request_id" jdbcType="VARCHAR" property="uniqueRequestId" />
+    <result column="notify_url" jdbcType="VARCHAR" property="notifyUrl" />
+    <result column="notify_request_date" jdbcType="TIMESTAMP" property="notifyRequestDate" />
+    <result column="notify_response_date" jdbcType="TIMESTAMP" property="notifyResponseDate" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.ipaylinks.test.mock.server.dao.model.NotifyRecordWithBLOBs">
+    <result column="notify_request_content" jdbcType="LONGVARCHAR" property="notifyRequestContent" />
+    <result column="notify_response_content" jdbcType="LONGVARCHAR" property="notifyResponseContent" />
+  </resultMap>
+  <sql id="Blob_Column_List">
+    notify_request_content, notify_response_content
+  </sql>
+  <insert id="insert" parameterType="com.ipaylinks.test.mock.server.dao.model.NotifyRecordWithBLOBs">
+    insert into notify_record (id, access_point, notify_template_name, 
+      unique_request_id, notify_url, notify_request_date, 
+      notify_response_date, notify_request_content, 
+      notify_response_content)
+    values (#{id,jdbcType=INTEGER}, #{accessPoint,jdbcType=VARCHAR}, #{notifyTemplateName,jdbcType=VARCHAR}, 
+      #{uniqueRequestId,jdbcType=VARCHAR}, #{notifyUrl,jdbcType=VARCHAR}, #{notifyRequestDate,jdbcType=TIMESTAMP}, 
+      #{notifyResponseDate,jdbcType=TIMESTAMP}, #{notifyRequestContent,jdbcType=LONGVARCHAR}, 
+      #{notifyResponseContent,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ipaylinks.test.mock.server.dao.model.NotifyRecordWithBLOBs">
+    insert into notify_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="accessPoint != null">
+        access_point,
+      </if>
+      <if test="notifyTemplateName != null">
+        notify_template_name,
+      </if>
+      <if test="uniqueRequestId != null">
+        unique_request_id,
+      </if>
+      <if test="notifyUrl != null">
+        notify_url,
+      </if>
+      <if test="notifyRequestDate != null">
+        notify_request_date,
+      </if>
+      <if test="notifyResponseDate != null">
+        notify_response_date,
+      </if>
+      <if test="notifyRequestContent != null">
+        notify_request_content,
+      </if>
+      <if test="notifyResponseContent != null">
+        notify_response_content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="accessPoint != null">
+        #{accessPoint,jdbcType=VARCHAR},
+      </if>
+      <if test="notifyTemplateName != null">
+        #{notifyTemplateName,jdbcType=VARCHAR},
+      </if>
+      <if test="uniqueRequestId != null">
+        #{uniqueRequestId,jdbcType=VARCHAR},
+      </if>
+      <if test="notifyUrl != null">
+        #{notifyUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="notifyRequestDate != null">
+        #{notifyRequestDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="notifyResponseDate != null">
+        #{notifyResponseDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="notifyRequestContent != null">
+        #{notifyRequestContent,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="notifyResponseContent != null">
+        #{notifyResponseContent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

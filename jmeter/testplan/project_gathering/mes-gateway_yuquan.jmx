@@ -1,0 +1,2683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0.20190624">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP请求默认值" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+        <stringProp name="HTTPSampler.port">${port}</stringProp>
+        <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+        <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.proxyHost">127.0.0.1</stringProp>
+        <stringProp name="HTTPSampler.proxyPort">8888</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="DB gathering-test1" enabled="false">
+        <stringProp name="TestPlan.comments">Connect to local HSPAD_Demo_CO and set its isolation mode to SNAPSHOT (4096) and disable auto commit.</stringProp>
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="checkQuery">select 1 from dual</stringProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="dataSource">DB-gathering-test1</stringProp>
+        <stringProp name="dbUrl">jdbc:oracle:thin:@106.15.186.65:2523:cfpdbt</stringProp>
+        <stringProp name="driver">oracle.jdbc.OracleDriver</stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <stringProp name="password">d8InpLfgCEVdJUeu</stringProp>
+        <stringProp name="poolMax">8</stringProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <stringProp name="username">testquery</stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="DB gathering-test2" enabled="true">
+        <stringProp name="TestPlan.comments">Connect to local HSPAD_Demo_CO and set its isolation mode to SNAPSHOT (4096) and disable auto commit.</stringProp>
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="checkQuery">select 1 from dual</stringProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="dataSource">DB-gathering-test2</stringProp>
+        <stringProp name="dbUrl">jdbc:oracle:thin:@106.15.186.65:2524:cfpdbtt</stringProp>
+        <stringProp name="driver">oracle.jdbc.OracleDriver</stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <stringProp name="password">d8InpLfgCEVdJUeu</stringProp>
+        <stringProp name="poolMax">8</stringProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <stringProp name="username">testquery</stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <me.yangqiuhua.jmeter.protocol.config.RedisElement guiclass="TestBeanGUI" testclass="me.yangqiuhua.jmeter.protocol.config.RedisElement" testname="Redis gathering-test1" enabled="false">
+        <stringProp name="database">0</stringProp>
+        <stringProp name="host">139.196.75.96</stringProp>
+        <stringProp name="jedisPoolName">redis-gathering-test1</stringProp>
+        <stringProp name="maxIdle">8</stringProp>
+        <stringProp name="maxTotal">8</stringProp>
+        <stringProp name="maxWaitMillis">-1</stringProp>
+        <stringProp name="minIdle">0</stringProp>
+        <stringProp name="password">AdeTTT32312ttedsdcaHUHU</stringProp>
+        <stringProp name="port">3333</stringProp>
+        <stringProp name="timeout">60000</stringProp>
+      </me.yangqiuhua.jmeter.protocol.config.RedisElement>
+      <hashTree/>
+      <me.yangqiuhua.jmeter.protocol.config.RedisElement guiclass="TestBeanGUI" testclass="me.yangqiuhua.jmeter.protocol.config.RedisElement" testname="Redis gathering-test2" enabled="true">
+        <stringProp name="database">0</stringProp>
+        <stringProp name="host">139.196.75.96</stringProp>
+        <stringProp name="jedisPoolName">redis-gathering-test2</stringProp>
+        <stringProp name="maxIdle">8</stringProp>
+        <stringProp name="maxTotal">8</stringProp>
+        <stringProp name="maxWaitMillis">-1</stringProp>
+        <stringProp name="minIdle">0</stringProp>
+        <stringProp name="password">AdeTTT32312ttedsdcaHUHU</stringProp>
+        <stringProp name="port">3333</stringProp>
+        <stringProp name="timeout">60000</stringProp>
+      </me.yangqiuhua.jmeter.protocol.config.RedisElement>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="mes-gateway1" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="protocol" elementType="Argument">
+            <stringProp name="Argument.name">protocol</stringProp>
+            <stringProp name="Argument.value">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="IP" elementType="Argument">
+            <stringProp name="Argument.name">IP</stringProp>
+            <stringProp name="Argument.value">mesnew2.innertest.ipaylinks.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port" elementType="Argument">
+            <stringProp name="Argument.name">port</stringProp>
+            <stringProp name="Argument.value">80</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="httpMethod" elementType="Argument">
+            <stringProp name="Argument.name">httpMethod</stringProp>
+            <stringProp name="Argument.value">POST</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="charset" elementType="Argument">
+            <stringProp name="Argument.name">charset</stringProp>
+            <stringProp name="Argument.value">UTF-8</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+        <stringProp name="TestPlan.comments">测试二套</stringProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="mes-gateway2" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="protocol" elementType="Argument">
+            <stringProp name="Argument.name">protocol</stringProp>
+            <stringProp name="Argument.value">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="IP" elementType="Argument">
+            <stringProp name="Argument.name">IP</stringProp>
+            <stringProp name="Argument.value">47.101.70.242</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port" elementType="Argument">
+            <stringProp name="Argument.name">port</stringProp>
+            <stringProp name="Argument.value">8054</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="httpMethod" elementType="Argument">
+            <stringProp name="Argument.name">httpMethod</stringProp>
+            <stringProp name="Argument.value">POST</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="charset" elementType="Argument">
+            <stringProp name="Argument.name">charset</stringProp>
+            <stringProp name="Argument.value">UTF-8</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="mes-gateway-demo" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="protocol" elementType="Argument">
+            <stringProp name="Argument.name">protocol</stringProp>
+            <stringProp name="Argument.value">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="IP" elementType="Argument">
+            <stringProp name="Argument.name">IP</stringProp>
+            <stringProp name="Argument.value">172.19.0.118</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port" elementType="Argument">
+            <stringProp name="Argument.name">port</stringProp>
+            <stringProp name="Argument.value">8054</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="httpMethod" elementType="Argument">
+            <stringProp name="Argument.name">httpMethod</stringProp>
+            <stringProp name="Argument.value">POST</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="charset" elementType="Argument">
+            <stringProp name="Argument.name">charset</stringProp>
+            <stringProp name="Argument.value">UTF-8</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="http://mesnew2.innertest.ipaylinks.com/mes-gateway/api/shop/manager/addShop.json" elementType="Argument">
+            <stringProp name="Argument.name">http://mesnew2.innertest.ipaylinks.com/mes-gateway/api/shop/manager/addShop.json</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="profiles active 变量 选择" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="DB" elementType="Argument">
+            <stringProp name="Argument.name">DB</stringProp>
+            <stringProp name="Argument.value">DB-gathering-test2</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">数据库环境</stringProp>
+          </elementProp>
+          <elementProp name="redis" elementType="Argument">
+            <stringProp name="Argument.name">redis</stringProp>
+            <stringProp name="Argument.value">redis-gathering-test2</stringProp>
+            <stringProp name="Argument.desc">redis环境</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <org.apache.jmeter.protocol.jdbc.sampler.DbunitSampler guiclass="TestBeanGUI" testclass="org.apache.jmeter.protocol.jdbc.sampler.DbunitSampler" testname="Dbunit Sampler-backup" enabled="false">
+          <stringProp name="TestPlan.comments">备份数据库</stringProp>
+          <stringProp name="backupFileName">backupFiles</stringProp>
+          <stringProp name="dataSource">DB-gathering-test2</stringProp>
+          <stringProp name="operationType">backup</stringProp>
+          <stringProp name="schema">FE</stringProp>
+          <stringProp name="tables">T_SHOP,T_FUND_IN_ACCOUNT,T_ACCOUNT_INFO,T_ACCOUNT_BALANCE,T_FUND_IN_ACCOUNT_ACTIVATE,T_FUND_IN_ACCOUNT_APPLY</stringProp>
+        </org.apache.jmeter.protocol.jdbc.sampler.DbunitSampler>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="店铺提现" enabled="false"/>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="登录" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="loginName" elementType="Argument">
+                <stringProp name="Argument.name">loginName</stringProp>
+                <stringProp name="Argument.value">18912911129</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="password" elementType="Argument">
+                <stringProp name="Argument.name">password</stringProp>
+                <stringProp name="Argument.value">12345678A</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="提现" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="withdrawCurrency" elementType="Argument">
+                <stringProp name="Argument.name">withdrawCurrency</stringProp>
+                <stringProp name="Argument.value">USD</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="phone" elementType="Argument">
+                <stringProp name="Argument.name">phone</stringProp>
+                <stringProp name="Argument.value">18912911129</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="fundOutChannel" elementType="Argument">
+                <stringProp name="Argument.name">fundOutChannel</stringProp>
+                <stringProp name="Argument.value">FUIOU_ONLINE</stringProp>
+                <stringProp name="Argument.desc">CCS_ONLINE：稠州银行；BOSC_ONLINE_NEW：上海银行线上2.0；FUIOU_ONLINE：富友；BOSC_OFFLINE：上海银行线下</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="出款渠道配置，决定路由渠道" enabled="true"/>
+          <hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="稠州银行" enabled="true">
+              <stringProp name="IfController.condition">&quot;${fundOutChannel}&quot; == &quot;CCS_ONLINE&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="启用稠州银行" enabled="true">
+                <stringProp name="dataSource">${DB}</stringProp>
+                <stringProp name="queryType">Update Statement</stringProp>
+                <stringProp name="query">update CFP_CHANNEL.T_FUND_OUT_CHANNEL
+   set CHANNEL_TYPE   = &apos;1&apos;,
+       TRADE_TYPE     = &apos;1,7,8&apos;,
+       BUSINESS_TYPE  = &apos;1,2&apos;,
+       CURRENCY       = &apos;CNY&apos;,
+       REGION         = &apos;CM&apos;,
+       PRIORITY       = &apos;1&apos;,
+       STATUS         = &apos;1&apos;,
+       SITE           = &apos;101,103,104,105,102,203,204,301,401,402,501,601&apos;,
+       AMOUNT         = &apos;100000000&apos;,
+       FROM_TIME      = &apos;000000&apos;,
+       TO_TIME        = &apos;235959&apos;,
+       FROM_RATIO     = &apos;0&apos;,
+       TO_RATIO       = &apos;100&apos;,
+       NEED_ACCOUNT   = &apos;1&apos;,
+       LIMIT_ONE_CARD = &apos;1&apos;,
+       UPDATE_TIME    = sysdate
+ where ORG_CODE = &apos;CCS_ONLINE&apos;
+</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+              </JDBCSampler>
+              <hashTree/>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="禁用非稠州银行" enabled="true">
+                <stringProp name="dataSource">${DB}</stringProp>
+                <stringProp name="queryType">Update Statement</stringProp>
+                <stringProp name="query">update CFP_CHANNEL.T_FUND_OUT_CHANNEL
+   set STATUS = &apos;0&apos;, 
+       UPDATE_TIME = sysdate
+ where ORG_CODE != &apos;CCS_ONLINE&apos;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+              </JDBCSampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="上海银行线上2.0" enabled="true">
+              <stringProp name="IfController.condition">&quot;${fundOutChannel}&quot; == &quot;BOSC_ONLINE_NEW&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="启用上海银行线上2.0" enabled="true">
+                <stringProp name="dataSource">${DB}</stringProp>
+                <stringProp name="queryType">Update Statement</stringProp>
+                <stringProp name="query">update CFP_CHANNEL.T_FUND_OUT_CHANNEL
+   set CHANNEL_TYPE   = &apos;1&apos;,
+       TRADE_TYPE     = &apos;1,2&apos;,
+       BUSINESS_TYPE  = &apos;1&apos;,
+       CURRENCY       = &apos;CNY&apos;,
+       REGION         = &apos;CM&apos;,
+       PRIORITY       = &apos;1&apos;,
+       STATUS         = &apos;1&apos;,
+       SITE           = &apos;101,103,104,105,102,203,204,301,401,402,501,601&apos;,
+       AMOUNT         = &apos;100000000&apos;,
+       FROM_TIME      = &apos;000000&apos;,
+       TO_TIME        = &apos;235959&apos;,
+       FROM_RATIO     = &apos;0&apos;,
+       TO_RATIO       = &apos;100&apos;,
+       NEED_ACCOUNT   = &apos;1&apos;,
+       LIMIT_ONE_CARD = &apos;0&apos;,
+       UPDATE_TIME    = sysdate
+ where ORG_CODE = &apos;BOSC_ONLINE_NEW&apos;
+</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+              </JDBCSampler>
+              <hashTree/>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="禁用非上海银行线上2.0" enabled="true">
+                <stringProp name="dataSource">${DB}</stringProp>
+                <stringProp name="queryType">Update Statement</stringProp>
+                <stringProp name="query">update CFP_CHANNEL.T_FUND_OUT_CHANNEL
+   set STATUS = &apos;0&apos;, 
+       UPDATE_TIME = sysdate
+ where ORG_CODE != &apos;BOSC_ONLINE_NEW&apos;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+              </JDBCSampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="富友" enabled="true">
+              <stringProp name="IfController.condition">&quot;${fundOutChannel}&quot; == &quot;FUIOU_ONLINE&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="启用富友" enabled="true">
+                <stringProp name="dataSource">${DB}</stringProp>
+                <stringProp name="queryType">Update Statement</stringProp>
+                <stringProp name="query">update CFP_CHANNEL.T_FUND_OUT_CHANNEL
+   set CHANNEL_TYPE   = &apos;1&apos;,
+       TRADE_TYPE     = &apos;1,2&apos;,
+       BUSINESS_TYPE  = &apos;1&apos;,
+       CURRENCY       = &apos;CNY&apos;,
+       REGION         = &apos;CM&apos;,
+       PRIORITY       = &apos;1&apos;,
+       STATUS         = &apos;1&apos;,
+       SITE           = &apos;101,103,104,105,102,203,204,301,401,402,501,601&apos;,
+       AMOUNT         = &apos;100000000&apos;,
+       FROM_TIME      = &apos;000000&apos;,
+       TO_TIME        = &apos;235959&apos;,
+       FROM_RATIO     = &apos;0&apos;,
+       TO_RATIO       = &apos;100&apos;,
+       NEED_ACCOUNT   = &apos;0&apos;,
+       LIMIT_ONE_CARD = &apos;0&apos;,
+       UPDATE_TIME    = sysdate
+ where ORG_CODE = &apos;FUIOU_ONLINE&apos;
+</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+              </JDBCSampler>
+              <hashTree/>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="禁用非富友" enabled="true">
+                <stringProp name="dataSource">${DB}</stringProp>
+                <stringProp name="queryType">Update Statement</stringProp>
+                <stringProp name="query">update CFP_CHANNEL.T_FUND_OUT_CHANNEL
+   set STATUS = &apos;0&apos;, 
+       UPDATE_TIME = sysdate
+ where ORG_CODE != &apos;FUIOU_ONLINE&apos;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+              </JDBCSampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="上海银行线下" enabled="true">
+              <stringProp name="IfController.condition">&quot;${fundOutChannel}&quot; == &quot;BOSC_OFFLINE&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="启用上海银行线下" enabled="true">
+                <stringProp name="dataSource">${DB}</stringProp>
+                <stringProp name="queryType">Update Statement</stringProp>
+                <stringProp name="query">update CFP_CHANNEL.T_FUND_OUT_CHANNEL
+   set CHANNEL_TYPE   = &apos;1&apos;,
+       TRADE_TYPE     = &apos;1,6,9,10&apos;,
+       BUSINESS_TYPE  = &apos;1,2&apos;,
+       CURRENCY       = &apos;USD,EUR,GBP,HKD,AUD,CAD,JPY&apos;,
+       REGION         = &apos;CM,HK&apos;,
+       PRIORITY       = &apos;1&apos;,
+       STATUS         = &apos;1&apos;,
+       SITE           = &apos;101,103,104,105,102,203,204,301,401,402,501,601&apos;,
+       AMOUNT         = &apos;100000000&apos;,
+       FROM_TIME      = &apos;000000&apos;,
+       TO_TIME        = &apos;235959&apos;,
+       FROM_RATIO     = &apos;0&apos;,
+       TO_RATIO       = &apos;100&apos;,
+       NEED_ACCOUNT   = &apos;0&apos;,
+       LIMIT_ONE_CARD = &apos;0&apos;,
+       UPDATE_TIME    = sysdate
+ where ORG_CODE = &apos;BOSC_OFFLINE&apos;
+</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+              </JDBCSampler>
+              <hashTree/>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="禁用非上海银行线下" enabled="true">
+                <stringProp name="dataSource">${DB}</stringProp>
+                <stringProp name="queryType">Update Statement</stringProp>
+                <stringProp name="query">update CFP_CHANNEL.T_FUND_OUT_CHANNEL
+   set STATUS = &apos;0&apos;, 
+       UPDATE_TIME = sysdate
+ where ORG_CODE != &apos;BOSC_OFFLINE&apos;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+              </JDBCSampler>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="登录" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="869052411">测试计划</stringProp>
+              <stringProp name="869052411">测试计划</stringProp>
+              <stringProp name="964666">登录</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="店铺提现" enabled="false">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">1</stringProp>
+          </LoopController>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">AUTH-TOKEN</stringProp>
+                  <stringProp name="Header.value">${token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="支付密码提现" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="用户选择银行卡时，调用锁汇接口" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;currency&quot;:&quot;${withdrawCurrency}&quot;}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/withdraw/lockExchangeRate.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="1652331244">&quot;responseObj&quot;:</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="店铺提现" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;platId&quot;: 101,&#xd;
+    &quot;liquidateId&quot;: 9074,&#xd;
+    &quot;withdrawAmount&quot;: 2010,&#xd;
+    &quot;withdrawCurrency&quot;: &quot;${withdrawCurrency}&quot;,&#xd;
+    &quot;settleCurrency&quot;: &quot;CNY&quot;,&#xd;
+    &quot;checkMethod&quot;: &quot;1&quot;,&#xd;
+    &quot;paymengPwd&quot;: &quot;12345678Z&quot;,&#xd;
+    &quot;couponIds&quot;: [],&#xd;
+    &quot;details&quot;: [&#xd;
+        {&#xd;
+            &quot;id&quot;: 4609,&#xd;
+            &quot;memberCode&quot;: 10000007381,&#xd;
+            &quot;platId&quot;: 101,&#xd;
+            &quot;shopId&quot;: 5946,&#xd;
+            &quot;accountNo&quot;: &quot;320299110000007381840000000005946&quot;,&#xd;
+            &quot;withdrawAmount&quot;: &quot;2000&quot;,&#xd;
+            &quot;currencyCode&quot;: &quot;${withdrawCurrency}&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;id&quot;: 3642,&#xd;
+            &quot;memberCode&quot;: 10000007381,&#xd;
+            &quot;platId&quot;: 101,&#xd;
+            &quot;shopId&quot;: 5050,&#xd;
+            &quot;accountNo&quot;: &quot;320299110000007381840000000005050&quot;,&#xd;
+            &quot;withdrawAmount&quot;: &quot;10&quot;,&#xd;
+            &quot;currencyCode&quot;: &quot;${withdrawCurrency}&quot;&#xd;
+        }&#xd;
+    ] &#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/withdraw/applyWithdraw.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="短信验证码提现" enabled="false"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="用户选择银行卡时，调用锁汇接口" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;currency&quot;:&quot;${withdrawCurrency}&quot;}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/withdraw/lockExchangeRate.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="1652331244">&quot;responseObj&quot;:</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="发送提现短信验证码" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;codeType&quot;:&quot;payment_verification&quot;}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/common/sendVerifyCode.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="1652331244">&quot;responseObj&quot;:</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="redis 查询提现短信验证码" enabled="true">
+                <stringProp name="BeanShellSampler.query">import redis.clients.jedis.Jedis;
+import me.yangqiuhua.jmeter.protocol.config.RedisElement;
+
+	String redisPoolName = &quot;${redis}&quot;;
+	log.info(&quot;redisPoolName：{}&quot;,redisPoolName);
+	Jedis jedis = RedisElement.getJedis(redisPoolName);
+
+	String redisKey = &quot;MES_GATEWAY_SMS_${phone}_payment_verification&quot;;
+	log.info(&quot;redisKey：{}&quot;,redisKey);
+	
+	String redisValue = jedis.get(redisKey);
+	log.info(&quot;redisValue：{}&quot;,redisValue);
+	vars.put(&quot;verifyCode&quot;, redisValue.replaceAll(&quot;\&quot;&quot;, &quot;&quot;));
+
+	String responseData = &quot;redisKey：&quot; + redisKey + &quot;\r\n&quot; 
+	+ &quot;redisValue：&quot; + redisValue;
+
+SampleResult.setResponseData(responseData, &quot;utf-8&quot;); </stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="店铺提现" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;platId&quot;: 101,&#xd;
+    &quot;liquidateId&quot;: 9074,&#xd;
+    &quot;withdrawAmount&quot;: 2010,&#xd;
+    &quot;withdrawCurrency&quot;: &quot;${withdrawCurrency}&quot;,&#xd;
+    &quot;settleCurrency&quot;: &quot;CNY&quot;,&#xd;
+    &quot;checkMethod&quot;: &quot;0&quot;,&#xd;
+    &quot;verifyCode&quot;: &quot;${verifyCode}&quot;,&#xd;
+    &quot;couponIds&quot;: [],&#xd;
+    &quot;details&quot;: [&#xd;
+        {&#xd;
+            &quot;id&quot;: 4609,&#xd;
+            &quot;memberCode&quot;: 10000007381,&#xd;
+            &quot;platId&quot;: 101,&#xd;
+            &quot;shopId&quot;: 5946,&#xd;
+            &quot;accountNo&quot;: &quot;320299110000007381840000000005946&quot;,&#xd;
+            &quot;withdrawAmount&quot;: &quot;2000&quot;,&#xd;
+            &quot;currencyCode&quot;: &quot;${withdrawCurrency}&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;id&quot;: 3642,&#xd;
+            &quot;memberCode&quot;: 10000007381,&#xd;
+            &quot;platId&quot;: 101,&#xd;
+            &quot;shopId&quot;: 5050,&#xd;
+            &quot;accountNo&quot;: &quot;320299110000007381840000000005050&quot;,&#xd;
+            &quot;withdrawAmount&quot;: &quot;10&quot;,&#xd;
+            &quot;currencyCode&quot;: &quot;${withdrawCurrency}&quot;&#xd;
+        }&#xd;
+    ] &#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/withdraw/applyWithdraw.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="注册、登录" enabled="false"/>
+        <hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="手机号注册、登录" enabled="false"/>
+          <hashTree>
+            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="手机号注册、登录" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="loginName" elementType="Argument">
+                  <stringProp name="Argument.name">loginName</stringProp>
+                  <stringProp name="Argument.value">15261471747</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="password" elementType="Argument">
+                  <stringProp name="Argument.name">password</stringProp>
+                  <stringProp name="Argument.value">12345678A</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="payPwd" elementType="Argument">
+                  <stringProp name="Argument.name">payPwd</stringProp>
+                  <stringProp name="Argument.value">12345678Z</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="email" elementType="Argument">
+                  <stringProp name="Argument.name">email</stringProp>
+                  <stringProp name="Argument.value">qiuhua.yang@ipaylinks.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </Arguments>
+            <hashTree/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="手机号注册" enabled="true"/>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="发送注册短信验证码" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;requestObj&quot;:&quot;${loginName}&quot;}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/sendSmsCode.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="redis 查询注册短信验证码" enabled="true">
+                <stringProp name="BeanShellSampler.query">import redis.clients.jedis.Jedis;
+import me.yangqiuhua.jmeter.protocol.config.RedisElement;
+
+	String redisPoolName = &quot;${redis}&quot;;
+	log.info(&quot;redisPoolName：{}&quot;,redisPoolName);
+	Jedis jedis = RedisElement.getJedis(redisPoolName);
+
+	String redisKey = &quot;MES_GATEWAY_SMS_${loginName}_user_regist&quot;;
+	log.info(&quot;redisKey：{}&quot;,redisKey);
+	
+	String redisValue = jedis.get(redisKey);
+	log.info(&quot;redisValue：{}&quot;,redisValue);
+	vars.put(&quot;verifyCode&quot;, redisValue.replaceAll(&quot;\&quot;&quot;, &quot;&quot;));
+
+	String responseData = &quot;redisKey：&quot; + redisKey + &quot;\r\n&quot; 
+	+ &quot;redisValue：&quot; + redisValue;
+
+SampleResult.setResponseData(responseData, &quot;utf-8&quot;); </stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="注册" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;requestObj&quot;: {&#xd;
+        &quot;agreement&quot;: true,&#xd;
+        &quot;loginPhone&quot;: &quot;${loginName}&quot;,&#xd;
+        &quot;moblileVerifCode&quot;: &quot;${verifyCode}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/mobile.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="857455819">&quot;responseObj&quot;:&quot;MES_SIGN_VERFY_TOKEN_${loginName}&quot;</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="完善账户信息" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;requestObj&quot;: {&#xd;
+        &quot;email&quot;: &quot;${email}&quot;,&#xd;
+        &quot;loginPhone&quot;: &quot;${loginName}&quot;,&#xd;
+        &quot;payPwd&quot;: &quot;${payPwd}&quot;,&#xd;
+        &quot;payPwdRepeat&quot;: &quot;${payPwd}&quot;,&#xd;
+        &quot;pwd&quot;: &quot;${password}&quot;,&#xd;
+        &quot;pwdRepeat&quot;: &quot;${password}&quot;,&#xd;
+        &quot;recommendCode&quot;: &quot;&quot;,&#xd;
+        &quot;signType&quot;: 1,&#xd;
+        &quot;verfyToken&quot;: &quot;MES_SIGN_VERFY_TOKEN_${loginName}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/improveInfo.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="登录" enabled="true"/>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="登录" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;requestObj&quot;: {&#xd;
+    &quot;loginName&quot;: &quot;${loginName}&quot;,&#xd;
+    &quot;password&quot;: &quot;${password}&quot;&#xd;
+  }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/security/login.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-2083166786">&quot;responseObj&quot;:{&quot;token&quot;:</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="提取token" enabled="true">
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <boolProp name="resetInterpreter">false</boolProp>
+                  <stringProp name="script">import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+
+String responseDataString = prev.getResponseDataAsString();
+JSONObject responseData = JSON.parseObject(responseDataString);
+
+JSONObject responseObj = (JSONObject) responseData.get(&quot;responseObj&quot;);
+String token = String.valueOf(responseObj.get(&quot;token&quot;));
+vars.put(&quot;token&quot;, token);
+</stringProp>
+                </BeanShellPostProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="邮箱注册、登录" enabled="false"/>
+          <hashTree>
+            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="邮箱注册、登录" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="loginName" elementType="Argument">
+                  <stringProp name="Argument.name">loginName</stringProp>
+                  <stringProp name="Argument.value">15261471747</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="password" elementType="Argument">
+                  <stringProp name="Argument.name">password</stringProp>
+                  <stringProp name="Argument.value">12345678A</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="payPwd" elementType="Argument">
+                  <stringProp name="Argument.name">payPwd</stringProp>
+                  <stringProp name="Argument.value">12345678Z</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="email" elementType="Argument">
+                  <stringProp name="Argument.name">email</stringProp>
+                  <stringProp name="Argument.value">qiuhua.yang@ipaylinks.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </Arguments>
+            <hashTree/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="邮箱注册" enabled="true"/>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="注册" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;requestObj&quot;: {&#xd;
+        &quot;agreement&quot;: true,&#xd;
+        &quot;email&quot;: &quot;${email}&quot;,&#xd;
+        &quot;recommendCode&quot;: &quot;&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/email.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="redis 查询邮箱注册跳转链接token" enabled="true">
+                <stringProp name="BeanShellSampler.query">import redis.clients.jedis.Jedis;
+import me.yangqiuhua.jmeter.protocol.config.RedisElement;
+
+	String redisPoolName = &quot;${redis}&quot;;
+	log.info(&quot;redisPoolName：{}&quot;,redisPoolName);
+	Jedis jedis = RedisElement.getJedis(redisPoolName);
+
+	String redisKey = &quot;MES_REDIS_EMAIL_${email}&quot;;
+	log.info(&quot;redisKey：{}&quot;,redisKey);
+	
+	String redisValue = jedis.get(redisKey);
+	log.info(&quot;redisValue：{}&quot;,redisValue);
+	vars.put(&quot;registerToken&quot;, redisValue.replaceAll(&quot;\&quot;&quot;, &quot;&quot;));
+
+	String responseData = &quot;redisKey：&quot; + redisKey + &quot;\r\n&quot; 
+	+ &quot;redisValue：&quot; + redisValue;
+
+SampleResult.setResponseData(responseData, &quot;utf-8&quot;); </stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="点击邮箱注册跳转链接" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;requestObj&quot;: {&#xd;
+        &quot;agreement&quot;: true,&#xd;
+        &quot;email&quot;: &quot;${email}&quot;,&#xd;
+        &quot;token&quot;: &quot;${registerToken}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/activeEmail.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="发送注册短信验证码" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;requestObj&quot;:&quot;${loginName}&quot;}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/sendSmsCode.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="redis 查询注册短信验证码" enabled="true">
+                <stringProp name="BeanShellSampler.query">import redis.clients.jedis.Jedis;
+import me.yangqiuhua.jmeter.protocol.config.RedisElement;
+
+	String redisPoolName = &quot;${redis}&quot;;
+	log.info(&quot;redisPoolName：{}&quot;,redisPoolName);
+	Jedis jedis = RedisElement.getJedis(redisPoolName);
+
+	String redisKey = &quot;MES_GATEWAY_SMS_${loginName}_user_regist&quot;;
+	log.info(&quot;redisKey：{}&quot;,redisKey);
+	
+	String redisValue = jedis.get(redisKey);
+	log.info(&quot;redisValue：{}&quot;,redisValue);
+	vars.put(&quot;verifyCode&quot;, redisValue.replaceAll(&quot;\&quot;&quot;, &quot;&quot;));
+
+	String responseData = &quot;redisKey：&quot; + redisKey + &quot;\r\n&quot; 
+	+ &quot;redisValue：&quot; + redisValue;
+
+SampleResult.setResponseData(responseData, &quot;utf-8&quot;); </stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="完善账户信息" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;requestObj&quot;: {&#xd;
+        &quot;email&quot;: &quot;${email}&quot;,&#xd;
+        &quot;loginPhone&quot;: &quot;${loginName}&quot;,&#xd;
+        &quot;moblileVerifCode&quot;: &quot;${verifyCode}&quot;,&#xd;
+        &quot;payPwd&quot;: &quot;${payPwd}&quot;,&#xd;
+        &quot;payPwdRepeat&quot;: &quot;${payPwd}&quot;,&#xd;
+        &quot;pwd&quot;: &quot;${password}&quot;,&#xd;
+        &quot;pwdRepeat&quot;: &quot;${password}&quot;,&#xd;
+        &quot;recommendCode&quot;: &quot;&quot;,&#xd;
+        &quot;signType&quot;: 2,&#xd;
+        &quot;verfyToken&quot;: &quot;MES_SIGN_VERFY_TOKEN_${email}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/improveInfo.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="登录" enabled="true"/>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="登录" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;requestObj&quot;: {&#xd;
+    &quot;loginName&quot;: &quot;${loginName}&quot;,&#xd;
+    &quot;password&quot;: &quot;${password}&quot;&#xd;
+  }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/security/login.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-2083166786">&quot;responseObj&quot;:{&quot;token&quot;:</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="提取token" enabled="true">
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <boolProp name="resetInterpreter">false</boolProp>
+                  <stringProp name="script">import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+
+String responseDataString = prev.getResponseDataAsString();
+JSONObject responseData = JSON.parseObject(responseDataString);
+
+JSONObject responseObj = (JSONObject) responseData.get(&quot;responseObj&quot;);
+String token = String.valueOf(responseObj.get(&quot;token&quot;));
+vars.put(&quot;token&quot;, token);
+</stringProp>
+                </BeanShellPostProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="手机号+推荐码注册、登录" enabled="true"/>
+          <hashTree>
+            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="手机号注册、登录" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="loginName" elementType="Argument">
+                  <stringProp name="Argument.name">loginName</stringProp>
+                  <stringProp name="Argument.value">15261471747</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="password" elementType="Argument">
+                  <stringProp name="Argument.name">password</stringProp>
+                  <stringProp name="Argument.value">12345678A</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="payPwd" elementType="Argument">
+                  <stringProp name="Argument.name">payPwd</stringProp>
+                  <stringProp name="Argument.value">12345678Z</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="email" elementType="Argument">
+                  <stringProp name="Argument.name">email</stringProp>
+                  <stringProp name="Argument.value">qiuhua.yang@ipaylinks.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="recommendCode" elementType="Argument">
+                  <stringProp name="Argument.name">recommendCode</stringProp>
+                  <stringProp name="Argument.value">11080</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </Arguments>
+            <hashTree/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="手机号注册" enabled="true"/>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="发送注册短信验证码" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;requestObj&quot;:&quot;${loginName}&quot;}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/sendSmsCode.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="redis 查询注册短信验证码" enabled="true">
+                <stringProp name="BeanShellSampler.query">import redis.clients.jedis.Jedis;
+import me.yangqiuhua.jmeter.protocol.config.RedisElement;
+
+	String redisPoolName = &quot;${redis}&quot;;
+	log.info(&quot;redisPoolName：{}&quot;,redisPoolName);
+	Jedis jedis = RedisElement.getJedis(redisPoolName);
+
+	String redisKey = &quot;MES_GATEWAY_SMS_${loginName}_user_regist&quot;;
+	log.info(&quot;redisKey：{}&quot;,redisKey);
+	
+	String redisValue = jedis.get(redisKey);
+	log.info(&quot;redisValue：{}&quot;,redisValue);
+	vars.put(&quot;verifyCode&quot;, redisValue.replaceAll(&quot;\&quot;&quot;, &quot;&quot;));
+
+	String responseData = &quot;redisKey：&quot; + redisKey + &quot;\r\n&quot; 
+	+ &quot;redisValue：&quot; + redisValue;
+
+SampleResult.setResponseData(responseData, &quot;utf-8&quot;); </stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="注册" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;requestObj&quot;: {&#xd;
+        &quot;agreement&quot;: true,&#xd;
+        &quot;loginPhone&quot;: &quot;${loginName}&quot;,&#xd;
+        &quot;moblileVerifCode&quot;: &quot;${verifyCode}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/mobile.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="857455819">&quot;responseObj&quot;:&quot;MES_SIGN_VERFY_TOKEN_${loginName}&quot;</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="完善账户信息" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;requestObj&quot;: {&#xd;
+        &quot;email&quot;: &quot;${email}&quot;,&#xd;
+        &quot;loginPhone&quot;: &quot;${loginName}&quot;,&#xd;
+        &quot;payPwd&quot;: &quot;${payPwd}&quot;,&#xd;
+        &quot;payPwdRepeat&quot;: &quot;${payPwd}&quot;,&#xd;
+        &quot;pwd&quot;: &quot;${password}&quot;,&#xd;
+        &quot;pwdRepeat&quot;: &quot;${password}&quot;,&#xd;
+        &quot;recommendCode&quot;: &quot;${recommendCode}&quot;,&#xd;
+        &quot;signType&quot;: 1,&#xd;
+        &quot;verfyToken&quot;: &quot;MES_SIGN_VERFY_TOKEN_${loginName}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/improveInfo.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="登录" enabled="true"/>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="登录" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;requestObj&quot;: {&#xd;
+    &quot;loginName&quot;: &quot;${loginName}&quot;,&#xd;
+    &quot;password&quot;: &quot;${password}&quot;&#xd;
+  }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/security/login.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-2083166786">&quot;responseObj&quot;:{&quot;token&quot;:</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="提取token" enabled="true">
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <boolProp name="resetInterpreter">false</boolProp>
+                  <stringProp name="script">import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+
+String responseDataString = prev.getResponseDataAsString();
+JSONObject responseData = JSON.parseObject(responseDataString);
+
+JSONObject responseObj = (JSONObject) responseData.get(&quot;responseObj&quot;);
+String token = String.valueOf(responseObj.get(&quot;token&quot;));
+vars.put(&quot;token&quot;, token);
+</stringProp>
+                </BeanShellPostProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="邮箱注册+推荐码、登录" enabled="false"/>
+          <hashTree>
+            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="邮箱注册、登录" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="loginName" elementType="Argument">
+                  <stringProp name="Argument.name">loginName</stringProp>
+                  <stringProp name="Argument.value">15261471747</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="password" elementType="Argument">
+                  <stringProp name="Argument.name">password</stringProp>
+                  <stringProp name="Argument.value">12345678A</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="payPwd" elementType="Argument">
+                  <stringProp name="Argument.name">payPwd</stringProp>
+                  <stringProp name="Argument.value">12345678Z</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="email" elementType="Argument">
+                  <stringProp name="Argument.name">email</stringProp>
+                  <stringProp name="Argument.value">qiuhua.yang@ipaylinks.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="recommendCode" elementType="Argument">
+                  <stringProp name="Argument.name">recommendCode</stringProp>
+                  <stringProp name="Argument.value">11080</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </Arguments>
+            <hashTree/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="邮箱注册" enabled="true"/>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="注册" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;requestObj&quot;: {&#xd;
+        &quot;agreement&quot;: true,&#xd;
+        &quot;email&quot;: &quot;${email}&quot;,&#xd;
+        &quot;recommendCode&quot;: &quot;${recommendCode}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/email.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="redis 查询邮箱注册跳转链接token" enabled="true">
+                <stringProp name="BeanShellSampler.query">import redis.clients.jedis.Jedis;
+import me.yangqiuhua.jmeter.protocol.config.RedisElement;
+
+	String redisPoolName = &quot;${redis}&quot;;
+	log.info(&quot;redisPoolName：{}&quot;,redisPoolName);
+	Jedis jedis = RedisElement.getJedis(redisPoolName);
+
+	String redisKey = &quot;MES_REDIS_EMAIL_${email}&quot;;
+	log.info(&quot;redisKey：{}&quot;,redisKey);
+	
+	String redisValue = jedis.get(redisKey);
+	log.info(&quot;redisValue：{}&quot;,redisValue);
+	vars.put(&quot;registerToken&quot;, redisValue.replaceAll(&quot;\&quot;&quot;, &quot;&quot;));
+
+	String responseData = &quot;redisKey：&quot; + redisKey + &quot;\r\n&quot; 
+	+ &quot;redisValue：&quot; + redisValue;
+
+SampleResult.setResponseData(responseData, &quot;utf-8&quot;); </stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="点击邮箱注册跳转链接" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;requestObj&quot;: {&#xd;
+        &quot;agreement&quot;: true,&#xd;
+        &quot;email&quot;: &quot;${email}&quot;,&#xd;
+        &quot;token&quot;: &quot;${registerToken}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/activeEmail.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="发送注册短信验证码" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;requestObj&quot;:&quot;${loginName}&quot;}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/sendSmsCode.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="redis 查询注册短信验证码" enabled="true">
+                <stringProp name="BeanShellSampler.query">import redis.clients.jedis.Jedis;
+import me.yangqiuhua.jmeter.protocol.config.RedisElement;
+
+	String redisPoolName = &quot;${redis}&quot;;
+	log.info(&quot;redisPoolName：{}&quot;,redisPoolName);
+	Jedis jedis = RedisElement.getJedis(redisPoolName);
+
+	String redisKey = &quot;MES_GATEWAY_SMS_${loginName}_user_regist&quot;;
+	log.info(&quot;redisKey：{}&quot;,redisKey);
+	
+	String redisValue = jedis.get(redisKey);
+	log.info(&quot;redisValue：{}&quot;,redisValue);
+	vars.put(&quot;verifyCode&quot;, redisValue.replaceAll(&quot;\&quot;&quot;, &quot;&quot;));
+
+	String responseData = &quot;redisKey：&quot; + redisKey + &quot;\r\n&quot; 
+	+ &quot;redisValue：&quot; + redisValue;
+
+SampleResult.setResponseData(responseData, &quot;utf-8&quot;); </stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="完善账户信息" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;requestObj&quot;: {&#xd;
+        &quot;email&quot;: &quot;${email}&quot;,&#xd;
+        &quot;loginPhone&quot;: &quot;${loginName}&quot;,&#xd;
+        &quot;moblileVerifCode&quot;: &quot;${verifyCode}&quot;,&#xd;
+        &quot;payPwd&quot;: &quot;${payPwd}&quot;,&#xd;
+        &quot;payPwdRepeat&quot;: &quot;${payPwd}&quot;,&#xd;
+        &quot;pwd&quot;: &quot;${password}&quot;,&#xd;
+        &quot;pwdRepeat&quot;: &quot;${password}&quot;,&#xd;
+        &quot;recommendCode&quot;: &quot;${recommendCode}&quot;,&#xd;
+        &quot;signType&quot;: 2,&#xd;
+        &quot;verfyToken&quot;: &quot;MES_SIGN_VERFY_TOKEN_${email}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/improveInfo.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-619203974">&quot;responseObj&quot;:true</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="登录" enabled="true"/>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="登录" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;requestObj&quot;: {&#xd;
+    &quot;loginName&quot;: &quot;${loginName}&quot;,&#xd;
+    &quot;password&quot;: &quot;${password}&quot;&#xd;
+  }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/security/login.json</stringProp>
+                <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+                    <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+                    <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+                    <stringProp name="-2083166786">&quot;responseObj&quot;:{&quot;token&quot;:</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="提取token" enabled="true">
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <boolProp name="resetInterpreter">false</boolProp>
+                  <stringProp name="script">import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+
+String responseDataString = prev.getResponseDataAsString();
+JSONObject responseData = JSON.parseObject(responseDataString);
+
+JSONObject responseObj = (JSONObject) responseData.get(&quot;responseObj&quot;);
+String token = String.valueOf(responseObj.get(&quot;token&quot;));
+vars.put(&quot;token&quot;, token);
+</stringProp>
+                </BeanShellPostProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="添加店铺" enabled="false"/>
+        <hashTree>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>true</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>true</responseData>
+                <samplerData>true</samplerData>
+                <xml>true</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>true</responseHeaders>
+                <requestHeaders>true</requestHeaders>
+                <responseDataOnError>true</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>2</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <fileName>true</fileName>
+                <hostname>true</hostname>
+                <threadCounts>true</threadCounts>
+                <sampleCount>true</sampleCount>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="登录" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="loginName" elementType="Argument">
+                <stringProp name="Argument.name">loginName</stringProp>
+                <stringProp name="Argument.value">18973019192</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="password" elementType="Argument">
+                <stringProp name="Argument.name">password</stringProp>
+                <stringProp name="Argument.value">123456yy</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="模块控制器" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="869052411">测试计划</stringProp>
+              <stringProp name="869052411">测试计划</stringProp>
+              <stringProp name="964666">登录</stringProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">登录</stringProp>
+          </ModuleController>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="预开店铺" enabled="true"/>
+          <hashTree>
+            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="添加店铺" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="shop_name" elementType="Argument">
+                  <stringProp name="Argument.name">shop_name</stringProp>
+                  <stringProp name="Argument.value">auto_09</stringProp>
+                  <stringProp name="Argument.desc">店铺名称</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="platId" elementType="Argument">
+                  <stringProp name="Argument.name">platId</stringProp>
+                  <stringProp name="Argument.value">101</stringProp>
+                  <stringProp name="Argument.desc">平台id（101 103Amazon欧洲站 104Amazon英国站 105Amazon日本站）</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </Arguments>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">AUTH-TOKEN</stringProp>
+                  <stringProp name="Header.value">${token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="预开店铺" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;name&quot;:&quot;${shop_name}&quot;,&quot;platId&quot;:${platId},&quot;unShopFlag&quot;:1}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+              <stringProp name="HTTPSampler.port">${port}</stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+              <stringProp name="HTTPSampler.path">/mes-gateway/api/shop/manager/addShop.json</stringProp>
+              <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="免授权店铺" enabled="false"/>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">AUTH-TOKEN</stringProp>
+                  <stringProp name="Header.value">${token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="添加免授权店铺" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="shop_name" elementType="Argument">
+                  <stringProp name="Argument.name">shop_name</stringProp>
+                  <stringProp name="Argument.value">auto_0010</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="platId" elementType="Argument">
+                  <stringProp name="Argument.name">platId</stringProp>
+                  <stringProp name="Argument.value">101</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </Arguments>
+            <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="添加免授权店铺" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;name&quot;: &quot;${shop_name}&quot;,&#xd;
+  &quot;platId&quot;: ${platId},&#xd;
+  &quot;unShopFlag&quot;: 0,&#xd;
+  &quot;salesCategory&quot;: &quot;02&quot;,&#xd;
+  &quot;bankAccountName&quot;: &quot;YORKS&quot;,&#xd;
+  &quot;address&quot;: &quot;http://mesnew2.innertest.ipaylinks.com/#/home/storeManagement/addStore&quot;,&#xd;
+  &quot;sellerId&quot;: &quot;A3PN50Y06VN8VQ&quot;,&#xd;
+  &quot;mwsAuthToken&quot;: &quot;amzn.mws.d8aff87d-ead1-f9f2-833e-cbd9ddd02bbd&quot;&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/mes-gateway/api/shop/manager/addShop.json</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="实名认证" enabled="false"/>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="login_phone" elementType="Argument">
+                <stringProp name="Argument.name">login_phone</stringProp>
+                <stringProp name="Argument.value">16600000011</stringProp>
+                <stringProp name="Argument.desc">注册手机号</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="email" elementType="Argument">
+                <stringProp name="Argument.name">email</stringProp>
+                <stringProp name="Argument.value">1234561@qq.com</stringProp>
+                <stringProp name="Argument.desc">注册邮箱</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="pwd" elementType="Argument">
+                <stringProp name="Argument.name">pwd</stringProp>
+                <stringProp name="Argument.value">123456yu</stringProp>
+                <stringProp name="Argument.desc">登录密码</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="payPwd" elementType="Argument">
+                <stringProp name="Argument.name">payPwd</stringProp>
+                <stringProp name="Argument.value">123456yy</stringProp>
+                <stringProp name="Argument.desc">支付密码</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="注册" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="验证手机号码是否已经注册" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;clientCode&quot;:&quot;&quot;,&quot;requestObj&quot;:&quot;${login_phone}&quot;,&quot;traceId&quot;:&quot;&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/check/mobile.json</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1563444278">{&quot;responseCode&quot;:&quot;00000000&quot;,&quot;responseMsg&quot;:&quot;成功响应&quot;,&quot;responseStatus&quot;:&quot;1&quot;,&quot;responseObj&quot;:true}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">result</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.responseObj</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                <stringProp name="JSONPostProcessor.defaultValues">NOT FOUND</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>true</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>true</responseData>
+                <samplerData>true</samplerData>
+                <xml>true</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>true</responseHeaders>
+                <requestHeaders>true</requestHeaders>
+                <responseDataOnError>true</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>2</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <fileName>true</fileName>
+                <hostname>true</hostname>
+                <threadCounts>true</threadCounts>
+                <sampleCount>true</sampleCount>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="true">
+            <stringProp name="IfController.condition">${result}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">true</boolProp>
+          </IfController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="发送验证码" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="发送验证码" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;requestObj&quot;:&quot;${login_phone}&quot;}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/sendSmsCode.json</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1563444278">{&quot;responseCode&quot;:&quot;00000000&quot;,&quot;responseMsg&quot;:&quot;成功响应&quot;,&quot;responseStatus&quot;:&quot;1&quot;,&quot;responseObj&quot;:true}</stringProp>
+                    <stringProp name="0"></stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="redis 查询注册短信验证码" enabled="true">
+                <stringProp name="BeanShellSampler.query">import redis.clients.jedis.Jedis;
+import me.yangqiuhua.jmeter.protocol.config.RedisElement;
+
+String redisPoolName = &quot;${redis}&quot;;
+Jedis jedis = RedisElement.getJedis(redisPoolName);
+String redisKey = &quot;MES_GATEWAY_SMS_${loginName}_user_regist&quot;;
+
+String redisValue = jedis.get(redisKey);
+vars.put(&quot;verifyCode&quot;, redisValue);
+
+	
+</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="redis取短信验证码" enabled="false">
+                <stringProp name="TestPlan.comments">redis取短信验证码</stringProp>
+                <stringProp name="BeanShellSampler.query">import redis.clients.jedis.Jedis;
+import me.yangqiuhua.jmeter.protocol.config.RedisElement;
+
+	String redisPoolName = &quot;${redis}&quot;;
+	log.info(&quot;redisPoolName：{}&quot;,redisPoolName);
+	Jedis jedis = RedisElement.getJedis(redisPoolName);
+
+	String redisKey = &quot;MES_GATEWAY_SMS_${loginName}_user_regist&quot;;
+	log.info(&quot;redisKey：{}&quot;,redisKey);
+	
+	String redisValue = jedis.get(redisKey);
+	log.info(&quot;redisValue：{}&quot;,redisValue);
+	vars.put(&quot;verifyCode&quot;, redisValue.replaceAll(&quot;\&quot;&quot;, &quot;&quot;));
+
+	String responseData = &quot;redisKey：&quot; + redisKey + &quot;\r\n&quot; 
+	+ &quot;redisValue：&quot; + redisValue;
+
+SampleResult.setResponseData(responseData, &quot;utf-8&quot;); </stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="注册" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="注册01" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;requestObj&quot;: {&#xd;
+    &quot;agreement&quot;: true,&#xd;
+    &quot;loginPhone&quot;: &quot;${login_phone}&quot;,&#xd;
+    &quot;moblileVerifCode&quot;: &quot;vars.get(&quot;verifyCode&quot;)&quot;&#xd;
+  }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/mobile.json</stringProp>
+                <stringProp name="HTTPSampler.method">GET</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="995972583">{&quot;responseCode&quot;:&quot;00000000&quot;,&quot;responseMsg&quot;:&quot;成功响应&quot;,&quot;responseStatus&quot;:&quot;1&quot;,&quot;responseObj&quot;:&quot;MES_SIGN_VERFY_TOKEN_${login_phone}&quot;}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="注册02—完善信息" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;requestObj&quot;: {&#xd;
+    &quot;email&quot;: &quot;${email}&quot;,&#xd;
+    &quot;loginPhone&quot;: &quot;${login_phone}&quot;,&#xd;
+    &quot;payPwd&quot;: &quot;${payPwd}&quot;,&#xd;
+    &quot;payPwdRepeat&quot;: &quot;${payPwd}&quot;,&#xd;
+    &quot;pwd&quot;: &quot;${pwd}&quot;,&#xd;
+    &quot;pwdRepeat&quot;: &quot;${pwd}&quot;,&#xd;
+    &quot;recommendCode&quot;: &quot;&quot;,&#xd;
+    &quot;signType&quot;: 1,&#xd;
+    &quot;verfyToken&quot;: &quot;MES_SIGN_VERFY_TOKEN_${login_phone}&quot;&#xd;
+  }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/mes-gateway/api/sign/signup/improveInfo.json</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1563444278">{&quot;responseCode&quot;:&quot;00000000&quot;,&quot;responseMsg&quot;:&quot;成功响应&quot;,&quot;responseStatus&quot;:&quot;1&quot;,&quot;responseObj&quot;:true}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <org.apache.jmeter.protocol.jdbc.sampler.DbunitSampler guiclass="TestBeanGUI" testclass="org.apache.jmeter.protocol.jdbc.sampler.DbunitSampler" testname="Dbunit Sampler-rollback" enabled="false">
+          <stringProp name="dataSource">DB-gathering-test2</stringProp>
+          <stringProp name="operationType">rollback</stringProp>
+          <stringProp name="schema">FE</stringProp>
+          <stringProp name="tables"></stringProp>
+          <stringProp name="backupFileName">backupFiles</stringProp>
+        </org.apache.jmeter.protocol.jdbc.sampler.DbunitSampler>
+        <hashTree/>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="登录" enabled="false"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="登录" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;requestObj&quot;: {&#xd;
+    &quot;loginName&quot;: &quot;${loginName}&quot;,&#xd;
+    &quot;password&quot;: &quot;${password}&quot;&#xd;
+  }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">${charset}</stringProp>
+          <stringProp name="HTTPSampler.path">/mes-gateway/api/security/login.json</stringProp>
+          <stringProp name="HTTPSampler.method">${httpMethod}</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-96172152">&quot;responseCode&quot;:&quot;00000000&quot;</stringProp>
+              <stringProp name="-1064460224">&quot;responseMsg&quot;:&quot;成功响应&quot;</stringProp>
+              <stringProp name="792847174">&quot;responseStatus&quot;:&quot;1&quot;</stringProp>
+              <stringProp name="-2083166786">&quot;responseObj&quot;:{&quot;token&quot;:</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="提取token" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+
+String responseDataString = prev.getResponseDataAsString();
+JSONObject responseData = JSON.parseObject(responseDataString);
+
+JSONObject responseObj = (JSONObject) responseData.get(&quot;responseObj&quot;);
+String token = String.valueOf(responseObj.get(&quot;token&quot;));
+vars.put(&quot;token&quot;, token);
+</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell断言" enabled="true">
+            <stringProp name="BeanShellAssertion.query"></stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

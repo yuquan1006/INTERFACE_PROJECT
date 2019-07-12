@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ipaylinks.test.mock.server.dao.mapper.ResponseRecordMapper">
+  <resultMap id="BaseResultMap" type="com.ipaylinks.test.mock.server.dao.model.ResponseRecord">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="access_point" jdbcType="VARCHAR" property="accessPoint" />
+    <result column="response_template_name" jdbcType="VARCHAR" property="responseTemplateName" />
+    <result column="unique_request_id" jdbcType="VARCHAR" property="uniqueRequestId" />
+    <result column="request_date" jdbcType="TIMESTAMP" property="requestDate" />
+    <result column="response_date" jdbcType="TIMESTAMP" property="responseDate" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.ipaylinks.test.mock.server.dao.model.ResponseRecordWithBLOBs">
+    <result column="request_content" jdbcType="LONGVARCHAR" property="requestContent" />
+    <result column="response_content" jdbcType="LONGVARCHAR" property="responseContent" />
+  </resultMap>
+  <sql id="Blob_Column_List">
+    request_content, response_content
+  </sql>
+  <insert id="insert" parameterType="com.ipaylinks.test.mock.server.dao.model.ResponseRecordWithBLOBs">
+    insert into response_record (id, access_point, response_template_name, 
+      unique_request_id, request_date, response_date, 
+      request_content, response_content
+      )
+    values (#{id,jdbcType=INTEGER}, #{accessPoint,jdbcType=VARCHAR}, #{responseTemplateName,jdbcType=VARCHAR}, 
+      #{uniqueRequestId,jdbcType=VARCHAR}, #{requestDate,jdbcType=TIMESTAMP}, #{responseDate,jdbcType=TIMESTAMP}, 
+      #{requestContent,jdbcType=LONGVARCHAR}, #{responseContent,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ipaylinks.test.mock.server.dao.model.ResponseRecordWithBLOBs">
+    insert into response_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="accessPoint != null">
+        access_point,
+      </if>
+      <if test="responseTemplateName != null">
+        response_template_name,
+      </if>
+      <if test="uniqueRequestId != null">
+        unique_request_id,
+      </if>
+      <if test="requestDate != null">
+        request_date,
+      </if>
+      <if test="responseDate != null">
+        response_date,
+      </if>
+      <if test="requestContent != null">
+        request_content,
+      </if>
+      <if test="responseContent != null">
+        response_content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="accessPoint != null">
+        #{accessPoint,jdbcType=VARCHAR},
+      </if>
+      <if test="responseTemplateName != null">
+        #{responseTemplateName,jdbcType=VARCHAR},
+      </if>
+      <if test="uniqueRequestId != null">
+        #{uniqueRequestId,jdbcType=VARCHAR},
+      </if>
+      <if test="requestDate != null">
+        #{requestDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="responseDate != null">
+        #{responseDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="requestContent != null">
+        #{requestContent,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="responseContent != null">
+        #{responseContent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="findOne"
+          parameterType="com.ipaylinks.test.mock.server.dao.model.ResponseRecord"
+          resultMap="ResultMapWithBLOBs">
+    SELECT * FROM response_record
+    WHERE 1=1
+    <if test="responseTemplateName != null">
+      AND response_template_name = #{responseTemplateName}
+    </if>
+    <if test="accessPoint != null">
+      AND access_point = #{accessPoint}
+    </if>
+    <if test="uniqueRequestId != null">
+      AND unique_request_id = #{uniqueRequestId}
+    </if>
+    ORDER BY id desc
+    limit 1
+  </select>
+</mapper>

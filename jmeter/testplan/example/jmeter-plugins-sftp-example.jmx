@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0.20190603">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <me.yangqiuhua.jmeter.protocol.config.SftpElement guiclass="TestBeanGUI" testclass="me.yangqiuhua.jmeter.protocol.config.SftpElement" testname="SftpElement" enabled="true">
+        <stringProp name="host">106.14.227.5</stringProp>
+        <stringProp name="password">HKJWIhSt9UxmMfzIH8</stringProp>
+        <stringProp name="port">22</stringProp>
+        <stringProp name="sftpSessionName">sftp</stringProp>
+        <stringProp name="timeout">60000</stringProp>
+        <stringProp name="username">jollychic</stringProp>
+      </me.yangqiuhua.jmeter.protocol.config.SftpElement>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">import org.apache.jmeter.services.FileServer;
+
+//当前 jmx 路径
+String baseDir = FileServer.getFileServer().getBaseDir();
+
+//jmeter bin 路径
+String userDir = System.getProperty(&quot;user.dir&quot;);
+
+	String sftpFileName = &quot;你永远不知道未来的你会有多强大.jpg&quot;;
+	String sftpSrcPath = baseDir + System.getProperty(&quot;file.separator&quot;);
+	String sftpDestPath = &quot;/opt/sftp/jollychic/test/example/&quot;;
+	vars.put(&quot;sftpFileName&quot;, sftpFileName);
+	vars.put(&quot;sftpSrcPath&quot;, sftpSrcPath);
+	vars.put(&quot;sftpDestPath&quot;, sftpDestPath);</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="channelSftp op" enabled="true"/>
+          <hashTree>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="channelSftp 文件上传" enabled="true">
+              <stringProp name="BeanShellSampler.query">import com.jcraft.jsch.ChannelSftp;
+import me.yangqiuhua.jmeter.protocol.config.SftpElement;
+
+	String sftpSessionName = &quot;sftp&quot;;
+	ChannelSftp channelSftp = SftpElement.getChannelSftp(sftpSessionName);
+
+	String sftpFileName = vars.get(&quot;sftpFileName&quot;);
+	String sftpSrcPath = vars.get(&quot;sftpSrcPath&quot;);
+	String sftpDestPath = vars.get(&quot;sftpDestPath&quot;);
+	log.info(&quot;sftpFileName:{}&quot;, sftpFileName);
+	log.info(&quot;sftpSrcPath:{}&quot;, sftpSrcPath);
+	log.info(&quot;sftpDestPath:{}&quot;, sftpDestPath);
+	
+	String[] folders = sftpDestPath.split( &quot;/&quot; );
+	for ( String folder : folders ) {
+		log.info(&quot;folder:{}&quot;, folder);
+	    if ( folder.length() &gt; 0 ) {
+	        try {
+	            channelSftp.cd( folder );
+	        }
+	        catch ( Exception e ) {
+	            channelSftp.mkdir( folder );
+	            channelSftp.cd( folder );
+	        }
+	    }
+	}
+
+	try {
+	  channelSftp.put(sftpSrcPath+sftpFileName, sftpDestPath+sftpFileName);
+	} catch (Exception e) {
+	  e.printStackTrace();
+	}
+
+	String responseData = &quot;本地文件：&quot; + sftpSrcPath+sftpFileName + &quot;\r\n&quot; 
+	+ &quot;上传至服务器：&quot; + sftpDestPath+sftpFileName + &quot;\r\n&quot; 
+	+ &quot;成功&quot;;
+
+SampleResult.setResponseData(responseData, &quot;utf-8&quot;); </stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="channelSftp 文件下载" enabled="false">
+              <stringProp name="cacheKey">false</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import com.jcraft.jsch.ChannelSftp;
+import me.yangqiuhua.jmeter.protocol.config.SftpElement;
+
+	String sftpSessionName = &quot;sftp&quot;;
+	ChannelSftp channelSftp = SftpElement.getChannelSftp(sftpSessionName);
+
+	String src = &quot;/opt/sftp/jollychic/20181213/env.properties&quot;;
+	String dest = &quot;E:/&quot;;
+	try {
+	  channelSftp.get(src, dest);
+	} catch (Exception e) {
+	  e.printStackTrace();
+	}
+	
+	//注意：groovy中字符串用+拼接时，不能换行
+	String responseData = &quot;服务器文件：&quot; + src + &quot;\r\n&quot; + &quot;下载至本地：&quot; + dest + &quot;\r\n&quot; + &quot;成功&quot;;
+
+SampleResult.setResponseData(responseData, &quot;utf-8&quot;); </stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

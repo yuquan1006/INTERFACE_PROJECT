@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ipaylinks.test.mock.server.dao.mapper.NotifyTemplateMapper">
+  <resultMap id="BaseResultMap" type="com.ipaylinks.test.mock.server.dao.model.NotifyTemplate">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="access_point" jdbcType="VARCHAR" property="accessPoint" />
+    <result column="group" jdbcType="VARCHAR" property="group" />
+    <result column="notify_url" jdbcType="VARCHAR" property="notifyUrl" />
+    <result column="notify_template_name" jdbcType="VARCHAR" property="notifyTemplateName" />
+    <result column="notify_template_desc" jdbcType="VARCHAR" property="notifyTemplateDesc" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="sleep_time" jdbcType="INTEGER" property="sleepTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.ipaylinks.test.mock.server.dao.model.NotifyTemplate">
+    <result column="notify_template_content" jdbcType="LONGVARCHAR" property="notifyTemplateContent" />
+  </resultMap>
+  <sql id="Blob_Column_List">
+    notify_template_content
+  </sql>
+  <insert id="insert" parameterType="com.ipaylinks.test.mock.server.dao.model.NotifyTemplate">
+    insert into notify_template (id, access_point, group, 
+      notify_url, notify_template_name, notify_template_desc, 
+      status, sleep_time, notify_template_content
+      )
+    values (#{id,jdbcType=INTEGER}, #{accessPoint,jdbcType=VARCHAR}, #{group,jdbcType=VARCHAR}, 
+      #{notifyUrl,jdbcType=VARCHAR}, #{notifyTemplateName,jdbcType=VARCHAR}, #{notifyTemplateDesc,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{sleepTime,jdbcType=INTEGER}, #{notifyTemplateContent,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ipaylinks.test.mock.server.dao.model.NotifyTemplate">
+    insert into notify_template
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="accessPoint != null">
+        access_point,
+      </if>
+      <if test="group != null">
+        group,
+      </if>
+      <if test="notifyUrl != null">
+        notify_url,
+      </if>
+      <if test="notifyTemplateName != null">
+        notify_template_name,
+      </if>
+      <if test="notifyTemplateDesc != null">
+        notify_template_desc,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="sleepTime != null">
+        sleep_time,
+      </if>
+      <if test="notifyTemplateContent != null">
+        notify_template_content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="accessPoint != null">
+        #{accessPoint,jdbcType=VARCHAR},
+      </if>
+      <if test="group != null">
+        #{group,jdbcType=VARCHAR},
+      </if>
+      <if test="notifyUrl != null">
+        #{notifyUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="notifyTemplateName != null">
+        #{notifyTemplateName,jdbcType=VARCHAR},
+      </if>
+      <if test="notifyTemplateDesc != null">
+        #{notifyTemplateDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="sleepTime != null">
+        #{sleepTime,jdbcType=INTEGER},
+      </if>
+      <if test="notifyTemplateContent != null">
+        #{notifyTemplateContent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="findOne"
+          parameterType="com.ipaylinks.test.mock.server.dao.model.NotifyTemplate"
+          resultMap="ResultMapWithBLOBs">
+    SELECT * FROM notify_template
+    WHERE 1=1
+    <if test="notifyTemplateName != null">
+      AND notify_template_name = #{notifyTemplateName}
+    </if>
+    <if test="accessPoint != null">
+      AND access_point = #{accessPoint}
+    </if>
+    <if test="status != null">
+      AND status = #{status}
+    </if>
+    ORDER BY id desc
+    limit 1
+  </select>
+</mapper>

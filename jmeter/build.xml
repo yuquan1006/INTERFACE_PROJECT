@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF8"?>
+<project name="ant-jmeter-test" default="main" basedir=".">
+	<tstamp>
+		<format property="time" pattern="yyyyMMddHHmmssSSS" />
+	</tstamp>
+
+	<property name="jmeter.home" value="${basedir}/apache-jmeter-5.0" />
+
+	<property name="jmeter.testplan.rundir" value="${basedir}/testplan/run" />
+	<property name="jmeter.testplan.includes" value="*" />
+
+	<property name="jmeter.testreport.dir" value="${basedir}/testreport" />
+	<property name="jmeter.testreport.name" value="testreport" />
+	<property name="jmeter.testreport.jtlName" value="${jmeter.testreport.dir}/${jmeter.testreport.name}.jtl" />
+	<property name="jmeter.testreport.htmlName" value="${jmeter.testreport.dir}/${jmeter.testreport.name}.html" />
+
+	<target name="main">
+		<echo message="clean start"/>
+		<antcall target="clean" />
+		<echo message="clean end"/>
+		
+		<echo message="test start"/>
+		<antcall target="test" />
+		<echo message="test end"/>
+
+		<echo message="testreport start"/>
+		<antcall target="testreport" />
+		<echo message="testreport end"/>
+		
+		<echo message="sendEmail start"/>
+		<antcall target="sendEmail" />
+		<echo message="sendEmail end"/>
+	</target>
+	
+	<target name="clean">
+		<delete>
+			<fileset dir="${jmeter.testreport.dir}" includes="*.jtl,*.html"/>
+		</delete>
+	</target>
+         
+	<target name="test">
+		<taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" />
+		<jmeter jmeterhome="${jmeter.home}" resultlog="${jmeter.testreport.jtlName}">
+			<testplans dir="${jmeter.testplan.rundir}" includes="${jmeter.testplan.includes}.jmx" />
+			<property name="jmeter.save.saveservice.output_format" value="xml"/>
+		</jmeter>
+	</target>
+         
+	<target name="testreport">
+		<path id="xslt.classpath">
+			<fileset dir="${jmeter.home}/lib" includes="xalan*.jar"/>
+			<fileset dir="${jmeter.home}/lib" includes="serializer*.jar"/>
+		</path>
+		<!--style:jmeter-results-shanhe-me.xsl;jmeter-results-report_21.xsl;jmeter-results-detail-report_21.xsl-->
+		<xslt
+			classpathref="xslt.classpath"
+            force="true"
+			in="${jmeter.testreport.jtlName}"
+			out="${jmeter.testreport.htmlName}"
+			style="${jmeter.home}/extras/jmeter-results-shanhe-me.xsl">
+			<param name="titleReport" expression="${jmeter.testreport.name}"/>
+			<param name="dateReport" expression="${time}"/>
+		</xslt>
+		<copy todir="${jmeter.testreport.dir}">
+			<fileset dir="${jmeter.home}/extras">
+				<include name="collapse.png" />
+				<include name="expand.png" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="sendEmail">
+	    <mail from="no-reply@ipaylinks.com" mailhost="smtp.exmail.qq.com" mailport="465" user="no-reply@ipaylinks.com" password="knOgZrbcOIRzC0D88vWF" ssl="true" subject="[Jmeter]AutoTest Report By Jenkins" messagemimetype="text/html"  tolist="qiuhua.yang@ipaylinks.com" cclist="test@ipaylinks.com">
+		<!--<mail from="yangqiuhua0807@qq.com" mailhost="smtp.qq.com" mailport="465" user="yangqiuhua0807@qq.com" password="tbbnirspwhtriabb" ssl="true" subject="[Jmeter]AutoTest Report By Jenkins" messagemimetype="text/html"  tolist="qiuhua.yang@ipaylinks.com" cclist="test@ipaylinks.com">-->
+			<message>
+			This is the test report sent by Jenkins automatically.  &lt;br /&gt; &lt;br /&gt; 
+			The attachment is the test report file.  &lt;br /&gt; &lt;br /&gt; 
+			If you have any questions, please contact with quihua.yang@ipaylinks.com. Thank you! &lt;br /&gt; &lt;br /&gt; 
+			
+			</message>
+			<attachments>
+				<fileset dir="${jmeter.testreport.dir}">
+					<include name="${jmeter.testreport.name}.html" />
+					<include name="collapse.png" />
+					<include name="expand.png" />
+				</fileset>
+			</attachments>
+		</mail>
+	</target>
+
+
+</project>

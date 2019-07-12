@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ipaylinks.test.mock.server.dao.mapper.ResponseTemplateMapper">
+  <resultMap id="BaseResultMap" type="com.ipaylinks.test.mock.server.dao.model.ResponseTemplate">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="access_point" jdbcType="VARCHAR" property="accessPoint" />
+    <result column="group" jdbcType="VARCHAR" property="group" />
+    <result column="response_template_name" jdbcType="VARCHAR" property="responseTemplateName" />
+    <result column="response_template_desc" jdbcType="VARCHAR" property="responseTemplateDesc" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="sleep_time" jdbcType="INTEGER" property="sleepTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.ipaylinks.test.mock.server.dao.model.ResponseTemplate">
+    <result column="response_template_content" jdbcType="LONGVARCHAR" property="responseTemplateContent" />
+  </resultMap>
+  <sql id="Blob_Column_List">
+    response_template_content
+  </sql>
+  <insert id="insert" parameterType="com.ipaylinks.test.mock.server.dao.model.ResponseTemplate">
+    insert into response_template (id, access_point, group, 
+      response_template_name, response_template_desc, 
+      status, sleep_time, response_template_content
+      )
+    values (#{id,jdbcType=INTEGER}, #{accessPoint,jdbcType=VARCHAR}, #{group,jdbcType=VARCHAR}, 
+      #{responseTemplateName,jdbcType=VARCHAR}, #{responseTemplateDesc,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{sleepTime,jdbcType=INTEGER}, #{responseTemplateContent,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ipaylinks.test.mock.server.dao.model.ResponseTemplate">
+    insert into response_template
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="accessPoint != null">
+        access_point,
+      </if>
+      <if test="group != null">
+        group,
+      </if>
+      <if test="responseTemplateName != null">
+        response_template_name,
+      </if>
+      <if test="responseTemplateDesc != null">
+        response_template_desc,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="sleepTime != null">
+        sleep_time,
+      </if>
+      <if test="responseTemplateContent != null">
+        response_template_content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="accessPoint != null">
+        #{accessPoint,jdbcType=VARCHAR},
+      </if>
+      <if test="group != null">
+        #{group,jdbcType=VARCHAR},
+      </if>
+      <if test="responseTemplateName != null">
+        #{responseTemplateName,jdbcType=VARCHAR},
+      </if>
+      <if test="responseTemplateDesc != null">
+        #{responseTemplateDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="sleepTime != null">
+        #{sleepTime,jdbcType=INTEGER},
+      </if>
+      <if test="responseTemplateContent != null">
+        #{responseTemplateContent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="findOne"
+          parameterType="com.ipaylinks.test.mock.server.dao.model.ResponseTemplate"
+          resultMap="ResultMapWithBLOBs">
+    SELECT * FROM response_template
+    WHERE 1=1
+    <if test="responseTemplateName != null">
+      AND response_template_name = #{responseTemplateName}
+    </if>
+    <if test="accessPoint != null">
+      AND access_point = #{accessPoint}
+    </if>
+    <if test="status != null">
+      AND status = #{status}
+    </if>
+    ORDER BY id desc
+    limit 1
+  </select>
+</mapper>

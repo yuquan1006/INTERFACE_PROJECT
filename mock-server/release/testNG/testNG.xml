@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite" parallel="classes" thread-count="10">
+    <!--preserve-order="true" 表示classes下的class按顺序执行-->
+    <!--verbose="2" 标识的就是记录的日志级别，共有0-10的级别，其中0表示无，10表示最详细-->
+    <test verbose="2" preserve-order="true" name="mock-server Testcase">
+        <!--<packages>-->
+            <!--<package name="com.ipaylinks.mapi.web.controller.gateway"/>-->
+        <!--</packages>-->
+
+        <!--<groups>-->
+            <!--<run>-->
+                <!--<include name ="sale-s2s-2.0" />-->
+                <!--<include name ="refund-2.0" />-->
+                <!--<include name ="authorization-s2s-2.0" />-->
+                <!--<include name ="auth_void-2.0" />-->
+                <!--<include name ="capture-2.0" />-->
+                <!--<include name ="approved-2.0" />-->
+                <!--<include name ="refused-2.0" />-->
+                <!--<include name ="create_token-s2s-2.0" />-->
+                <!--<include name ="create_token_sale-s2s-2.0" />-->
+                <!--<include name ="create_token_auth-s2s-2.0" />-->
+                <!--<include name ="token_sale-s2s-2.0" />-->
+                <!--<include name ="token_auth-s2s-2.0" />-->
+                <!--<include name ="token_cancel-s2s-2.0" />-->
+                <!--<include name ="query-2.0" />-->
+                <!--<include name ="dcc_lock-2.0" />-->
+
+                <!--<include name ="sale-cashier-2.0" />-->
+
+                <!--<include name ="sale-direct_channel-2.0" />-->
+                <!--<include name ="authorization-direct_channel-2.0" />-->
+                <!--<include name ="create_token-direct_channel-2.0" />-->
+                <!--<include name ="create_token_sale-direct_channel-2.0" />-->
+                <!--<include name ="create_token_auth-direct_channel-2.0" />-->
+            <!--</run>-->
+        <!--</groups>-->
+
+        <classes>
+            <class name="com.ipaylinks.test.mock.server.api.czcb.CzcbApiTest">
+                <methods>
+                    <include name="od0005"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

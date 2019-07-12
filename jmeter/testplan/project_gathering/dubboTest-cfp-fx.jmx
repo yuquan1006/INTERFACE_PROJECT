@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0.20190611">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="注册中心地址" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="registry.address" elementType="Argument">
+            <stringProp name="Argument.name">registry.address</stringProp>
+            <stringProp name="Argument.value">101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="查询汇率" enabled="true"/>
+        <hashTree>
+          <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="FxFacade.rate" enabled="true">
+            <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="url" elementType="Argument">
+                  <stringProp name="Argument.name">url</stringProp>
+                  <stringProp name="Argument.value">${url}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="registryConfigs" elementType="Argument">
+                  <stringProp name="Argument.name">registryConfigs</stringProp>
+                  <stringProp name="Argument.value">${registryConfigs}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="monitorConfig" elementType="Argument">
+                  <stringProp name="Argument.name">monitorConfig</stringProp>
+                  <stringProp name="Argument.value">${monitorConfig}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="interfaceName" elementType="Argument">
+                  <stringProp name="Argument.name">interfaceName</stringProp>
+                  <stringProp name="Argument.value">${interfaceName}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="version" elementType="Argument">
+                  <stringProp name="Argument.name">version</stringProp>
+                  <stringProp name="Argument.value">${version}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="methodConfigs" elementType="Argument">
+                  <stringProp name="Argument.name">methodConfigs</stringProp>
+                  <stringProp name="Argument.value">${methodConfigs}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="methodName" elementType="Argument">
+                  <stringProp name="Argument.name">methodName</stringProp>
+                  <stringProp name="Argument.value">${methodName}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="methodParameters" elementType="Argument">
+                  <stringProp name="Argument.name">methodParameters</stringProp>
+                  <stringProp name="Argument.value">${methodParameters}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="classname">org.apache.jmeter.protocol.java.test.DubboTest</stringProp>
+          </JavaSampler>
+          <hashTree>
+            <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="interfaceName version methodName" enabled="true">
+              <collectionProp name="UserParameters.names">
+                <stringProp name="515839844">interfaceName</stringProp>
+                <stringProp name="351608024">version</stringProp>
+                <stringProp name="-723163380">methodName</stringProp>
+              </collectionProp>
+              <collectionProp name="UserParameters.thread_values">
+                <collectionProp name="2130762427">
+                  <stringProp name="1577497125">com.ipaylinks.fx.facade.FxFacade</stringProp>
+                  <stringProp name="48563">1.0</stringProp>
+                  <stringProp name="3493088">rate</stringProp>
+                </collectionProp>
+              </collectionProp>
+              <boolProp name="UserParameters.per_iteration">false</boolProp>
+            </UserParameters>
+            <hashTree/>
+            <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="url 点对点直连" enabled="false">
+              <collectionProp name="UserParameters.names">
+                <stringProp name="116079">url</stringProp>
+              </collectionProp>
+              <collectionProp name="UserParameters.thread_values">
+                <collectionProp name="-825906266">
+                  <stringProp name="-1887115082">dubbo://127.0.0.1:20000/</stringProp>
+                </collectionProp>
+              </collectionProp>
+              <boolProp name="UserParameters.per_iteration">false</boolProp>
+            </UserParameters>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="registryConfigs 注册中心" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import com.alibaba.dubbo.config.RegistryConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	RegistryConfig registryConfig = new RegistryConfig();
+	registryConfig.setProtocol(&quot;zookeeper&quot;);
+	registryConfig.setAddress(&quot;${registry.address}&quot;);
+//	registryConfig.setAddress(&quot;47.100.10.132:2181,47.100.10.132:2182,47.100.10.132:2183&quot;);
+
+	JSONArray registryConfigs = new JSONArray();
+	registryConfigs.add(registryConfig);
+	vars.put(&quot;registryConfigs&quot;,registryConfigs.toJSONString());
+	vars.put(&quot;url&quot;,&quot;&quot;);
+//	vars.put(&quot;registryConfigs&quot;,&quot;&quot;);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="monitorConfig 监控中心" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import com.alibaba.dubbo.config.MonitorConfig;
+import com.alibaba.fastjson.JSON;
+
+	MonitorConfig monitorConfig = new MonitorConfig();
+	//protocol为registry时，表示从注册中心发现监控中心地址，否则为直连监控中心
+	monitorConfig.setProtocol(&quot;registry&quot;);
+	//直连监控中心服务器地址
+//	monitorConfig.setAddress(&quot;127.0.0.1:7070&quot;);
+
+	vars.put(&quot;monitorConfig&quot;, JSON.toJSONString(monitorConfig));
+	vars.put(&quot;monitorConfig&quot;, &quot;&quot;);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="methodConfigs 方法级别配置" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import com.alibaba.dubbo.config.MethodConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	String methodName = vars.get(&quot;methodName&quot;);
+
+	MethodConfig methodConfig = new MethodConfig();
+	methodConfig.setName(methodName);
+	methodConfig.setTimeout(120000);
+	methodConfig.setRetries(0);
+
+	JSONArray methodConfigs = new JSONArray();
+	methodConfigs.add(methodConfig);
+	vars.put(&quot;methodConfigs&quot;, methodConfigs.toJSONString());
+
+	vars.put(&quot;methodConfigs&quot;, &quot;&quot;);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="methodParameters groovy泛型参数对象" enabled="true">
+              <stringProp name="cacheKey">false</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+import com.ipaylinks.fx.facade.request.RateRequest;
+import com.ipaylinks.common.CurrencyEnum;
+import com.ipaylinks.common.Money;
+	
+	RateRequest req = new RateRequest();
+	req.setBizId(&quot;${__time(yyyyMMddHHmmssSSS,)}${__RandomString(4,0123456789,)}&quot;);
+	req.setBizSource(&quot;TRANSACTION&quot;);
+	req.setChannel(&quot;DBS&quot;);
+	req.setCcyPair(&quot;USDSGD&quot;);
+	req.setDealtSide(&quot;Buy&quot;);
+	Money txnAmount = new Money(&quot;123&quot;, CurrencyEnum.USD.getAlphaCode());
+	req.setTxnAmount(txnAmount);
+	req.setTxnCcy(&quot;USD&quot;);
+//	req.setTenor(&quot;SPOT&quot;);
+	req.setTenor(&quot;TODAY&quot;);
+	 
+	JSONArray methodParameters = new JSONArray();
+	methodParameters.add(JSON.toJSONString(req));
+	vars.put(&quot;methodParameters&quot;,methodParameters.toJSONString());</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="汇兑" enabled="true"/>
+        <hashTree>
+          <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="FxFacade.booking" enabled="true">
+            <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="url" elementType="Argument">
+                  <stringProp name="Argument.name">url</stringProp>
+                  <stringProp name="Argument.value">${url}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="registryConfigs" elementType="Argument">
+                  <stringProp name="Argument.name">registryConfigs</stringProp>
+                  <stringProp name="Argument.value">${registryConfigs}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="monitorConfig" elementType="Argument">
+                  <stringProp name="Argument.name">monitorConfig</stringProp>
+                  <stringProp name="Argument.value">${monitorConfig}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="interfaceName" elementType="Argument">
+                  <stringProp name="Argument.name">interfaceName</stringProp>
+                  <stringProp name="Argument.value">${interfaceName}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="version" elementType="Argument">
+                  <stringProp name="Argument.name">version</stringProp>
+                  <stringProp name="Argument.value">${version}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="methodConfigs" elementType="Argument">
+                  <stringProp name="Argument.name">methodConfigs</stringProp>
+                  <stringProp name="Argument.value">${methodConfigs}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="methodName" elementType="Argument">
+                  <stringProp name="Argument.name">methodName</stringProp>
+                  <stringProp name="Argument.value">${methodName}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="methodParameters" elementType="Argument">
+                  <stringProp name="Argument.name">methodParameters</stringProp>
+                  <stringProp name="Argument.value">${methodParameters}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="classname">org.apache.jmeter.protocol.java.test.DubboTest</stringProp>
+          </JavaSampler>
+          <hashTree>
+            <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="interfaceName version methodName" enabled="true">
+              <collectionProp name="UserParameters.names">
+                <stringProp name="515839844">interfaceName</stringProp>
+                <stringProp name="351608024">version</stringProp>
+                <stringProp name="-723163380">methodName</stringProp>
+              </collectionProp>
+              <collectionProp name="UserParameters.thread_values">
+                <collectionProp name="1674152609">
+                  <stringProp name="1577497125">com.ipaylinks.fx.facade.FxFacade</stringProp>
+                  <stringProp name="48563">1.0</stringProp>
+                  <stringProp name="64686169">booking</stringProp>
+                </collectionProp>
+              </collectionProp>
+              <boolProp name="UserParameters.per_iteration">false</boolProp>
+            </UserParameters>
+            <hashTree/>
+            <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="url 点对点直连" enabled="false">
+              <collectionProp name="UserParameters.names">
+                <stringProp name="116079">url</stringProp>
+              </collectionProp>
+              <collectionProp name="UserParameters.thread_values">
+                <collectionProp name="-825906266">
+                  <stringProp name="-1887115082">dubbo://127.0.0.1:20000/</stringProp>
+                </collectionProp>
+              </collectionProp>
+              <boolProp name="UserParameters.per_iteration">false</boolProp>
+            </UserParameters>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="registryConfigs 注册中心" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import com.alibaba.dubbo.config.RegistryConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	RegistryConfig registryConfig = new RegistryConfig();
+	registryConfig.setProtocol(&quot;zookeeper&quot;);
+	registryConfig.setAddress(&quot;${registry.address}&quot;);
+//	registryConfig.setAddress(&quot;47.100.10.132:2181,47.100.10.132:2182,47.100.10.132:2183&quot;);
+
+	JSONArray registryConfigs = new JSONArray();
+	registryConfigs.add(registryConfig);
+	vars.put(&quot;registryConfigs&quot;,registryConfigs.toJSONString());
+	vars.put(&quot;url&quot;,&quot;&quot;);
+//	vars.put(&quot;registryConfigs&quot;,&quot;&quot;);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="monitorConfig 监控中心" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import com.alibaba.dubbo.config.MonitorConfig;
+import com.alibaba.fastjson.JSON;
+
+	MonitorConfig monitorConfig = new MonitorConfig();
+	//protocol为registry时，表示从注册中心发现监控中心地址，否则为直连监控中心
+	monitorConfig.setProtocol(&quot;registry&quot;);
+	//直连监控中心服务器地址
+//	monitorConfig.setAddress(&quot;127.0.0.1:7070&quot;);
+
+	vars.put(&quot;monitorConfig&quot;, JSON.toJSONString(monitorConfig));
+	vars.put(&quot;monitorConfig&quot;, &quot;&quot;);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="methodConfigs 方法级别配置" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import com.alibaba.dubbo.config.MethodConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+	String methodName = vars.get(&quot;methodName&quot;);
+
+	MethodConfig methodConfig = new MethodConfig();
+	methodConfig.setName(methodName);
+	methodConfig.setTimeout(120000);
+	methodConfig.setRetries(0);
+
+	JSONArray methodConfigs = new JSONArray();
+	methodConfigs.add(methodConfig);
+	vars.put(&quot;methodConfigs&quot;, methodConfigs.toJSONString());
+
+	vars.put(&quot;methodConfigs&quot;, &quot;&quot;);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="methodParameters groovy泛型参数对象" enabled="true">
+              <stringProp name="cacheKey">false</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+
+import com.ipaylinks.fx.facade.request.RateRequest;
+import com.ipaylinks.common.CurrencyEnum;
+import com.ipaylinks.common.Money;
+	
+	BookingRequest req = new BookingRequest();
+	req.setBizId(&quot;${__time(yyyyMMddHHmmssSSS,)}${__RandomString(4,0123456789,)}&quot;);
+	req.setBizType(&quot;TRANSACTION&quot;);
+	req.setRequestId(&quot;&quot;);
+	req.setTransactionNo(&quot;&quot;);
+	 
+	JSONArray methodParameters = new JSONArray();
+	methodParameters.add(JSON.toJSONString(req));
+	vars.put(&quot;methodParameters&quot;,methodParameters.toJSONString());</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

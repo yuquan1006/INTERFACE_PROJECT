@@ -1,0 +1,10 @@
+#spring:
+#  cloud:
+#    zookeeper:
+#      enabled: true
+#      connect-string: 139.196.75.96:2181,139.196.75.96:2182,139.196.75.96:2183
+#      config:
+#        root: config
+#        enable: true
+#        watcher:
+#          enable: true

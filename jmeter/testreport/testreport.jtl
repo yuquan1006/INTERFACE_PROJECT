@@ -1,0 +1,1946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="5638" it="0" lt="0" ct="0" ts="1560492852669" s="true" lb="AccountManageFacade.openAccount" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="362" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountManageFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:openAccount&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountIndentity\&quot;:\&quot;9527\&quot;,\&quot;accountType\&quot;:\&quot;320299\&quot;,\&quot;currencys\&quot;:[\&quot;USD\&quot;],\&quot;memberCode\&quot;:20000001520,\&quot;memberType\&quot;:1},\&quot;traceId\&quot;:\&quot;bbc6ca1a9bdd48aeb2b6aae951f8272c\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="1928" it="0" lt="1924" ct="1710" ts="1560492858345" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3681	20000001520	1	320299120000001520840000000009527	USD	320299	N	N	N	2019-06-05 21:41:40.264	null	2019-06-05 21:41:40.264	null	null	9527
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+320299120000001520840000000009527
+varchar</samplerData>
+</sample>
+<sample t="7" it="0" lt="6" ct="0" ts="1560492860339" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="341" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3341	20000001520	V	320299120000001520840000000009527	320299	0	0	0	2019-06-05 21:41:40.275	2019-06-14 13:58:30.381	USD	0	0	0	null	null	9527
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+320299120000001520840000000009527
+varchar</samplerData>
+</sample>
+<sample t="28" it="0" lt="0" ct="0" ts="1560492860405" s="true" lb="AccountManageFacade.openAccount" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="362" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountManageFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:openAccount&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountIndentity\&quot;:\&quot;9527\&quot;,\&quot;accountType\&quot;:\&quot;320299\&quot;,\&quot;currencys\&quot;:[\&quot;USD\&quot;],\&quot;memberCode\&quot;:20000001520,\&quot;memberType\&quot;:1},\&quot;traceId\&quot;:\&quot;8058d7d4aedf4b118940f29134b737a3\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="7" it="0" lt="7" ct="0" ts="1560492860452" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3681	20000001520	1	320299120000001520840000000009527	USD	320299	N	N	N	2019-06-05 21:41:40.264	null	2019-06-05 21:41:40.264	null	null	9527
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+320299120000001520840000000009527
+varchar</samplerData>
+</sample>
+<sample t="8" it="0" lt="7" ct="0" ts="1560492860502" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="341" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3341	20000001520	V	320299120000001520840000000009527	320299	0	0	0	2019-06-05 21:41:40.275	2019-06-14 13:58:30.381	USD	0	0	0	null	null	9527
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+320299120000001520840000000009527
+varchar</samplerData>
+</sample>
+<sample t="22" it="0" lt="0" ct="0" ts="1560492860591" s="true" lb="AccountManageFacade.openAccount" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="362" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountManageFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:openAccount&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountIndentity\&quot;:\&quot;9528\&quot;,\&quot;accountType\&quot;:\&quot;320299\&quot;,\&quot;currencys\&quot;:[\&quot;USD\&quot;],\&quot;memberCode\&quot;:20000001520,\&quot;memberType\&quot;:1},\&quot;traceId\&quot;:\&quot;3b6353761bde4f7db02d2d9822f5b834\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="6" it="0" lt="6" ct="0" ts="1560492860617" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3761	20000001520	1	320299120000001520840000000009528	USD	320299	N	N	N	2019-06-12 10:02:24.665	null	2019-06-12 10:02:24.665	null	null	9528
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+320299120000001520840000000009528
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="5" ct="0" ts="1560492860663" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="341" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3421	20000001520	V	320299120000001520840000000009528	320299	0	0	0	2019-06-12 10:02:24.677	2019-06-14 13:58:30.395	USD	0	0	0	null	null	9528
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+320299120000001520840000000009528
+varchar</samplerData>
+</sample>
+<sample t="20" it="0" lt="0" ct="0" ts="1560492860745" s="true" lb="AccountManageFacade.openAccount" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="362" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountManageFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:openAccount&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountIndentity\&quot;:\&quot;9528\&quot;,\&quot;accountType\&quot;:\&quot;320299\&quot;,\&quot;currencys\&quot;:[\&quot;USD\&quot;],\&quot;memberCode\&quot;:20000001520,\&quot;memberType\&quot;:1},\&quot;traceId\&quot;:\&quot;ea15fafb9c9a40429f3163c5149e0ea2\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="7" it="0" lt="6" ct="0" ts="1560492860772" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3761	20000001520	1	320299120000001520840000000009528	USD	320299	N	N	N	2019-06-12 10:02:24.665	null	2019-06-12 10:02:24.665	null	null	9528
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+320299120000001520840000000009528
+varchar</samplerData>
+</sample>
+<sample t="5" it="0" lt="5" ct="0" ts="1560492860822" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="341" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3421	20000001520	V	320299120000001520840000000009528	320299	0	0	0	2019-06-12 10:02:24.677	2019-06-14 13:58:30.395	USD	0	0	0	null	null	9528
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+320299120000001520840000000009528
+varchar</samplerData>
+</sample>
+<sample t="243" it="0" lt="0" ct="0" ts="1560492860905" s="true" lb="AccountManageFacade.openAccount" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="1794" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountManageFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:openAccount&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountIndentity\&quot;:\&quot;\&quot;,\&quot;accountType\&quot;:\&quot;220281\&quot;,\&quot;currencys\&quot;:[\&quot;USD\&quot;,\&quot;EUR\&quot;,\&quot;GBP\&quot;,\&quot;JPY\&quot;,\&quot;AUD\&quot;,\&quot;CAD\&quot;,\&quot;HKD\&quot;],\&quot;memberCode\&quot;:20000001520,\&quot;memberType\&quot;:1},\&quot;traceId\&quot;:\&quot;9e66b00f967f41ae82f7e76ba786e354\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="5" it="0" lt="5" ct="0" ts="1560492861175" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3746	20000001520	1	220281120000001520840000000000000	USD	220281	N	N	N	2019-06-10 19:33:16.123	null	2019-06-10 19:33:16.123	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520840000000000000
+varchar</samplerData>
+</sample>
+<sample t="7" it="0" lt="6" ct="0" ts="1560492861209" s="false" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="348" sby="0" sc="1" ec="1" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>&#xd;
+ actual AVAILABLE_BALANCE=[14985] is not equals to expected AVAILABLE_BALANCE=[0]&#xd;
+ actual BALANCE=[14985] is not equals to expected BALANCE=[0]</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3406	20000001520	V	220281120000001520840000000000000	220281	14985	0	14985	2019-06-10 19:33:16.129	2019-06-14 13:59:06.58	USD	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520840000000000000
+varchar</samplerData>
+</sample>
+<sample t="7" it="0" lt="6" ct="0" ts="1560492861259" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3747	20000001520	1	220281120000001520978000000000000	EUR	220281	N	N	N	2019-06-10 19:33:16.136	null	2019-06-10 19:33:16.136	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520978000000000000
+varchar</samplerData>
+</sample>
+<sample t="8" it="0" lt="8" ct="0" ts="1560492861302" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="339" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3407	20000001520	V	220281120000001520978000000000000	220281	0	0	0	2019-06-10 19:33:16.14	2019-06-10 19:33:16.14	EUR	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520978000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="5" ct="0" ts="1560492861375" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3748	20000001520	1	220281120000001520826000000000000	GBP	220281	N	N	N	2019-06-10 19:33:16.146	null	2019-06-10 19:33:16.146	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520826000000000000
+varchar</samplerData>
+</sample>
+<sample t="22" it="0" lt="21" ct="0" ts="1560492861425" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="339" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3408	20000001520	V	220281120000001520826000000000000	220281	0	0	0	2019-06-10 19:33:16.15	2019-06-10 19:33:16.15	GBP	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520826000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="6" ct="0" ts="1560492861487" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3749	20000001520	1	220281120000001520392000000000000	JPY	220281	N	N	N	2019-06-10 19:33:16.156	null	2019-06-10 19:33:16.156	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520392000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="6" ct="0" ts="1560492861759" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="339" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3409	20000001520	V	220281120000001520392000000000000	220281	0	0	0	2019-06-10 19:33:16.16	2019-06-10 19:33:16.16	JPY	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520392000000000000
+varchar</samplerData>
+</sample>
+<sample t="5" it="0" lt="5" ct="0" ts="1560492861908" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3750	20000001520	1	220281120000001520036000000000000	AUD	220281	N	N	N	2019-06-10 19:33:16.166	null	2019-06-10 19:33:16.166	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520036000000000000
+varchar</samplerData>
+</sample>
+<sample t="10" it="0" lt="9" ct="0" ts="1560492861990" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="341" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3410	20000001520	V	220281120000001520036000000000000	220281	0	0	0	2019-06-10 19:33:16.171	2019-06-10 19:33:16.171	AUD	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520036000000000000
+varchar</samplerData>
+</sample>
+<sample t="5" it="0" lt="5" ct="0" ts="1560492862056" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3751	20000001520	1	220281120000001520124000000000000	CAD	220281	N	N	N	2019-06-10 19:33:16.177	null	2019-06-10 19:33:16.177	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520124000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="6" ct="1" ts="1560492862102" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="341" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3411	20000001520	V	220281120000001520124000000000000	220281	0	0	0	2019-06-10 19:33:16.196	2019-06-10 19:33:16.196	CAD	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520124000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="6" ct="0" ts="1560492862152" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3752	20000001520	1	220281120000001520344000000000000	HKD	220281	N	N	N	2019-06-10 19:33:16.203	null	2019-06-10 19:33:16.203	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520344000000000000
+varchar</samplerData>
+</sample>
+<sample t="8" it="0" lt="8" ct="0" ts="1560492862199" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="341" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3412	20000001520	V	220281120000001520344000000000000	220281	0	0	0	2019-06-10 19:33:16.207	2019-06-10 19:33:16.207	HKD	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520344000000000000
+varchar</samplerData>
+</sample>
+<sample t="47" it="0" lt="0" ct="0" ts="1560492862289" s="true" lb="AccountManageFacade.openAccount" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="1794" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountManageFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:openAccount&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountIndentity\&quot;:\&quot;\&quot;,\&quot;accountType\&quot;:\&quot;220281\&quot;,\&quot;currencys\&quot;:[\&quot;USD\&quot;,\&quot;EUR\&quot;,\&quot;GBP\&quot;,\&quot;JPY\&quot;,\&quot;AUD\&quot;,\&quot;CAD\&quot;,\&quot;HKD\&quot;],\&quot;memberCode\&quot;:20000001520,\&quot;memberType\&quot;:1},\&quot;traceId\&quot;:\&quot;0e0fe4726b30463d8e901c7daf6e384e\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="5" it="0" lt="5" ct="0" ts="1560492862348" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3746	20000001520	1	220281120000001520840000000000000	USD	220281	N	N	N	2019-06-10 19:33:16.123	null	2019-06-10 19:33:16.123	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520840000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="5" ct="0" ts="1560492862388" s="false" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="348" sby="0" sc="1" ec="1" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>&#xd;
+ actual AVAILABLE_BALANCE=[14985] is not equals to expected AVAILABLE_BALANCE=[0]&#xd;
+ actual BALANCE=[14985] is not equals to expected BALANCE=[0]</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3406	20000001520	V	220281120000001520840000000000000	220281	14985	0	14985	2019-06-10 19:33:16.129	2019-06-14 13:59:06.58	USD	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520840000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="5" ct="0" ts="1560492862435" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3747	20000001520	1	220281120000001520978000000000000	EUR	220281	N	N	N	2019-06-10 19:33:16.136	null	2019-06-10 19:33:16.136	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520978000000000000
+varchar</samplerData>
+</sample>
+<sample t="8" it="0" lt="7" ct="1" ts="1560492862469" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="339" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3407	20000001520	V	220281120000001520978000000000000	220281	0	0	0	2019-06-10 19:33:16.14	2019-06-10 19:33:16.14	EUR	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520978000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="6" ct="0" ts="1560492862508" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3748	20000001520	1	220281120000001520826000000000000	GBP	220281	N	N	N	2019-06-10 19:33:16.146	null	2019-06-10 19:33:16.146	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520826000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="6" ct="0" ts="1560492862542" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="339" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3408	20000001520	V	220281120000001520826000000000000	220281	0	0	0	2019-06-10 19:33:16.15	2019-06-10 19:33:16.15	GBP	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520826000000000000
+varchar</samplerData>
+</sample>
+<sample t="5" it="0" lt="5" ct="0" ts="1560492862576" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3749	20000001520	1	220281120000001520392000000000000	JPY	220281	N	N	N	2019-06-10 19:33:16.156	null	2019-06-10 19:33:16.156	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520392000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="6" ct="0" ts="1560492862612" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="339" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3409	20000001520	V	220281120000001520392000000000000	220281	0	0	0	2019-06-10 19:33:16.16	2019-06-10 19:33:16.16	JPY	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520392000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="6" ct="0" ts="1560492862649" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3750	20000001520	1	220281120000001520036000000000000	AUD	220281	N	N	N	2019-06-10 19:33:16.166	null	2019-06-10 19:33:16.166	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520036000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="6" ct="0" ts="1560492862687" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="341" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3410	20000001520	V	220281120000001520036000000000000	220281	0	0	0	2019-06-10 19:33:16.171	2019-06-10 19:33:16.171	AUD	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520036000000000000
+varchar</samplerData>
+</sample>
+<sample t="7" it="0" lt="6" ct="0" ts="1560492862726" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3751	20000001520	1	220281120000001520124000000000000	CAD	220281	N	N	N	2019-06-10 19:33:16.177	null	2019-06-10 19:33:16.177	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520124000000000000
+varchar</samplerData>
+</sample>
+<sample t="7" it="0" lt="6" ct="0" ts="1560492862761" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="341" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3411	20000001520	V	220281120000001520124000000000000	220281	0	0	0	2019-06-10 19:33:16.196	2019-06-10 19:33:16.196	CAD	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520124000000000000
+varchar</samplerData>
+</sample>
+<sample t="7" it="0" lt="6" ct="0" ts="1560492862800" s="true" lb="fe.T_ACCOUNT_INFO 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="302" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_TYPE	ACCOUNT_NO	CURRENCY	ACCOUNT_TYPE	CHECK_IN	CHECK_OUT	CANCEL_ACCOUNT	CREATE_TIME	CANCEL_TIME	UPDATE_TIME	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3752	20000001520	1	220281120000001520344000000000000	HKD	220281	N	N	N	2019-06-10 19:33:16.203	null	2019-06-10 19:33:16.203	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_INFO t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520344000000000000
+varchar</samplerData>
+</sample>
+<sample t="6" it="0" lt="6" ct="0" ts="1560492862838" s="true" lb="fe.T_ACCOUNT_BALANCE 查询" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="341" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>JSR223 Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@47.101.147.47:2522:CFPDB, user:FE</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">ID	MEMBER_CODE	MEMBER_GRADE	ACCOUNT_NO	ACCOUNT_TYPE	BALANCE	FREEZE_AMOUNT	AVAILABLE_BALANCE	CREATE_TIME	UPDATE_TIME	CURRENCY	BALANCE_DUE	BALANCE_INTEREST	BALANCE_LIMIT	SHOP_ID	PLAT_ID	ACCOUNT_INDENTITY
+3412	20000001520	V	220281120000001520344000000000000	220281	0	0	0	2019-06-10 19:33:16.207	2019-06-10 19:33:16.207	HKD	0	0	0	null	null	null
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Prepared Select Statement] select t.*
+  from fe.T_ACCOUNT_BALANCE t
+ where 1 = 1
+   and t.account_no = ?
+220281120000001520344000000000000
+varchar</samplerData>
+</sample>
+<sample t="435" it="0" lt="0" ct="0" ts="1560492862950" s="true" lb="AccountingFacade.apply 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;inAccountNo\&quot;:\&quot;11111111\&quot;},\&quot;remark\&quot;:\&quot;test CHANNEL_IN_ACCT\&quot;,\&quot;transferType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;},{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009528\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:200000,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;inAccountNo\&quot;:\&quot;22222222\&quot;},\&quot;remark\&quot;:\&quot;test\&quot;,\&quot;transferType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414228746711\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414228746711\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414228746711\&quot;,\&quot;txType\&quot;:\&quot;1001\&quot;},\&quot;traceId\&quot;:\&quot;f351762b5e154a6781a732af9763dbe3\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="23" it="0" lt="0" ct="0" ts="1560492863432" s="true" lb="AccountingFacade.apply 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;inAccountNo\&quot;:\&quot;11111111\&quot;},\&quot;remark\&quot;:\&quot;test CHANNEL_IN_ACCT\&quot;,\&quot;transferType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;},{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009528\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:200000,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;inAccountNo\&quot;:\&quot;22222222\&quot;},\&quot;remark\&quot;:\&quot;test\&quot;,\&quot;transferType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414228746711\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414228746711\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414228746711\&quot;,\&quot;txType\&quot;:\&quot;1001\&quot;},\&quot;traceId\&quot;:\&quot;f6892a0cc35d4836927bf5136ff68bb2\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="254" it="0" lt="0" ct="0" ts="1560492863485" s="true" lb="AccountingFacade.rollback 店铺入账，资金回冲" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:rollback&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;requestNo\&quot;:\&quot;201906141414228746711\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;},\&quot;traceId\&quot;:\&quot;6951f2fd90d44ed8bf6ed8de2f5047a3\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="13" it="0" lt="0" ct="0" ts="1560492863768" s="true" lb="AccountingFacade.rollback 店铺入账，资金回冲" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:rollback&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;requestNo\&quot;:\&quot;201906141414228746711\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;},\&quot;traceId\&quot;:\&quot;d480364541654715bbac888c91589ce1\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="417" it="0" lt="0" ct="0" ts="1560492863829" s="true" lb="AccountingFacade.apply 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;inAccountNo\&quot;:\&quot;11111111\&quot;},\&quot;remark\&quot;:\&quot;test CHANNEL_IN_ACCT\&quot;,\&quot;transferType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;},{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009528\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:200000,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;inAccountNo\&quot;:\&quot;22222222\&quot;},\&quot;remark\&quot;:\&quot;test\&quot;,\&quot;transferType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414237856590\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414237856590\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414237856590\&quot;,\&quot;txType\&quot;:\&quot;1001\&quot;},\&quot;traceId\&quot;:\&quot;f21e180ea483444eb70e4908d2c32e27\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="34" it="0" lt="0" ct="0" ts="1560492864305" s="true" lb="AccountingFacade.apply 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;inAccountNo\&quot;:\&quot;11111111\&quot;},\&quot;remark\&quot;:\&quot;test CHANNEL_IN_ACCT\&quot;,\&quot;transferType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;},{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009528\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:200000,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;inAccountNo\&quot;:\&quot;22222222\&quot;},\&quot;remark\&quot;:\&quot;test\&quot;,\&quot;transferType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414237856590\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414237856590\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414237856590\&quot;,\&quot;txType\&quot;:\&quot;1001\&quot;},\&quot;traceId\&quot;:\&quot;925bff82e9e641afa9dbfc773df3bb88\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="427" it="0" lt="0" ct="0" ts="1560492864377" s="true" lb="AccountingFacade.apply 资金冻结" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;remark\&quot;:\&quot;test FREEZE\&quot;,\&quot;transferType\&quot;:\&quot;FREEZE\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414243405946\&quot;,\&quot;bzType\&quot;:\&quot;FREEZE\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414243405946\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414243405946\&quot;,\&quot;txType\&quot;:\&quot;2001\&quot;},\&quot;traceId\&quot;:\&quot;682bb742971540fc9a756ff5c734853d\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="27" it="0" lt="0" ct="0" ts="1560492864840" s="true" lb="AccountingFacade.apply 资金冻结" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;remark\&quot;:\&quot;test FREEZE\&quot;,\&quot;transferType\&quot;:\&quot;FREEZE\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414243405946\&quot;,\&quot;bzType\&quot;:\&quot;FREEZE\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414243405946\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414243405946\&quot;,\&quot;txType\&quot;:\&quot;2001\&quot;},\&quot;traceId\&quot;:\&quot;eb4dfb10a297484ba68080dd5a0bf0f8\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="375" it="0" lt="0" ct="0" ts="1560492864888" s="true" lb="AccountingFacade.rollback 资金冻结，资金回冲" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:rollback&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;requestNo\&quot;:\&quot;201906141414243405946\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;},\&quot;traceId\&quot;:\&quot;a5e6f54103f24135a8ad70c7298a886a\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="27" it="0" lt="0" ct="0" ts="1560492865291" s="true" lb="AccountingFacade.rollback 资金冻结，资金回冲" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:rollback&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;requestNo\&quot;:\&quot;201906141414243405946\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;},\&quot;traceId\&quot;:\&quot;8e87612dbf8c42b9918be7ecfb32fcb0\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="290" it="0" lt="0" ct="0" ts="1560492865346" s="true" lb="AccountingFacade.apply 资金冻结" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;remark\&quot;:\&quot;test FREEZE\&quot;,\&quot;transferType\&quot;:\&quot;FREEZE\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414253214124\&quot;,\&quot;bzType\&quot;:\&quot;FREEZE\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414253214124\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414253214124\&quot;,\&quot;txType\&quot;:\&quot;2001\&quot;},\&quot;traceId\&quot;:\&quot;fedcb02f032a4ff78275ab1078bb03b5\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="35" it="0" lt="0" ct="0" ts="1560492865684" s="true" lb="AccountingFacade.apply 资金冻结" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;remark\&quot;:\&quot;test FREEZE\&quot;,\&quot;transferType\&quot;:\&quot;FREEZE\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414253214124\&quot;,\&quot;bzType\&quot;:\&quot;FREEZE\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414253214124\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414253214124\&quot;,\&quot;txType\&quot;:\&quot;2001\&quot;},\&quot;traceId\&quot;:\&quot;860a27f5e1014f05b8fe6f84a878ce55\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="480" it="0" lt="0" ct="0" ts="1560492865756" s="true" lb="AccountingFacade.apply 资金解冻" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;remark\&quot;:\&quot;test UNFREEZE\&quot;,\&quot;transferType\&quot;:\&quot;UNFREEZE\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414257208575\&quot;,\&quot;bzType\&quot;:\&quot;UNFREEZE\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414257208575\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414257208575\&quot;,\&quot;txType\&quot;:\&quot;2001\&quot;},\&quot;traceId\&quot;:\&quot;dd0651191ca648919f0c4828aba739ae\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="24" it="0" lt="0" ct="0" ts="1560492866271" s="true" lb="AccountingFacade.apply 资金解冻" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;remark\&quot;:\&quot;test UNFREEZE\&quot;,\&quot;transferType\&quot;:\&quot;UNFREEZE\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414257208575\&quot;,\&quot;bzType\&quot;:\&quot;UNFREEZE\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414257208575\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414257208575\&quot;,\&quot;txType\&quot;:\&quot;2001\&quot;},\&quot;traceId\&quot;:\&quot;88726d4c725f42d4b5da8da3bf2ed824\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="211" it="0" lt="0" ct="0" ts="1560492866312" s="true" lb="AccountingFacade.rollback 资金解冻，资金回冲" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:rollback&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;requestNo\&quot;:\&quot;201906141414257208575\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;},\&quot;traceId\&quot;:\&quot;5da54c2eded049869d85813afed385dc\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="18" it="0" lt="0" ct="0" ts="1560492866544" s="true" lb="AccountingFacade.rollback 资金解冻，资金回冲" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:rollback&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;requestNo\&quot;:\&quot;201906141414257208575\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;},\&quot;traceId\&quot;:\&quot;e6478e45a72d45a2ace8517473de6492\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="338" it="0" lt="0" ct="0" ts="1560492866590" s="true" lb="AccountingFacade.apply 资金解冻" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;remark\&quot;:\&quot;test UNFREEZE\&quot;,\&quot;transferType\&quot;:\&quot;UNFREEZE\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414265644066\&quot;,\&quot;bzType\&quot;:\&quot;UNFREEZE\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414265644066\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414265644066\&quot;,\&quot;txType\&quot;:\&quot;2001\&quot;},\&quot;traceId\&quot;:\&quot;a41c0616a5d749b0aae135b637174095\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="32" it="0" lt="0" ct="0" ts="1560492866965" s="true" lb="AccountingFacade.apply 资金解冻" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;01\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;remark\&quot;:\&quot;test UNFREEZE\&quot;,\&quot;transferType\&quot;:\&quot;UNFREEZE\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414265644066\&quot;,\&quot;bzType\&quot;:\&quot;UNFREEZE\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414265644066\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414265644066\&quot;,\&quot;txType\&quot;:\&quot;2001\&quot;},\&quot;traceId\&quot;:\&quot;895a505540194d35a22fdbcc599fd567\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="377" it="0" lt="0" ct="0" ts="1560492867034" s="true" lb="AccountingFacade.apply 店铺提现" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;bankAcctNo\&quot;:\&quot;6217880800001810391\&quot;,\&quot;shopName\&quot;:\&quot;9527\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;withdrawId\&quot;:\&quot;withdrawId201906141414269992567\&quot;},\&quot;remark\&quot;:\&quot;test SHOP_WITHDRAW\&quot;,\&quot;transferType\&quot;:\&quot;SHOP_WITHDRAW\&quot;},{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009528\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:200000,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;bankAcctNo\&quot;:\&quot;6217880800001810391\&quot;,\&quot;shopName\&quot;:\&quot;9528\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;withdrawId\&quot;:\&quot;withdrawId201906141414269992567\&quot;},\&quot;remark\&quot;:\&quot;test SHOP_WITHDRAW\&quot;,\&quot;transferType\&quot;:\&quot;SHOP_WITHDRAW\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414269992567\&quot;,\&quot;bzType\&quot;:\&quot;SHOP_WITHDRAW\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414269992567\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414269992567\&quot;,\&quot;txType\&quot;:\&quot;3001\&quot;},\&quot;traceId\&quot;:\&quot;c5187d9736d3456389134b141cf75b64\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="23" it="0" lt="0" ct="0" ts="1560492867442" s="true" lb="AccountingFacade.apply 店铺提现" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;bankAcctNo\&quot;:\&quot;6217880800001810391\&quot;,\&quot;shopName\&quot;:\&quot;9527\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;withdrawId\&quot;:\&quot;withdrawId201906141414269992567\&quot;},\&quot;remark\&quot;:\&quot;test SHOP_WITHDRAW\&quot;,\&quot;transferType\&quot;:\&quot;SHOP_WITHDRAW\&quot;},{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009528\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:200000,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;bankAcctNo\&quot;:\&quot;6217880800001810391\&quot;,\&quot;shopName\&quot;:\&quot;9528\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;withdrawId\&quot;:\&quot;withdrawId201906141414269992567\&quot;},\&quot;remark\&quot;:\&quot;test SHOP_WITHDRAW\&quot;,\&quot;transferType\&quot;:\&quot;SHOP_WITHDRAW\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414269992567\&quot;,\&quot;bzType\&quot;:\&quot;SHOP_WITHDRAW\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414269992567\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414269992567\&quot;,\&quot;txType\&quot;:\&quot;3001\&quot;},\&quot;traceId\&quot;:\&quot;33dac146c28645b79fee085d153f55e4\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="302" it="0" lt="0" ct="0" ts="1560492867527" s="true" lb="AccountingFacade.rollback 店铺提现，资金回冲" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:rollback&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;requestNo\&quot;:\&quot;201906141414269992567\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;},\&quot;traceId\&quot;:\&quot;648e3bb7d1634adaa30d2af0ea0ca523\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="23" it="0" lt="0" ct="0" ts="1560492867859" s="true" lb="AccountingFacade.rollback 店铺提现，资金回冲" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:rollback&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;requestNo\&quot;:\&quot;201906141414269992567\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;},\&quot;traceId\&quot;:\&quot;fc9bdd8174e44f86987bcb555ace0edb\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="433" it="0" lt="0" ct="0" ts="1560492867920" s="true" lb="AccountingFacade.apply 店铺提现" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;bankAcctNo\&quot;:\&quot;6217880800001810391\&quot;,\&quot;shopName\&quot;:\&quot;9527\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;withdrawId\&quot;:\&quot;withdrawId201906141414278856116\&quot;},\&quot;remark\&quot;:\&quot;test SHOP_WITHDRAW\&quot;,\&quot;transferType\&quot;:\&quot;SHOP_WITHDRAW\&quot;},{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009528\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:200000,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;bankAcctNo\&quot;:\&quot;6217880800001810391\&quot;,\&quot;shopName\&quot;:\&quot;9528\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;withdrawId\&quot;:\&quot;withdrawId201906141414278856116\&quot;},\&quot;remark\&quot;:\&quot;test SHOP_WITHDRAW\&quot;,\&quot;transferType\&quot;:\&quot;SHOP_WITHDRAW\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414278856116\&quot;,\&quot;bzType\&quot;:\&quot;SHOP_WITHDRAW\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414278856116\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414278856116\&quot;,\&quot;txType\&quot;:\&quot;3001\&quot;},\&quot;traceId\&quot;:\&quot;899b2385b144424393f4bfa4ea851185\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="22" it="0" lt="0" ct="0" ts="1560492868384" s="true" lb="AccountingFacade.apply 店铺提现" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountingFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:apply&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountOrderDTOs\&quot;:[{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009527\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:30000.88,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;bankAcctNo\&quot;:\&quot;6217880800001810391\&quot;,\&quot;shopName\&quot;:\&quot;9527\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;withdrawId\&quot;:\&quot;withdrawId201906141414278856116\&quot;},\&quot;remark\&quot;:\&quot;test SHOP_WITHDRAW\&quot;,\&quot;transferType\&quot;:\&quot;SHOP_WITHDRAW\&quot;},{\&quot;accountNo\&quot;:\&quot;320299120000001520840000000009528\&quot;,\&quot;accountingFlag\&quot;:\&quot;02\&quot;,\&quot;amount\&quot;:200000,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;extendDataMap\&quot;:{\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;bankAcctNo\&quot;:\&quot;6217880800001810391\&quot;,\&quot;shopName\&quot;:\&quot;9528\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;withdrawId\&quot;:\&quot;withdrawId201906141414278856116\&quot;},\&quot;remark\&quot;:\&quot;test SHOP_WITHDRAW\&quot;,\&quot;transferType\&quot;:\&quot;SHOP_WITHDRAW\&quot;}],\&quot;bzOrderNo\&quot;:\&quot;biz201906141414278856116\&quot;,\&quot;bzType\&quot;:\&quot;SHOP_WITHDRAW\&quot;,\&quot;requestNo\&quot;:\&quot;201906141414278856116\&quot;,\&quot;requestType\&quot;:\&quot;TX_COMMON\&quot;,\&quot;txOrderNo\&quot;:\&quot;txn201906141414278856116\&quot;,\&quot;txType\&quot;:\&quot;3001\&quot;},\&quot;traceId\&quot;:\&quot;b8d1ed211bfa4ec488e1213d4f4d8042\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="204" it="0" lt="0" ct="0" ts="1560492868446" s="true" lb="AccountBalanceFacade.queryAccount" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="639" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountBalanceFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:queryAccount&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountNos\&quot;:[\&quot;320299120000001520840000000009527\&quot;,\&quot;320299120000001520840000000009528\&quot;],\&quot;accountType\&quot;:\&quot;320299\&quot;,\&quot;memberCode\&quot;:20000001520},\&quot;traceId\&quot;:\&quot;3a2bcd21888a4682aa2a0393d9cb2efc\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="171" it="0" lt="0" ct="0" ts="1560492868683" s="true" lb="AccountBalanceFacade.sumBalanceByMemberCode" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="150" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.acct.facade.AccountBalanceFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:sumBalanceByMemberCode&#xd;
+methodParameters:[&quot;{\&quot;requestObj\&quot;:{\&quot;accountType\&quot;:\&quot;320299\&quot;,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;memberCode\&quot;:20000001520},\&quot;traceId\&quot;:\&quot;cdb645fc1f27401aa2f55c985a0ad7b8\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="2" it="0" lt="0" ct="0" ts="1560492868867" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="GBK" by="2168" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">JMeterVariables:
+ACCOUNT_INDENTITY=
+ACCOUNT_NO=220281120000001520344000000000000
+ACCOUNT_TYPE=220281
+AVAILABLE_BALANCE=0
+BALANCE=0
+CANCEL_ACCOUNT=N
+CHECK_IN=N
+CHECK_OUT=N
+CURRENCY=HKD
+DB=DB-gathering-dev
+DB-gathering-dev=org.apache.jmeter.protocol.jdbc.config.DataSourceElement$DataSourceComponentImpl@6acfb286
+FREEZE_AMOUNT=0
+JMeterThread.last_sample_ok=true
+JMeterThread.pack=org.apache.jmeter.threads.SamplePackage@519be8b1
+MEMBER_CODE=20000001520
+MEMBER_GRADE=V
+MEMBER_TYPE=1
+START.HMS=141406
+START.MS=1560492846515
+START.YMD=20190614
+TESTSTART.MS=1560492849665
+__jm__幂等测试__idx=0
+__jm__循环控制器__idx=0
+__jm__线程组__idx=0
+accountBalanceList=[{CURRENCY=HKD, ACCOUNT_INDENTITY=null, ACCOUNT_TYPE=220281, SHOP_ID=null, FREEZE_AMOUNT=0, BALANCE_LIMIT=0, UPDATE_TIME=2019-06-10 19:33:16.207, BALANCE=0, BALANCE_INTEREST=0, PLAT_ID=null, AVAILABLE_BALANCE=0, accountBalanceListSize=1, ID=3412, MEMBER_GRADE=V, ACCOUNT_NO=220281120000001520344000000000000, CREATE_TIME=2019-06-10 19:33:16.207, BALANCE_DUE=0, MEMBER_CODE=20000001520}]
+accountIdentity=
+accountInfoList=[{CURRENCY=HKD, ACCOUNT_INDENTITY=null, ACCOUNT_TYPE=220281, SHOP_ID=null, MEMBER_TYPE=1, UPDATE_TIME=2019-06-10 19:33:16.203, PLAT_ID=null, CHECK_OUT=N, ID=3752, ACCOUNT_NO=220281120000001520344000000000000, CREATE_TIME=2019-06-10 19:33:16.203, CANCEL_TIME=null, CHECK_IN=N, accountInfoListSize=1, CANCEL_ACCOUNT=N, MEMBER_CODE=20000001520}]
+accountNo=220281120000001520344000000000000
+accountType=220281
+currencies=USD;EUR;GBP;JPY;AUD;CAD;HKD
+currenciesLength=7
+interfaceName=com.ipaylinks.acct.facade.AccountBalanceFacade
+memberCode=20000001520
+memberType=1
+methodConfigs=
+methodName=sumBalanceByMemberCode
+methodParameters=[&quot;{\&quot;requestObj\&quot;:{\&quot;accountType\&quot;:\&quot;320299\&quot;,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;memberCode\&quot;:20000001520},\&quot;traceId\&quot;:\&quot;cdb645fc1f27401aa2f55c985a0ad7b8\&quot;}&quot;]
+monitorConfig=
+registry.address=101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183
+registryConfigs=[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]
+requestNo=201906141414278856116
+responseCode=00000000
+responseMsg=成功响应
+responseStatus=1
+url=
+version=1.0
+
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+
+<sample t="6152" it="0" lt="0" ct="0" ts="1560492873110" s="true" lb="OutChannelFundoutFacade.fundOut" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="120" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.channel.facade.fundout.OutChannelFundoutFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:fundOut&#xd;
+methodParameters:[&quot;{\&quot;amount\&quot;:20379.6,\&quot;amountSrc\&quot;:2997,\&quot;bankAccountNo\&quot;:\&quot;290613ae6980601eee4b3fac2222041aea020aefed265198\&quot;,\&quot;bankAcountName\&quot;:\&quot;杨秋华\&quot;,\&quot;bankAddress\&quot;:\&quot;中国上海浦东\&quot;,\&quot;bankBizNo\&quot;:\&quot;\&quot;,\&quot;bankCnapsCode\&quot;:\&quot;104290003582\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;batchNo\&quot;:\&quot;\&quot;,\&quot;bizOrderId\&quot;:1906141414321034199,\&quot;bizType\&quot;:\&quot;1\&quot;,\&quot;businessType\&quot;:1,\&quot;certNo\&quot;:\&quot;32012519930807171X\&quot;,\&quot;currencyCode\&quot;:\&quot;CNY\&quot;,\&quot;currencyCodeSrc\&quot;:\&quot;USD\&quot;,\&quot;declareBatchNo\&quot;:\&quot;\&quot;,\&quot;exchangeRate\&quot;:\&quot;6.8\&quot;,\&quot;ext1\&quot;:\&quot;\&quot;,\&quot;feeAmount\&quot;:0,\&quot;fundSource\&quot;:\&quot;3\&quot;,\&quot;memberCode\&quot;:20000001520,\&quot;orgCode\&quot;:\&quot;CCS_ONLINE\&quot;,\&quot;payeeName\&quot;:\&quot;杨秋华\&quot;,\&quot;referenceNo\&quot;:\&quot;\&quot;,\&quot;remark\&quot;:\&quot;remark\&quot;,\&quot;subAcctNo\&quot;:\&quot;1560201403990018003519\&quot;,\&quot;swiftCode\&quot;:\&quot;\&quot;,\&quot;traceId\&quot;:\&quot;6b34e49695a04ac5b222f52a368e49af\&quot;,\&quot;transactionOrderNo\&quot;:\&quot;201906141414321034199\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="68" it="0" lt="0" ct="0" ts="1560492879304" s="false" lb="OutChannelFundoutFacade.fundOut" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="109" sby="0" sc="1" ec="1" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>&#xd;
+ actual responseCode=[23000001] is not equals to expected responseCode=[fundout_router_success]&#xd;
+ actual responseMsg=[出款单初始创建] is not equals to expected responseMsg=[出款路由成功]</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.channel.facade.fundout.OutChannelFundoutFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:fundOut&#xd;
+methodParameters:[&quot;{\&quot;amount\&quot;:20379.6,\&quot;amountSrc\&quot;:2997,\&quot;bankAccountNo\&quot;:\&quot;290613ae6980601eee4b3fac2222041aea020aefed265198\&quot;,\&quot;bankAcountName\&quot;:\&quot;杨秋华\&quot;,\&quot;bankAddress\&quot;:\&quot;中国上海浦东\&quot;,\&quot;bankBizNo\&quot;:\&quot;\&quot;,\&quot;bankCnapsCode\&quot;:\&quot;104290003582\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;batchNo\&quot;:\&quot;\&quot;,\&quot;bizOrderId\&quot;:1906141414321034199,\&quot;bizType\&quot;:\&quot;1\&quot;,\&quot;businessType\&quot;:1,\&quot;certNo\&quot;:\&quot;32012519930807171X\&quot;,\&quot;currencyCode\&quot;:\&quot;CNY\&quot;,\&quot;currencyCodeSrc\&quot;:\&quot;USD\&quot;,\&quot;declareBatchNo\&quot;:\&quot;\&quot;,\&quot;exchangeRate\&quot;:\&quot;6.8\&quot;,\&quot;ext1\&quot;:\&quot;\&quot;,\&quot;feeAmount\&quot;:0,\&quot;fundSource\&quot;:\&quot;3\&quot;,\&quot;memberCode\&quot;:20000001520,\&quot;orgCode\&quot;:\&quot;CCS_ONLINE\&quot;,\&quot;payeeName\&quot;:\&quot;杨秋华\&quot;,\&quot;referenceNo\&quot;:\&quot;\&quot;,\&quot;remark\&quot;:\&quot;remark\&quot;,\&quot;subAcctNo\&quot;:\&quot;1560201403990018003519\&quot;,\&quot;swiftCode\&quot;:\&quot;\&quot;,\&quot;traceId\&quot;:\&quot;c9f8290dd8ee44c19233d926d95b9a9e\&quot;,\&quot;transactionOrderNo\&quot;:\&quot;201906141414321034199\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="226" it="0" lt="0" ct="0" ts="1560492879415" s="true" lb="FundOutOrderFacade.getFundorderByBizOrderId" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="944" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.channel.facade.fundout.FundOutOrderFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:getFundorderByBizOrderId&#xd;
+methodParameters:[&quot;1906141414321034199&quot;]</samplerData>
+</sample>
+<sample t="15" it="0" lt="0" ct="0" ts="1560492879725" s="true" lb="FundOutOrderFacade.getFundorderByBizOrderId" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="1026" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.channel.facade.fundout.FundOutOrderFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:getFundorderByBizOrderId&#xd;
+methodParameters:[&quot;1906141414321034199&quot;]</samplerData>
+</sample>
+<sample t="313" it="0" lt="0" ct="0" ts="1560492879789" s="true" lb="FundOutOrderFacade.FundOutPackNotify" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.channel.facade.fundout.ChannelFundOutFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:FundOutPackNotify&#xd;
+methodParameters:[&quot;{\&quot;foOrderId\&quot;:81219061400000000802,\&quot;packOrderStatus\&quot;:1,\&quot;packOrderType\&quot;:1,\&quot;platName\&quot;:\&quot;amazon\&quot;,\&quot;traceId\&quot;:\&quot;010fa2aaa05b4d26a673ea0cc733ff0f\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="40" it="0" lt="0" ct="0" ts="1560492880142" s="true" lb="FundOutOrderFacade.FundOutPackNotify" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="77" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>BeanShell断言</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.channel.facade.fundout.ChannelFundOutFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:FundOutPackNotify&#xd;
+methodParameters:[&quot;{\&quot;foOrderId\&quot;:81219061400000000802,\&quot;packOrderStatus\&quot;:1,\&quot;packOrderType\&quot;:1,\&quot;platName\&quot;:\&quot;amazon\&quot;,\&quot;traceId\&quot;:\&quot;db52c9e4f9594ec89868ba8463df1f30\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="1" it="0" lt="0" ct="0" ts="1560492880192" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="GBK" by="833" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">JMeterVariables:
+JMeterThread.last_sample_ok=true
+JMeterThread.pack=org.apache.jmeter.threads.SamplePackage@3664d64f
+START.HMS=141430
+START.MS=1560492870604
+START.YMD=20190614
+TESTSTART.MS=1560492871151
+__jm__循环控制器__idx=0
+__jm__线程组__idx=0
+bizOrderId=1906141414321034199
+foOrderId=81219061400000000802
+interfaceName=com.ipaylinks.cfp.channel.facade.fundout.ChannelFundOutFacade
+methodConfigs=
+methodName=FundOutPackNotify
+methodParameters=[&quot;{\&quot;foOrderId\&quot;:81219061400000000802,\&quot;packOrderStatus\&quot;:1,\&quot;packOrderType\&quot;:1,\&quot;platName\&quot;:\&quot;amazon\&quot;,\&quot;traceId\&quot;:\&quot;db52c9e4f9594ec89868ba8463df1f30\&quot;}&quot;]
+monitorConfig=
+registry.address=101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183
+registryConfigs=[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]
+url=
+version=1.0
+
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+
+<sample t="5242" it="0" lt="0" ct="0" ts="1560492884002" s="true" lb="FxFacade.rate" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="100" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.fx.facade.FxFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:rate&#xd;
+methodParameters:[&quot;{\&quot;bizId\&quot;:\&quot;201906141414431377404\&quot;,\&quot;bizSource\&quot;:\&quot;TRANSACTION\&quot;,\&quot;ccyPair\&quot;:\&quot;USDSGD\&quot;,\&quot;channel\&quot;:\&quot;DBS\&quot;,\&quot;dealtSide\&quot;:\&quot;Buy\&quot;,\&quot;tenor\&quot;:\&quot;TODAY\&quot;,\&quot;traceId\&quot;:\&quot;a28e99d7015648758c3c79e9b62f7a1c\&quot;,\&quot;txnAmount\&quot;:{\&quot;amount\&quot;:123.00,\&quot;cent\&quot;:12300,\&quot;centFactor\&quot;:100,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;currencyAmount\&quot;:123.00},\&quot;txnCcy\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="163" it="0" lt="0" ct="0" ts="1560492889332" s="true" lb="FxFacade.booking" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="102" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.fx.facade.FxFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:booking&#xd;
+methodParameters:[&quot;{\&quot;bizId\&quot;:\&quot;201906141414431377404\&quot;,\&quot;bizSource\&quot;:\&quot;TRANSACTION\&quot;,\&quot;ccyPair\&quot;:\&quot;USDSGD\&quot;,\&quot;channel\&quot;:\&quot;DBS\&quot;,\&quot;dealtSide\&quot;:\&quot;Buy\&quot;,\&quot;tenor\&quot;:\&quot;TODAY\&quot;,\&quot;traceId\&quot;:\&quot;a28e99d7015648758c3c79e9b62f7a1c\&quot;,\&quot;txnAmount\&quot;:{\&quot;amount\&quot;:123.00,\&quot;cent\&quot;:12300,\&quot;centFactor\&quot;:100,\&quot;currency\&quot;:\&quot;USD\&quot;,\&quot;currencyAmount\&quot;:123.00},\&quot;txnCcy\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+
+<sample t="5384" it="0" lt="0" ct="0" ts="1560492893685" s="true" lb="TransactionCoreFacade.paymentIn 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="185" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:paymentIn&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141414526677223\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;amazon-us-001\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002644\&quot;,\&quot;amount\&quot;:1000.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;},\&quot;traceId\&quot;:\&quot;27870393603d47eab8db0df5073a3e5f\&quot;,\&quot;txAmount\&quot;:1000.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="17" it="0" lt="0" ct="0" ts="1560492899103" s="true" lb="TransactionCoreFacade.paymentIn 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="179" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:paymentIn&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141414526677223\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;amazon-us-001\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002644\&quot;,\&quot;amount\&quot;:1000.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;},\&quot;traceId\&quot;:\&quot;aac8990fd7f64bc2a186fcd9df1789de\&quot;,\&quot;txAmount\&quot;:1000.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="244" it="0" lt="0" ct="0" ts="1560492899173" s="true" lb="TransactionCoreFacade.paymentIn 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="185" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:paymentIn&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141414591205147\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;amazon-us-002\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002645\&quot;,\&quot;amount\&quot;:2000.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;},\&quot;traceId\&quot;:\&quot;ed16d0604e344e82968cf7f00f1d2177\&quot;,\&quot;txAmount\&quot;:2000.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="22" it="0" lt="0" ct="0" ts="1560492899452" s="true" lb="TransactionCoreFacade.paymentIn 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="179" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:paymentIn&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141414591205147\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;amazon-us-002\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002645\&quot;,\&quot;amount\&quot;:2000.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;},\&quot;traceId\&quot;:\&quot;305cf8345ca84218bb27e217469d06f3\&quot;,\&quot;txAmount\&quot;:2000.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="333" it="0" lt="0" ct="0" ts="1560492899573" s="true" lb="TransactionCoreFacade.transfer 店铺转钱包" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="190" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:transfer&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141414594803715\&quot;,\&quot;bzType\&quot;:\&quot;SHOP_TRANSFER_WALLET\&quot;,\&quot;feeAmount\&quot;:3,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;srcAccountList\&quot;:[{\&quot;accountName\&quot;:\&quot;amazon-us-001\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002644\&quot;,\&quot;amount\&quot;:999.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;,\&quot;feeAmount\&quot;:1,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;},{\&quot;accountName\&quot;:\&quot;amazon-us-002\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002645\&quot;,\&quot;amount\&quot;:1998.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;,\&quot;feeAmount\&quot;:2,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;}],\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;钱包美元账户\&quot;,\&quot;accountNo\&quot;:\&quot;220281120000001520840000000000000\&quot;,\&quot;amount\&quot;:2997.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;,\&quot;feeAmount\&quot;:0,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;},\&quot;traceId\&quot;:\&quot;77a16c6f9dac4472a725262031dc7ce3\&quot;,\&quot;txAmount\&quot;:2997.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="23" it="0" lt="0" ct="0" ts="1560492899929" s="true" lb="TransactionCoreFacade.transfer 店铺转钱包" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="184" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:transfer&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141414594803715\&quot;,\&quot;bzType\&quot;:\&quot;SHOP_TRANSFER_WALLET\&quot;,\&quot;feeAmount\&quot;:3,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;srcAccountList\&quot;:[{\&quot;accountName\&quot;:\&quot;amazon-us-001\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002644\&quot;,\&quot;amount\&quot;:999.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;,\&quot;feeAmount\&quot;:1,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;},{\&quot;accountName\&quot;:\&quot;amazon-us-002\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002645\&quot;,\&quot;amount\&quot;:1998.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;,\&quot;feeAmount\&quot;:2,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;}],\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;钱包美元账户\&quot;,\&quot;accountNo\&quot;:\&quot;220281120000001520840000000000000\&quot;,\&quot;amount\&quot;:2997.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;,\&quot;feeAmount\&quot;:0,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;},\&quot;traceId\&quot;:\&quot;c2b57e0ae7ce4323aebc72a4d90cf431\&quot;,\&quot;txAmount\&quot;:2997.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="239" it="0" lt="0" ct="0" ts="1560492899995" s="true" lb="TransactionCoreFacade.paymentIn 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="185" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:paymentIn&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141414599529085\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;amazon-us-001\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002644\&quot;,\&quot;amount\&quot;:1000.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;},\&quot;traceId\&quot;:\&quot;2f56f18f616f47b9bbb65745971db63c\&quot;,\&quot;txAmount\&quot;:1000.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="20" it="0" lt="0" ct="0" ts="1560492900264" s="true" lb="TransactionCoreFacade.paymentIn 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="179" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:paymentIn&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141414599529085\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;amazon-us-001\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002644\&quot;,\&quot;amount\&quot;:1000.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;},\&quot;traceId\&quot;:\&quot;15e97a34590d4ea88316b5738f9c866c\&quot;,\&quot;txAmount\&quot;:1000.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="250" it="0" lt="0" ct="0" ts="1560492900356" s="true" lb="TransactionCoreFacade.paymentIn 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="185" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:paymentIn&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141415002898875\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;amazon-us-002\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002645\&quot;,\&quot;amount\&quot;:2000.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;},\&quot;traceId\&quot;:\&quot;9f95ae7aa4fb4bfc9f44fab5538d9107\&quot;,\&quot;txAmount\&quot;:2000.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="24" it="0" lt="0" ct="0" ts="1560492900637" s="true" lb="TransactionCoreFacade.paymentIn 店铺入账" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="179" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:paymentIn&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141415002898875\&quot;,\&quot;bzType\&quot;:\&quot;CHANNEL_IN_ACCT\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;amazon-us-002\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002645\&quot;,\&quot;amount\&quot;:2000.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;},\&quot;traceId\&quot;:\&quot;9efccfc1accb4aa99c9062ead6b23d34\&quot;,\&quot;txAmount\&quot;:2000.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="532" it="0" lt="0" ct="0" ts="1560492900755" s="true" lb="TransactionCoreFacade.paymentOut 店铺提现" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="189" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:paymentOut&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141415006644838\&quot;,\&quot;bzType\&quot;:\&quot;SHOP_WITHDRAW\&quot;,\&quot;feeAmount\&quot;:3,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;srcAccountList\&quot;:[{\&quot;accountName\&quot;:\&quot;amazon-us-001\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002644\&quot;,\&quot;amount\&quot;:999.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;,\&quot;feeAmount\&quot;:1,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;},{\&quot;accountName\&quot;:\&quot;amazon-us-002\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002645\&quot;,\&quot;amount\&quot;:1998.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;,\&quot;feeAmount\&quot;:2,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;}],\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;杨秋华\&quot;,\&quot;accountNo\&quot;:\&quot;290613ae6980601eee4b3fac2222041aea020aefed265198\&quot;,\&quot;amount\&quot;:20379.60,\&quot;bankAddress\&quot;:\&quot;中国上海浦东\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;certNo\&quot;:\&quot;32012519930807171X\&quot;,\&quot;currencyCode\&quot;:\&quot;CNY\&quot;,\&quot;exchangeRate\&quot;:6.8,\&quot;extendData\&quot;:{\&quot;BANK_CNAPS_CODE\&quot;:\&quot;104290003582\&quot;,\&quot;BUSINESS_TYPE\&quot;:\&quot;1\&quot;},\&quot;fullName\&quot;:\&quot;杨秋华\&quot;,\&quot;fundSource\&quot;:\&quot;3\&quot;,\&quot;subAccountNo\&quot;:\&quot;1560201403990018003519\&quot;},\&quot;traceId\&quot;:\&quot;2cccd9e814494fdb853e17ec7f0550cc\&quot;,\&quot;txAmount\&quot;:2997.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+<sample t="219" it="0" lt="0" ct="0" ts="1560492901320" s="true" lb="TransactionCoreFacade.paymentOut 店铺提现" rc="200" rm="OK" tn="线程组 1-1" dt="" de="UTF-8" by="189" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">url:&#xd;
+registryConfigs:[{&quot;address&quot;:&quot;101.132.113.199:2181,101.132.113.199:2182,101.132.113.199:2183&quot;,&quot;protocol&quot;:&quot;zookeeper&quot;}]&#xd;
+monitorConfig:&#xd;
+interfaceName:com.ipaylinks.cfp.transaction.facade.TransactionCoreFacade&#xd;
+version:1.0&#xd;
+methodConfigs:&#xd;
+methodName:paymentOut&#xd;
+methodParameters:[&quot;{\&quot;bzOrderNo\&quot;:\&quot;201906141415006644838\&quot;,\&quot;bzType\&quot;:\&quot;SHOP_WITHDRAW\&quot;,\&quot;feeAmount\&quot;:3,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;,\&quot;memberCode\&quot;:\&quot;20000001520\&quot;,\&quot;srcAccountList\&quot;:[{\&quot;accountName\&quot;:\&quot;amazon-us-001\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002644\&quot;,\&quot;amount\&quot;:999.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;,\&quot;feeAmount\&quot;:1,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;},{\&quot;accountName\&quot;:\&quot;amazon-us-002\&quot;,\&quot;accountNo\&quot;:\&quot;320299120000001520840000000002645\&quot;,\&quot;amount\&quot;:1998.00,\&quot;currencyCode\&quot;:\&quot;USD\&quot;,\&quot;feeAmount\&quot;:2,\&quot;feeCurrencyCode\&quot;:\&quot;USD\&quot;}],\&quot;tarAccountInfo\&quot;:{\&quot;accountName\&quot;:\&quot;杨秋华\&quot;,\&quot;accountNo\&quot;:\&quot;290613ae6980601eee4b3fac2222041aea020aefed265198\&quot;,\&quot;amount\&quot;:20379.60,\&quot;bankAddress\&quot;:\&quot;中国上海浦东\&quot;,\&quot;bankName\&quot;:\&quot;中国银行\&quot;,\&quot;certNo\&quot;:\&quot;32012519930807171X\&quot;,\&quot;currencyCode\&quot;:\&quot;CNY\&quot;,\&quot;exchangeRate\&quot;:6.8,\&quot;extendData\&quot;:{\&quot;BANK_CNAPS_CODE\&quot;:\&quot;104290003582\&quot;,\&quot;BUSINESS_TYPE\&quot;:\&quot;1\&quot;},\&quot;fullName\&quot;:\&quot;杨秋华\&quot;,\&quot;fundSource\&quot;:\&quot;3\&quot;,\&quot;subAccountNo\&quot;:\&quot;1560201403990018003519\&quot;},\&quot;traceId\&quot;:\&quot;085aa37f46af4baa9e43d6bb5d87a425\&quot;,\&quot;txAmount\&quot;:2997.00,\&quot;txCurrencyCode\&quot;:\&quot;USD\&quot;}&quot;]</samplerData>
+</sample>
+
+<sample t="1924" it="0" lt="1923" ct="1909" ts="1560492904622" s="true" lb="启用富友" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="9" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@106.15.186.65:2524:cfpdbtt, user:testquery</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">1 updates</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Update Statement] update CFP_CHANNEL.T_FUND_OUT_CHANNEL
+   set CHANNEL_TYPE   = &apos;1&apos;,
+       TRADE_TYPE     = &apos;1,2&apos;,
+       BUSINESS_TYPE  = &apos;1&apos;,
+       CURRENCY       = &apos;CNY&apos;,
+       REGION         = &apos;CM&apos;,
+       PRIORITY       = &apos;1&apos;,
+       STATUS         = &apos;1&apos;,
+       SITE           = &apos;101,103,104,105,102,203,204,301,401,402,501,601&apos;,
+       AMOUNT         = &apos;100000000&apos;,
+       FROM_TIME      = &apos;000000&apos;,
+       TO_TIME        = &apos;235959&apos;,
+       FROM_RATIO     = &apos;0&apos;,
+       TO_RATIO       = &apos;100&apos;,
+       NEED_ACCOUNT   = &apos;0&apos;,
+       LIMIT_ONE_CARD = &apos;0&apos;,
+       UPDATE_TIME    = sysdate
+ where ORG_CODE = &apos;FUIOU_ONLINE&apos;
+
+
+</samplerData>
+</sample>
+<sample t="7" it="0" lt="7" ct="0" ts="1560492906558" s="true" lb="禁用非富友" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="9" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String">shared:true, driver:oracle.jdbc.OracleDriver, url:jdbc:oracle:thin:@106.15.186.65:2524:cfpdbtt, user:testquery</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">4 updates</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Update Statement] update CFP_CHANNEL.T_FUND_OUT_CHANNEL
+   set STATUS = &apos;0&apos;, 
+       UPDATE_TIME = sysdate
+ where ORG_CODE != &apos;FUIOU_ONLINE&apos;
+
+</samplerData>
+</sample>
+<httpSample t="115" it="0" lt="112" ct="32" ts="1560492906700" s="true" lb="登录" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="533" sby="314" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Expires: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+X-XSS-Protection: 1; mode=block
+Pragma: no-cache
+X-Frame-Options: DENY
+Date: Fri, 14 Jun 2019 06:15:08 GMT
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Transfer-Encoding: chunked
+Content-Type: application/json;charset=UTF-8
+X-Application-Context: mes-gateway
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json;charset=UTF-8
+Content-Length: 90
+Host: 47.101.70.242:8054
+User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_181)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;responseCode&quot;:&quot;00000000&quot;,&quot;responseMsg&quot;:&quot;成功响应&quot;,&quot;responseStatus&quot;:&quot;1&quot;,&quot;responseObj&quot;:{&quot;token&quot;:&quot;MES_TOKEN_76f5b1de-b297-4a53-8976-841ea7f59fd3&quot;}}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;requestObj&quot;: {&#xd;
+    &quot;loginName&quot;: &quot;18912911129&quot;,&#xd;
+    &quot;password&quot;: &quot;12345678A&quot;&#xd;
+  }&#xd;
+}</queryString>
+  <java.net.URL>http://47.101.70.242:8054/mes-gateway/api/security/login.json</java.net.URL>
+</httpSample>
+<httpSample t="19" it="0" lt="19" ct="0" ts="1560492906912" s="true" lb="用户选择银行卡时，调用锁汇接口" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="481" sby="313" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Expires: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+X-XSS-Protection: 1; mode=block
+Pragma: no-cache
+X-Frame-Options: DENY
+Date: Fri, 14 Jun 2019 06:15:08 GMT
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Transfer-Encoding: chunked
+Content-Type: application/json;charset=UTF-8
+X-Application-Context: mes-gateway
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json;charset=UTF-8
+AUTH-TOKEN: MES_TOKEN_76f5b1de-b297-4a53-8976-841ea7f59fd3
+Content-Length: 18
+Host: 47.101.70.242:8054
+User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_181)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;responseCode&quot;:&quot;00000000&quot;,&quot;responseMsg&quot;:&quot;成功响应&quot;,&quot;responseStatus&quot;:&quot;1&quot;,&quot;responseObj&quot;:6.9115}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&quot;currency&quot;:&quot;USD&quot;}</queryString>
+  <java.net.URL>http://47.101.70.242:8054/mes-gateway/api/withdraw/lockExchangeRate.json</java.net.URL>
+</httpSample>
+<httpSample t="156" it="0" lt="155" ct="0" ts="1560492906932" s="true" lb="店铺提现" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="UTF-8" by="479" sby="1100" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Expires: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+X-XSS-Protection: 1; mode=block
+Pragma: no-cache
+X-Frame-Options: DENY
+Date: Fri, 14 Jun 2019 06:15:08 GMT
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Transfer-Encoding: chunked
+Content-Type: application/json;charset=UTF-8
+X-Application-Context: mes-gateway
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json;charset=UTF-8
+AUTH-TOKEN: MES_TOKEN_76f5b1de-b297-4a53-8976-841ea7f59fd3
+Content-Length: 807
+Host: 47.101.70.242:8054
+User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_181)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;responseCode&quot;:&quot;00000000&quot;,&quot;responseMsg&quot;:&quot;成功响应&quot;,&quot;responseStatus&quot;:&quot;1&quot;,&quot;responseObj&quot;:true}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;platId&quot;: 101,&#xd;
+    &quot;liquidateId&quot;: 9074,&#xd;
+    &quot;withdrawAmount&quot;: 2010,&#xd;
+    &quot;withdrawCurrency&quot;: &quot;USD&quot;,&#xd;
+    &quot;settleCurrency&quot;: &quot;CNY&quot;,&#xd;
+    &quot;checkMethod&quot;: &quot;1&quot;,&#xd;
+    &quot;paymengPwd&quot;: &quot;12345678Z&quot;,&#xd;
+    &quot;couponIds&quot;: [],&#xd;
+    &quot;details&quot;: [&#xd;
+        {&#xd;
+            &quot;id&quot;: 4609,&#xd;
+            &quot;memberCode&quot;: 10000007381,&#xd;
+            &quot;platId&quot;: 101,&#xd;
+            &quot;shopId&quot;: 5946,&#xd;
+            &quot;accountNo&quot;: &quot;320299110000007381840000000005946&quot;,&#xd;
+            &quot;withdrawAmount&quot;: &quot;2000&quot;,&#xd;
+            &quot;currencyCode&quot;: &quot;USD&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;id&quot;: 3642,&#xd;
+            &quot;memberCode&quot;: 10000007381,&#xd;
+            &quot;platId&quot;: 101,&#xd;
+            &quot;shopId&quot;: 5050,&#xd;
+            &quot;accountNo&quot;: &quot;320299110000007381840000000005050&quot;,&#xd;
+            &quot;withdrawAmount&quot;: &quot;10&quot;,&#xd;
+            &quot;currencyCode&quot;: &quot;USD&quot;&#xd;
+        }&#xd;
+    ] &#xd;
+}</queryString>
+  <java.net.URL>http://47.101.70.242:8054/mes-gateway/api/withdraw/applyWithdraw.json</java.net.URL>
+</httpSample>
+<sample t="5" it="0" lt="0" ct="0" ts="1560492907110" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="线程组 1-1" dt="text" de="GBK" by="767" sby="0" sc="1" ec="0" ng="1" na="1" hn="yangqiuhua-PC">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">JMeterVariables:
+DB=DB-gathering-test2
+DB-gathering-test2=org.apache.jmeter.protocol.jdbc.config.DataSourceElement$DataSourceComponentImpl@2159bf37
+IP=47.101.70.242
+JMeterThread.last_sample_ok=true
+JMeterThread.pack=org.apache.jmeter.threads.SamplePackage@3800d715
+START.HMS=141503
+START.MS=1560492903176
+START.YMD=20190614
+TESTSTART.MS=1560492904079
+__jm__店铺提现__idx=0
+__jm__线程组__idx=0
+__jmeter.U_T__=线程组 1-1
+charset=UTF-8
+fundOutChannel=FUIOU_ONLINE
+httpMethod=POST
+loginName=18912911129
+password=12345678A
+phone=18912911129
+port=8054
+protocol=http
+redis=redis-gathering-test2
+redis-gathering-test2=me.yangqiuhua.jmeter.protocol.config.RedisElement$JedisPoolComponentImpl@3de8f967
+token=MES_TOKEN_76f5b1de-b297-4a53-8976-841ea7f59fd3
+withdrawCurrency=USD
+
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+
+</testResults>

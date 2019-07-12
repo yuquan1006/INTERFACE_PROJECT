@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="51fce792-0151-480e-8034-0ca51057cab8" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/logCmd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cx_Oracle.Error</find>
+      <find>数据库关闭时异常</find>
+      <find>.</find>
+      <find>exce</find>
+      <find>gc.</find>
+      <find>}</find>
+      <find>true</find>
+      <find>requests</find>
+      <find>subPath</find>
+      <find>/mes-gateway/api/sign/signup/mobile.json</find>
+      <find>json</find>
+      <find>@st</find>
+      <find>callSenderAliBatch</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>BaseException</replace>
+      <replace>_</replace>
+      <replace>data.</replace>
+      <replace>{</replace>
+      <replace>True</replace>
+    </replaceStrings>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../local/阅读源码.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/case/cfp_mesgateway/login/test_register.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/run_all_case.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../local/ipaylinks/demo1111.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/case/cfp_mesgateway/verifyCode/test_verifyCode.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/common/requestCmd.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/common/mesApi.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/common/logCmd.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/case/cfp_mesgateway/Flow/test_register_login.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/config/globals.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/case/cfp_mesgateway/Flow/test_realNameAuth.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/case/CFP-MesGateWay/login/Test_login.py" />
+        <option value="$PROJECT_DIR$/case/CFP-MesGateWay/verifyCode/test_verifyCode.py" />
+        <option value="$PROJECT_DIR$/case/CFP-MesGateWay/login/Test_register.py" />
+        <option value="$PROJECT_DIR$/common/emailUtil.py" />
+        <option value="$PROJECT_DIR$/case/cfp_mesgateway/login/Test_register.py" />
+        <option value="$PROJECT_DIR$/case/cfp_mesgateway/Flow/register_login.py" />
+        <option value="$PROJECT_DIR$/common/mes_gateway_api.py" />
+        <option value="$PROJECT_DIR$/common/logUtil.py" />
+        <option value="$PROJECT_DIR$/common/oracle_cmd.py" />
+        <option value="$PROJECT_DIR$/common/redisUtil.py" />
+        <option value="$PROJECT_DIR$/common/mysqlCmd.py" />
+        <option value="$PROJECT_DIR$/common/logCmd.py" />
+        <option value="$PROJECT_DIR$/common/emailCmd.py" />
+        <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/../local/upload_file.py" />
+        <option value="$PROJECT_DIR$/../local/ipaylinks/demo1111.py" />
+        <option value="$PROJECT_DIR$/../local/QBC密文生产.py" />
+        <option value="$PROJECT_DIR$/common/oracleCmd.py" />
+        <option value="$PROJECT_DIR$/case/cfp_mesgateway/login/test_register.py" />
+        <option value="$PROJECT_DIR$/run_all_case.py" />
+        <option value="$PROJECT_DIR$/case/cfp_mesgateway/verifyCode/test_verifyCode.py" />
+        <option value="$PROJECT_DIR$/case/cfp_mesgateway/login/test_login.py" />
+        <option value="$PROJECT_DIR$/case/cfp_mesgateway/Flow/test_register_login.py" />
+        <option value="$PROJECT_DIR$/../local/阅读源码.py" />
+        <option value="D:/python36/Lib/site-packages/requests/models.py" />
+        <option value="$PROJECT_DIR$/common/requestCmd.py" />
+        <option value="$PROJECT_DIR$/config/globals.py" />
+        <option value="$PROJECT_DIR$/case/cfp_mesgateway/Flow/flow_data.py" />
+        <option value="$PROJECT_DIR$/common/mesApi.py" />
+        <option value="$PROJECT_DIR$/case/cfp_mesgateway/Flow/test_realNameAuth.py" />
+        <option value="$PROJECT_DIR$/../local/ipaylinks/语音告警/commonUtils.py" />
+        <option value="$PROJECT_DIR$/../local/Res.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="auto_cfp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto_cfp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto_cfp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto_cfp" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto_cfp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../local/ipaylinks/语音告警" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Data\py_space\local\ipaylinks\语音告警" />
+      <recent name="D:\Data\py_space\local" />
+      <recent name="D:\Data\py_space\auto_cfp\data" />
+      <recent name="D:\Data\py_space\auto_cfp\case\a" />
+      <recent name="D:\Data\py_space\auto_cfp\case\CFP-MesGateWay\login" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.run_all_case">
+    <configuration name="Res" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="local" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../local" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../local/Res.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="commonUtils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="local" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../local/ipaylinks/语音告警" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../local/ipaylinks/语音告警/commonUtils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_all_case" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="auto_cfp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_all_case.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_register_login.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="auto_cfp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/cfp_mesgateway/Flow/test_register_login.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_verifyCode.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="auto_cfp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case/cfp_mesgateway/verifyCode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/cfp_mesgateway/verifyCode/test_verifyCode.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.run_all_case" />
+        <item itemvalue="Python.Res" />
+        <item itemvalue="Python.commonUtils" />
+        <item itemvalue="Python tests.Unittests in test_verifyCode.py" />
+        <item itemvalue="Python tests.Unittests in test_register_login.py" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51fce792-0151-480e-8034-0ca51057cab8" name="Default Changelist" comment="" />
+      <created>1562117163881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562117163881</updated>
+      <workItem from="1562117166449" duration="31275000" />
+      <workItem from="1562209379904" duration="21932000" />
+      <workItem from="1562290387674" duration="46160000" />
+      <workItem from="1562551075883" duration="8992000" />
+      <workItem from="1562637408316" duration="1737000" />
+      <workItem from="1562640113206" duration="274000" />
+      <workItem from="1562643312313" duration="3626000" />
+      <workItem from="1562816354931" duration="1371000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_test_realNameAuth_RealNameAuth_test_ - 2019.07.08 at 10h 46m 27s.xml">
+      <configuration name="Unittests for test_realNameAuth.RealNameAuth.test_" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_realNameAuth_RealNameAuth_test_land_person_realNameAuth - 2019.07.08 at 10h 49m 02s.xml">
+      <configuration name="Unittests for test_realNameAuth.RealNameAuth.test_land_person_realNameAuth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_realNameAuth_RealNameAuth_test_land_person_realNameAuth - 2019.07.08 at 10h 49m 38s.xml">
+      <configuration name="Unittests for test_realNameAuth.RealNameAuth.test_land_person_realNameAuth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_realNameAuth_RealNameAuth_test_land_person_realNameAuth - 2019.07.08 at 10h 52m 57s.xml">
+      <configuration name="Unittests for test_realNameAuth.RealNameAuth.test_land_person_realNameAuth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_realNameAuth_RealNameAuth_test_land_person_realNameAuth - 2019.07.08 at 11h 00m 56s.xml">
+      <configuration name="Unittests for test_realNameAuth.RealNameAuth.test_land_person_realNameAuth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_realNameAuth_py - 2019.07.08 at 11h 10m 47s.xml">
+      <configuration name="Unittests in test_realNameAuth.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_realNameAuth_py - 2019.07.08 at 11h 11m 55s.xml">
+      <configuration name="Unittests in test_realNameAuth.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_realNameAuth_RealNameAuth_test_land_person_realNameAuth - 2019.07.08 at 11h 12m 30s.xml">
+      <configuration name="Unittests for test_realNameAuth.RealNameAuth.test_land_person_realNameAuth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_register_login_py - 2019.07.08 at 11h 29m 06s.xml">
+      <configuration name="Unittests in test_register_login.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_verifyCode_py - 2019.07.08 at 11h 29m 43s.xml">
+      <configuration name="Unittests in test_verifyCode.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="115367000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.61213434" visible="true" weight="0.26865673" />
+      <window_info id="Structure" order="1" sideWeight="0.38786566" side_tool="true" visible="true" weight="0.26865673" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35536295" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../local/ipaylinks/demo1111.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/auto_cfp$globals.coverage" NAME="globals Coverage Results" MODIFIED="1562552947581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_in_test_login_py.coverage" NAME="Unittests in test_login.py Coverage Results" MODIFIED="1562497660770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/login" />
+    <SUITE FILE_PATH="coverage/auto_cfp$commonUtils.coverage" NAME="commonUtils Coverage Results" MODIFIED="1562557774526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../local/ipaylinks/语音告警" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_in_Test_register_py.coverage" NAME="Unittests in test_register.py Coverage Results" MODIFIED="1562139852112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/login" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_in_test_register_login_py.coverage" NAME="Unittests in test_register_login.py Coverage Results" MODIFIED="1562556542120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+    <SUITE FILE_PATH="coverage/auto_cfp$.coverage" NAME="阅读源码 Coverage Results" MODIFIED="1562503608272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../local" />
+    <SUITE FILE_PATH="coverage/auto_cfp$emailCmd.coverage" NAME="emailCmd Coverage Results" MODIFIED="1562471581271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_Test_register_Test_register.coverage" NAME="Unittests for Test_register.Test_register Coverage Results" MODIFIED="1562138221193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/login" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_register_login_Register_login_test_register_login_to_phone.coverage" NAME="Unittests for register_login.Register_login.test_register_login_to_phone Coverage Results" MODIFIED="1562144198836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Res.coverage" NAME="Res Coverage Results" MODIFIED="1562637577646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../local" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_register_login_Register_login_test_register_login_to_email.coverage" NAME="Unittests for test_register_login.Register_login.test_register_login_to_email Coverage Results" MODIFIED="1562503334499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+    <SUITE FILE_PATH="coverage/auto_cfp$run_all_case.coverage" NAME="run_all_case Coverage Results" MODIFIED="1562659570429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/auto_cfp$redisUtil.coverage" NAME="redisUtil Coverage Results" MODIFIED="1562135344807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/auto_cfp$mysqlCmd.coverage" NAME="mysqlCmd Coverage Results" MODIFIED="1562207650895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/auto_cfp$mes_gateway_api.coverage" NAME="mes_gateway_api Coverage Results" MODIFIED="1562140650579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/auto_cfp$demo1111.coverage" NAME="demo1111 Coverage Results" MODIFIED="1562324237519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../local/ipaylinks" />
+    <SUITE FILE_PATH="coverage/auto_cfp$checks.coverage" NAME="checks Coverage Results" MODIFIED="1562132774748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/auto_cfp$oracle_cmd.coverage" NAME="oracle_cmd Coverage Results" MODIFIED="1562207289095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_verifyCode_Test_verifyCode.coverage" NAME="Unittests for test_verifyCode.Test_verifyCode Coverage Results" MODIFIED="1562485531083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/verifyCode" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_register_Test_register_test_Flow_Register_ToPhone.coverage" NAME="Unittests for test_register.Test_register.test_Flow_Register_ToPhone Coverage Results" MODIFIED="1562140943592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/login" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_verifyCode_Test_verifyCode_test_verifyCode_Flow_ToRegister.coverage" NAME="Unittests for test_verifyCode.Test_verifyCode.test_verifyCode_Flow_ToRegister Coverage Results" MODIFIED="1562497051078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/verifyCode" />
+    <SUITE FILE_PATH="coverage/auto_cfp$QBC.coverage" NAME="QBC密文生产 Coverage Results" MODIFIED="1562399741974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../local" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_register_login_Register_login.coverage" NAME="Unittests for register_login.Register_login Coverage Results" MODIFIED="1562142739332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_in_register_login_py.coverage" NAME="Unittests in register_login.py Coverage Results" MODIFIED="1562148445834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_realNameAuth_RealNameAuth.coverage" NAME="Unittests for test_realNameAuth.RealNameAuth Coverage Results" MODIFIED="1562222450644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+    <SUITE FILE_PATH="coverage/auto_cfp$oracleCmd.coverage" NAME="oracleCmd Coverage Results" MODIFIED="1562486001475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_verifyCode_Test_verifyCode_test_verifyCode_Except_PhoneIsNull.coverage" NAME="Unittests for test_verifyCode.Test_verifyCode.test_verifyCode_Except_PhoneIsNull Coverage Results" MODIFIED="1562497055759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/verifyCode" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_in_test_register_py.coverage" NAME="Unittests in test_register.py Coverage Results" MODIFIED="1562497679696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/login" />
+    <SUITE FILE_PATH="coverage/auto_cfp$mesApi.coverage" NAME="mesApi Coverage Results" MODIFIED="1562552805468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/auto_cfp$requestCmd.coverage" NAME="requestCmd Coverage Results" MODIFIED="1562552028329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_Test_register_Test_register_test_Flow_Register_ToPhone.coverage" NAME="Unittests for Test_register.Test_register.test_Flow_Register_ToPhone Coverage Results" MODIFIED="1562139433668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/login" />
+    <SUITE FILE_PATH="coverage/auto_cfp$emailUtil.coverage" NAME="emailUtil Coverage Results" MODIFIED="1562132942325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/auto_cfp$upload_file.coverage" NAME="upload_file Coverage Results" MODIFIED="1562230145752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../local" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_realNameAuth_RealNameAuth_test_land_person_realNameAuth.coverage" NAME="Unittests for test_realNameAuth.RealNameAuth.test_land_person_realNameAuth Coverage Results" MODIFIED="1562555544695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_in_test_realNameAuth_py.coverage" NAME="Unittests in test_realNameAuth.py Coverage Results" MODIFIED="1562555505960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_verifyCode_Test_verifyCode_test_verifyCode_Except_PhoneIsMix.coverage" NAME="Unittests for test_verifyCode.Test_verifyCode.test_verifyCode_Except_PhoneIsMix Coverage Results" MODIFIED="1562490004946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/verifyCode" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_verifyCode_Test_verifyCode_test_verifyCode_Except_PhoneIsExixtes.coverage" NAME="Unittests for test_verifyCode.Test_verifyCode.test_verifyCode_Except_PhoneIsExixtes Coverage Results" MODIFIED="1562486559954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/verifyCode" />
+    <SUITE FILE_PATH="coverage/auto_cfp$logUtil.coverage" NAME="logUtil Coverage Results" MODIFIED="1562206270842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_verifyCode_Test_verifyCode_test_verifyCode_Except_PhoneIsNotExixtes.coverage" NAME="Unittests for test_verifyCode.Test_verifyCode.test_verifyCode_Except_PhoneIsNotExixtes Coverage Results" MODIFIED="1562482946784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/verifyCode" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_register_login_Register_login_test_register_login_to_phone.coverage" NAME="Unittests for test_register_login.Register_login.test_register_login_to_phone Coverage Results" MODIFIED="1562503222185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_test_realNameAuth_RealNameAuth_test_.coverage" NAME="Unittests for test_realNameAuth.RealNameAuth.test_ Coverage Results" MODIFIED="1562553986596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_in_test_verifyCode_py.coverage" NAME="Unittests in test_verifyCode.py Coverage Results" MODIFIED="1562556582760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/verifyCode" />
+    <SUITE FILE_PATH="coverage/auto_cfp$Unittests_for_register_login_Register_login_test_register_login_to_email.coverage" NAME="Unittests for register_login.Register_login.test_register_login_to_email Coverage Results" MODIFIED="1562148320170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case/cfp_mesgateway/Flow" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://D:/python36/Lib/site-packages/redis/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="1424" selection-start-line="1424" selection-end-line="1432" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/checks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/redisCmd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/mysqlCmd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="e#156#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="537" column="8" selection-start-line="537" selection-start-column="8" selection-end-line="537" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../local/upload_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report/log/main.log">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="1435" column="52" selection-start-line="1435" selection-start-column="43" selection-end-line="1435" selection-end-column="52" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="1104">
+          <caret line="48" column="91" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../local/01.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/python36/Lib/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="2096" column="12" lean-forward="true" selection-start-line="2096" selection-start-column="12" selection-end-line="2096" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/builtins.pyi">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/collections/__init__.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="262" column="16" selection-start-line="262" selection-end-line="263" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/emailCmd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../local/ipaylinks/demo1111.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+          <folding>
+            <element signature="e#342#803#0" />
+            <element signature="e#849#894#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../local/QBC密文生产.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/oracleCmd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/http/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="160" selection-start-line="160" selection-end-line="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/site-packages/requests/structures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/_collections_abc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="801" selection-start-line="801" selection-end-line="801" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/json/encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="201" selection-start-line="201" selection-end-line="201" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="230" selection-start-line="230" selection-end-line="230" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/site-packages/requests/hooks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/site-packages/requests/cookies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="350" selection-start-line="350" selection-end-line="350" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/http/cookiejar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="1244" selection-start-line="1244" selection-end-line="1244" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/unittest/runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="648" selection-start-line="648" selection-end-line="648" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="348" column="8" selection-start-line="348" selection-start-column="8" selection-end-line="348" selection-end-column="8" />
+          <folding>
+            <element signature="e#11504#11507#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-181045577/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="132" column="4" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/site-packages/requests/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="458" column="19" lean-forward="true" selection-start-line="458" selection-start-column="19" selection-end-line="458" selection-end-column="19" />
+          <folding>
+            <element signature="e#129#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/site-packages/requests/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="596" column="42" selection-start-line="596" selection-start-column="41" selection-end-line="596" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python36/Lib/site-packages/requests/sessions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="451" column="12" lean-forward="true" selection-start-line="451" selection-start-column="12" selection-end-line="451" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/requestCmd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="92" column="47" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/IdCardLoad.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/cfp_mesgateway/Flow/flow_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="72" column="49" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../local/阅读源码.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#73#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/IdCardUp.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/mesApi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="146" column="66" selection-start-line="146" selection-start-column="66" selection-end-line="146" selection-end-column="66" />
+          <folding>
+            <element signature="e#31#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/cfp_mesgateway/Flow/test_realNameAuth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding>
+            <element signature="e#11#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/cfp_mesgateway/Flow/test_register_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="56" column="36" lean-forward="true" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+          <folding>
+            <element signature="e#13#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/cfp_mesgateway/login/test_register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/cfp_mesgateway/login/test_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/cfp_mesgateway/verifyCode/test_verifyCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1656">
+          <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_all_case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding>
+            <element signature="e#60#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../local/ipaylinks/语音告警/callSenderAliBatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="39" />
+          <folding>
+            <element signature="e#40#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../local/Res.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../local/demo1111.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../local/ipaylinks/语音告警/commonUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/logCmd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
